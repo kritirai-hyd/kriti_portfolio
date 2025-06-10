@@ -1,16 +1,12 @@
-/** @type {import('next').NextConfig} */
-
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'kriti_portfolio'; // Replace with your GitHub repo name
-
 const nextConfig = {
+  reactStrictMode: true,
   images: {
-    unoptimized: true,
+    unoptimized: true, 
   },
-  trailingSlash: true,
-  output: 'export',
-  basePath: isProd ? `/${repoName}` : '',
-  assetPrefix: isProd ? `/${repoName}/` : '',
+  assetPrefix: isProd ? '/kriti_portfolio/' : '',
+  basePath: isProd ? '/kriti_portfolio' : '',
+  output: 'export'
 };
 
 export default nextConfig;
