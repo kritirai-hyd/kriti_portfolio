@@ -1,0 +1,116 @@
+.banner-bg{
+backdrop-filter: drop-shadow(2px 4px 6px #000);
+    background: linear-gradient(222deg, #580993ba, #000000, #3b0781bf);
+    border-radius: 38px;
+    width: 380px;
+    height: 50vh;
+    position: absolute;
+    rotate: 276deg;
+    right: 6rem;
+    filter: blur(6px);
+}
+@media only screen and (min-width:320px) and (max-width:720px) {
+  .navbar{
+    display: none;
+  }
+    .banner-bg{
+backdrop-filter: drop-shadow(2px 4px 6px #000);
+    background: linear-gradient(222deg, #580993ba, #000000, #3b0781bf);
+      border-radius: 38px;
+    width: 295px;
+    height: 34vh;
+    position: absolute;
+    right: 5rem
+
+;
+
+    rotate: 354deg;
+}
+
+}
+
+.right{
+      top: 4rem;
+    position: relative;
+}
+.circle{
+
+  height: 13.75rem;
+margin-right: -13rem;
+  z-index: -1;
+  content: var(--tw-content);
+  --tw-blur: blur(150px);
+  filter: var(--tw-blur);
+  content: var(--tw-content);
+    background-image: linear-gradient(260deg, #8750f7, rgba(115, 67, 210, 0));
+    border-radius: 50%;
+    width: 13.75rem;
+    position: absolute;
+}
+
+
+.card-flex{
+  display: flex;
+  color: #fff;
+  gap: 1rem;
+  
+}
+.card-flex li{
+  list-style: none;
+}
+.banner-img{
+  margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.d-btn{
+  border: 1px solid #8d58f7;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+}
+.card-flex li a{
+  border: 1px solid #8d58f7;
+  /* padding: 21px 2px 4px 8px; */
+  border-radius: 50%;
+  height: 35px;
+  display: flex
+;
+margin-top: 8px;
+  width: 35px;
+  padding: 4px;
+}
+.card-flex li a:hover{
+box-shadow: 1px 1px 6px 4px #8d58f7;
+}
+.wrapper-about{
+display: grid;
+margin-top: 4rem;
+
+gap: 2rem;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.progress h2{
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4rem;
+  
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+
+.progress p{
+  text-align: center;
+  font-size: 1.4rem;
+}
