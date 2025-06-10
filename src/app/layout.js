@@ -1,15 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import { Inter, Roboto } from 'next/font/google';
+const geistSans = Inter({
+  subsets: ['latin'],
+  variable: '--font-geist-sans',
+  weight: ['400', '700'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistMono = Roboto({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+  weight: ['400', '700'],
+});import "./globals.css";
 
 export const metadata = {
   title: "Kriti Rai | Full Stack Developer | Portfolio",
