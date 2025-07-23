@@ -1,0 +1,91 @@
+/* Container */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+.projects{
+  background-color: #fff;
+}
+/* Title Section */
+.s-title {
+  text-align: center;
+ padding-top: 40px;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.project-card {
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image wrapper */
+.project-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Content */
+.project-content {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.project-tags span {
+  display: inline-block;
+  background: #f2f2f2;
+  color: #333;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  margin: 0 6px 8px 0;
+}
+
+.project-links a {
+  margin-right: 12px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
