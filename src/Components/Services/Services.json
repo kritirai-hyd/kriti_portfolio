@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Responsive Web Design",
+    "desc": "Seamless experiences across all screen sizes—your website will adapt beautifully to mobile phones, tablets, laptops, and desktops.",
+    "rbtn": "See How Responsive Design Works"
+  },
+  {
+    "id": "2",
+    "title": "SEO Optimization",
+    "desc": "Built with SEO best practices in mind. From clean, semantic HTML to meta tag implementation and performance tuning, your website will be optimized to rank higher and get discovered.",
+    "rbtn": "Boost Visibility with Proven SEO Tactics"
+  },
+  {
+    "id": "3",
+    "title": "UI & UX Design",
+    "desc": "Visually striking designs paired with intuitive navigation. I focus on creating interfaces that not only look great but also guide users effortlessly—boosting engagement and conversions.",
+    "rbtn": "Discover the Power of Good Design"
+  },
+  {
+    "id": "4",
+    "title": "Performance Optimization",
+    "desc": "Fast load times and smooth interactions for better user experience and lower bounce rates.",
+    "rbtn": "Speed Up Your Website for Better Results"
+  },
+  {
+    "id": "5",
+    "title": "Accessibility",
+    "desc": "Websites should be for everyone. I follow WCAG guidelines to make sure your site is fully accessible to users with disabilities, including screen reader support, keyboard navigation, and color contrast.",
+    "rbtn": "Make Your Website Inclusive for All"
+  },
+  {
+    "id": "6",
+    "title": "Content Protection",
+    "desc": "Add an extra layer of security by disabling right-click, text copying, and basic dev tools access—helping to deter unauthorized content theft or misuse.",
+    "rbtn": "Learn How to Safeguard Your Content"
+  }
+]

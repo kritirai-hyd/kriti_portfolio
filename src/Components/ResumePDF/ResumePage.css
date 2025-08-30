@@ -1,0 +1,77 @@
+.resume-container {
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.resume-header {
+  /* border-bottom: 2px solid #ccc; */
+  margin-bottom: 30px;
+}
+
+.resume-header h1 {
+  margin-bottom: 5px;
+  font-size: 2.2rem;
+}
+
+.resume-header h2 {
+  font-weight: normal;
+  color: #666;
+  font-size: 1.3rem;
+}
+
+.resume-header p {
+  margin: 4px 0;
+}
+
+.resume-section {
+  margin-bottom: 30px;
+}
+
+.resume-section h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-left: 4px solid #3498db;
+  padding-left: 10px;
+}
+
+.resume-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.resume-section ul li {
+  margin-bottom: 6px;
+}
+
+.resume-section p {
+  margin: 6px 0;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.head-1{
+        text-align: center;
+}
+.d-flex{
+        display: flex
+;
+    justify-content: center;
+    gap: 20px;
+}
+.education{
+    border-bottom: 0.1px solid #000000;
+    padding-bottom: 7px;
+}
