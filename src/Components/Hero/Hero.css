@@ -517,7 +517,7 @@
     transform: rotate(-2deg);
     /* margin: 2rem 0; */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 18x 0;
+    padding: 15px 0;
 }
 .scroll-item {
     display: flex;

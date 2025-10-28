@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/global.css"],"sourcesContent":["\r\n/* Theme variables */\r\n:root {\r\n--bg-color: rgba(255, 255, 255, 0.85);\r\n--text-color: #333333;\r\n--accent-color: #0070f3;\r\n--bg-color-scrolled: rgba(248, 248, 248, 0.92);\r\n--text-color-light: #333333;\r\n--text-color-dark: #ffffff;\r\n--border-color: rgba(0, 0, 0, 0.08);\r\n}\r\n*{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}"],"names":[],"mappings":"AAEA;;;;;;;;;;AASA"}}]
+}

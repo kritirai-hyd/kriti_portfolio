@@ -188,9 +188,9 @@ const Contact = () => {
        <p className={styles['social-title']}>Follow me on</p>
        <div className={styles['social-icons']}>
         {/* Add your social media links here */}
-        <a href="https://github.com/kritirai-hyd" className={styles['social-link']}>LinkedIn</a>
-        <a href="https://x.com/dev_kritirai" className={styles['social-link']}>GitHub</a>
-        <a href="https://www.linkedin.com/in/dev-kritirai" className={styles['social-link']}>Twitter</a>
+        <a href="https://www.linkedin.com/in/dev-kritirai" className={styles['social-link']}>LinkedIn</a>
+        <a href="https://github.com/kritirai-hyd" className={styles['social-link']}>GitHub</a>
+        <a href="https://x.com/dev_kritirai" className={styles['social-link']}>Twitter</a>
        </div>
       </div>
      </div>

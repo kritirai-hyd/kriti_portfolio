@@ -1,0 +1,18 @@
+/* [project]/src/app/global.css [app-client] (css) */
+:root {
+  --bg-color: #ffffffd9;
+  --text-color: #333;
+  --accent-color: #0070f3;
+  --bg-color-scrolled: #f8f8f8eb;
+  --text-color-light: #333;
+  --text-color-dark: #fff;
+  --border-color: #00000014;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=src_app_global_css_bad6b30c._.single.css.map*/
