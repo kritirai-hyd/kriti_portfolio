@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import "@/styles/globals.css";
 
@@ -44,4 +45,10 @@ export default function App({ Component, pageProps }) {
       <Footer />
     </ThemeProvider>
   );
+=======
+import "@/styles/globals.css";
+
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+>>>>>>> c780d92b (Initial commit from Create Next App)
 }

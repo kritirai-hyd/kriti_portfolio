@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "kriti_portfolio",
+=======
+  "name": "kritirai",
+>>>>>>> c780d92b (Initial commit from Create Next App)
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
@@ -18,6 +23,11 @@
     "react-countup": "^6.5.3",
     "react-dom": "19.2.3",
     "react-to-pdf": "^2.0.3"
+=======
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+>>>>>>> c780d92b (Initial commit from Create Next App)
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0"
