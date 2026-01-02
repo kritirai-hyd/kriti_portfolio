@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 
+
+import React, { useEffect } from "react";
 import "@/styles/globals.css";
 
 
@@ -11,32 +12,32 @@ import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
 
 export default function App({ Component, pageProps }) {
-    // useEffect(() => {
+    useEffect(() => {
      
-    //   const handleContextMenu = (e) => {
-    //     e.preventDefault();
-    //   };
+      const handleContextMenu = (e) => {
+        e.preventDefault();
+      };
   
-    //   const handleKeyDown = (e) => {
+      const handleKeyDown = (e) => {
        
-    //     if (
-    //       e.key === 'F12' ||
-    //       (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) ||
-    //       (e.ctrlKey && e.key.toUpperCase() === 'U')
-    //     ) {
-    //       e.preventDefault();
-    //       return false;
-    //     }
-    //   };
+        if (
+          e.key === 'F12' ||
+          (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) ||
+          (e.ctrlKey && e.key.toUpperCase() === 'U')
+        ) {
+          e.preventDefault();
+          return false;
+        }
+      };
   
-    //   document.addEventListener('contextmenu', handleContextMenu);
-    //   document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('contextmenu', handleContextMenu);
+      document.addEventListener('keydown', handleKeyDown);
   
-    //   return () => {
-    //     document.removeEventListener('contextmenu', handleContextMenu);
-    //     document.removeEventListener('keydown', handleKeyDown);
-    //   };
-    // }, []);
+      return () => {
+        document.removeEventListener('contextmenu', handleContextMenu);
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []);
   return (
     <ThemeProvider>
       
@@ -45,10 +46,4 @@ export default function App({ Component, pageProps }) {
       <Footer />
     </ThemeProvider>
   );
-=======
-import "@/styles/globals.css";
-
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
->>>>>>> c780d92b (Initial commit from Create Next App)
 }

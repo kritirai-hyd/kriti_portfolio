@@ -2,7 +2,7 @@ import Head from "next/head";
 import { JavaScriptAlgorithms } from "@/Components/Certificate/JavaScriptAlgorithms";
 
 export default function JavaScriptAlgorithmsPage() {
-  // JSON-LD Structured Data
+
   const schemaData = [
     {
       "@context": "https://schema.org",
