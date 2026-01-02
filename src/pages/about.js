@@ -116,7 +116,7 @@ export default function AboutPage() {
         />
         <meta
           name="keywords"
-          content="Kriti Rai, Full stack developer India, MERN stack developer 2025, Kriti Rai portfolio, Web developer in Delhi, Web developer in Hyderabad, Hire full stack developer India, MERN stack projects, JavaScript developer India, Responsive design developer, SEO optimized portfolio developer"
+          content="Kriti Rai, Full stack developer India, MERN stack developer 2026, Kriti Rai portfolio, Web developer in Delhi, Web developer in Hyderabad, Hire full stack developer India, MERN stack projects, JavaScript developer India, Responsive design developer, SEO optimized portfolio developer"
         />
         <meta name="author" content="Kriti Rai" />
 

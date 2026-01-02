@@ -15,7 +15,6 @@
   background-color: rgb(255 255 255 / 39%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-
 .header-left {
   display: flex;
   align-items: center;
@@ -58,7 +57,6 @@
   height: 3px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  /* Safari support */
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 @keyframes scaleIn {
@@ -92,7 +90,6 @@
 .nav-link:hover::before {
   width: 70%;
 }
-/* Color variations for light/dark themes */
 .cl-light {
   color: var(--text-color-light);
 }
@@ -168,6 +165,9 @@ background-color: #001e60;
     transform: translateX(100%);
     text-align: center;
     justify-content: start;
+  }
+  .header{
+      padding: 1.2rem 0px;
   }
   .nav.open {
     transform: translateX(0);
@@ -284,19 +284,11 @@ background-color: #001e60;
   .nav-list li {
     font-size: 1.1rem;
   }
-  /* .nav {
-    width: 260px;
-    padding: 36px 20px;
-  } */
 }
 @media (max-width: 599px) {
   .logo {
     margin-top: 20px;
   }
-  /* .nav {
-    width: 300px;
-    padding: 32px 18px;
-  } */
   .nav-link {
     font-size: 1.1rem;
     padding: 10px 0;
@@ -304,6 +296,7 @@ background-color: #001e60;
   .burger {
     width: 24px;
     height: 19px;
+            margin-right: -16px;
   }
 }
 @media (min-width: 1200px) {

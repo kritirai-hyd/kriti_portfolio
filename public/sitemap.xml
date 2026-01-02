@@ -4,9 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
-
 <url>
   <loc>https://www.kritirai.com/</loc>
   <lastmod>2025-12-23T03:37:46+00:00</lastmod>
@@ -16,7 +13,7 @@
   <lastmod>2025-12-23T03:37:46+00:00</lastmod>
 </url>
 <url>
-  <loc>https://www.kritirai.com/certificates/javaScrip-algorithms-&-data-structures</loc>
+  <loc>https://www.kritirai.com/certificates/javaScrip-algorithms-&amp;-data-structures</loc>
   <lastmod>2025-12-23T03:37:46+00:00</lastmod>
 </url>
 <url>
@@ -59,5 +56,4 @@
   <loc>https://www.kritirai.com/services</loc>
   <lastmod>2025-12-23T03:37:46+00:00</lastmod>
 </url>
-
 </urlset>

@@ -41,6 +41,7 @@ const Hero = () => {
 
   return (
     <>
+
       <div className={`hero ${theme === 'dark' ? 'bg-dark' : 'bg-light'}`}>
         <div className="hero-background">
           <div className="gradient-blob"></div>

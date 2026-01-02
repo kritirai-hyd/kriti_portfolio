@@ -7,10 +7,8 @@ import Heading from "../../Components/ui/Heading/Heading";
 import works from "./Badges.json";
 import Link from "next/link";
 import { SquareArrowOutUpRight } from "lucide-react";
-
 const Badges = () => {
   const { theme } = useTheme();
-
   return (
     <div
       id="projects"
@@ -18,13 +16,15 @@ const Badges = () => {
         theme === "dark" ? styles.bgDark : styles.bgLight
       }`}
     >
-      <Heading heading="My Projects" />
-
+      <Heading heading="Badges" />
       <section className={styles.portfolioContainer}>
         {works.map((w) => {
-          const img = require(`../../assets/image/${w.image}`)
+          const img = require(`../../assets/image/${w.image}`);
           return (
-            <div key={w.id} className={`${styles.projectCard} ${styles.animateFadeIn}`}>
+            <div
+              key={w.id}
+              className={`${styles.projectCard} ${styles.animateFadeIn}`}
+            >
               <div className={styles.projectImageContainer}>
                 <Image
                   src={img}
@@ -46,8 +46,9 @@ const Badges = () => {
                   </div>
                 )}
               </div>
-
-     
+              <div className={styles.projectContent}>
+                <h3 className={styles.projectTitle}>{w.title}</h3>
+              </div>
             </div>
           );
         })}
@@ -55,5 +56,4 @@ const Badges = () => {
     </div>
   );
 };
-
 export default Badges;

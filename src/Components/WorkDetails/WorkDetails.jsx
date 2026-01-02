@@ -6,15 +6,12 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import useLenis from "../hooks/useLenis";
 import styles from "./WorkDetails.module.css";
-
 import c1 from "../../assets/image/creative-coder-p1.png";
 import c2 from "../../assets/image/creative-coder-p2.png";
 import c3 from "../../assets/image/creative-coder-p3.png";
-
 import cz1 from "../../assets/image/couponszone-p1.png";
 import cz2 from "../../assets/image/couponszone-p2.png";
 import cz3 from "../../assets/image/couponszone-p3.png";
-
 import c4 from "../../assets/image/creative-coder-p4.png";
 import c5 from "../../assets/image/creative-coder-p5.png";
 import c6 from "../../assets/image/creative-coder-p6.png";
@@ -64,13 +61,10 @@ const projects = [
     code: "#",
   },
 ];
-
 const WorkDetails = () => {
   useLenis();
-
   return (
     <div className={styles.page}>
-      {/* Breadcrumb */}
       <div className={styles.worksBreadcrumb}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,8 +76,6 @@ const WorkDetails = () => {
           <p>Home / Projects</p>
         </motion.div>
       </div>
-
-      {/* Projects Section */}
       <section className={styles.works}>
         <div className={styles.worksContainer}>
           {projects.map((project, i) => (
@@ -95,13 +87,10 @@ const WorkDetails = () => {
               viewport={{ once: true, amount: 0.3 }}
               className={styles.projectCard}
             >
-              {/* Project Header */}
               <div className={styles.projectHeader}>
                 <h2 className={styles.projectTitle}>{project.title}</h2>
                 <span className={styles.projectType}>{project.type}</span>
               </div>
-
-              {/* Gallery */}
               <div className={styles.wContainer}>
                 <div className={styles.workGallery}>
                   {project.images.map((img, idx) => (
@@ -115,8 +104,6 @@ const WorkDetails = () => {
                     </div>
                   ))}
                 </div>
-
-                {/* Description + Tech */}
                 <div className={styles.projectDescription}>
                   <ul className={styles.featureList}>
                     {project.description.map((desc, idx) => (
@@ -127,8 +114,6 @@ const WorkDetails = () => {
                     <b>Technologies:</b> {project.tech}
                   </p>
                 </div>
-
-                {/* Actions */}
                 <div className={styles.projectActions}>
                   {project.demo && (
                     <Link href={project.demo} className={styles.submitBtn}>
@@ -149,5 +134,4 @@ const WorkDetails = () => {
     </div>
   );
 };
-
 export default WorkDetails;

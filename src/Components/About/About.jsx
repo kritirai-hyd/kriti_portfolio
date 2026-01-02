@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import styles from './About.module.css';
 import { useTheme } from '../../context/ThemeContext';
 import { fadeIn } from '../variants';
-
 import html from '../../assets/svg/html.svg';
 import css from '../../assets/svg/css.svg';
 import js from '../../assets/svg/js.svg';
@@ -21,7 +20,6 @@ import git from '../../assets/svg/git.svg';
 import github from '../../assets/svg/github.svg';
 import vercel from '../../assets/svg/vercel.svg';
 import express from '../../assets/svg/express.png';
-
 const skills = [
   { src: html, label: 'HTML' },
   { src: css, label: 'CSS' },
@@ -34,7 +32,6 @@ const skills = [
   { src: express, label: 'Express.js' },
   { src: sql, label: 'SQL' },
 ];
-
 const tools = [
   { src: git, label: 'Git' },
   { src: github, label: 'GitHub' },
@@ -42,7 +39,6 @@ const tools = [
   { src: postman, label: 'Postman' },
   { src: vercel, label: 'Vercel' },
 ];
-
 const SkillCard = ({ src, label, theme }) => (
   <motion.div
     className={`${styles.skillCard} ${theme === 'dark' ? styles.cardDark : styles.cardLight}`}
@@ -66,25 +62,20 @@ const SkillCard = ({ src, label, theme }) => (
     <div className={styles.cardGlow}></div>
   </motion.div>
 );
-
 const About = () => {
   const { theme } = useTheme();
-
   return (
     <section
       id="skills"
       className={`${styles.about} ${theme === 'dark' ? styles.bgDark : styles.bgLight}`}
     >
       <div className={styles.aboutContainer}>
-        {/* Background Shapes */}
         <div className={styles.aboutBackground}>
           <div className={`${styles.bgShape} ${styles.shape1}`}></div>
           <div className={`${styles.bgShape} ${styles.shape2}`}></div>
           <div className={`${styles.bgShape} ${styles.shape3}`}></div>
           <div className={`${styles.bgShape} ${styles.shape4}`}></div>
         </div>
-
-        {/* Section Title */}
         <motion.div
           className={styles.sTitle}
           variants={fadeIn('down', 0.2)}
@@ -96,9 +87,7 @@ const About = () => {
             Skills & Tools
           </h2>
         </motion.div>
-
         <div className={styles.aboutSection}>
-          {/* Skills */}
           <motion.div
             className={styles.aboutGroup}
             variants={fadeIn('right', 0.3)}
@@ -106,10 +95,6 @@ const About = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.7 }}
           >
-            <div className={styles.groupHeader}>
-              <h3 className={`${styles.groupTitle} ${theme === 'dark' ? styles.tDark : styles.tLight}`}>Development</h3>
-              <div className={styles.groupUnderline}></div>
-            </div>
             <motion.div
               className={styles.gridContainer}
               variants={fadeIn('up', 0.4)}
@@ -122,8 +107,6 @@ const About = () => {
               ))}
             </motion.div>
           </motion.div>
-
-          {/* Tools */}
           <motion.div
             className={styles.aboutGroup}
             variants={fadeIn('left', 0.3)}
@@ -131,10 +114,7 @@ const About = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.7 }}
           >
-            <div className={styles.groupHeader}>
-              <h3 className={`${styles.groupTitle} ${theme === 'dark' ? styles.tDark : styles.tLight}`}>Tools</h3>
-              <div className={styles.groupUnderline}></div>
-            </div>
+            
             <motion.div
               className={styles.gridContainer}
               variants={fadeIn('up', 0.4)}
@@ -152,5 +132,4 @@ const About = () => {
     </section>
   );
 };
-
 export default About;

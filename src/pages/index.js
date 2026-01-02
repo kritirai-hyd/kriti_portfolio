@@ -1,3 +1,4 @@
+
 import Head from "next/head";
 import About from "@/Components/About/About";
 import Contact from "@/Components/Contact/Contact";
@@ -9,7 +10,6 @@ import Certificate from "@/Components/Certificate/Certificate";
 import useLenis from "@/Components/hooks/useLenis";
 import Counter from "@/Components/Counter/Counter";
 import Badges from "@/Components/Badges/Badges";
-
 
 export default function Home() {
   useLenis();
@@ -24,13 +24,13 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Kriti Rai, Full stack developer India, MERN stack developer 2025, Kriti Rai portfolio, Web developer in Delhi, Web developer in Hyderabad, Hire full stack developer India, MERN stack projects, Kriti Rai web development services, JavaScript developer India, Responsive design developer, Full stack portfolio site, SEO optimized portfolio developer"
+          content="Kriti Rai, Full stack developer India, MERN stack developer 2026, Kriti Rai portfolio, Web developer in Delhi, Web developer in Hyderabad, Hire full stack developer India, MERN stack projects, Kriti Rai web development services, JavaScript developer India, Responsive design developer, Full stack portfolio site, SEO optimized portfolio developer"
         />
         <meta name="author" content="Kriti Rai" />
         <link rel="canonical" href="https://www.kritirai.com" />
         <meta
           property="og:title"
-          content="Kriti Rai | Full Stack Developer | MERN Portfolio 2025"
+          content="Kriti Rai | Full Stack Developer | MERN Portfolio 2026"
         />
         <meta
           property="og:description"
@@ -49,7 +49,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Kriti Rai | Full Stack Developer | MERN Portfolio 2025"
+          content="Kriti Rai | Full Stack Developer | MERN Portfolio 2026"
         />
         <meta
           name="twitter:description"
@@ -141,9 +141,9 @@ export default function Home() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              name: "Full Stack Development services 2025",
-              startDate: "2025-08-01T10:00:00+05:30",
-              endDate: "2025-08-01T17:00:00+05:30",
+              name: "Full Stack Development services 2026",
+              startDate: "2026-08-01T10:00:00+05:30",
+              endDate: "2026-08-01T17:00:00+05:30",
               url: "https://www.kritirai.com/workshops",
               location: {
                 "@type": "Place",
@@ -174,7 +174,7 @@ export default function Home() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Article",
-              headline: "Kriti Rai | Full Stack Developer Portfolio 2025",
+              headline: "Kriti Rai | Full Stack Developer Portfolio 2026",
               description:
                 "Explore Kriti Rai’s portfolio showcasing MERN stack projects, SEO-first development, responsive web applications and scalable backend systems.",
               image: "https://www.kritirai.com/assets/svg/kritirai.svg",
@@ -191,8 +191,8 @@ export default function Home() {
                   url: "https://www.kritirai.com/assets/svg/kritirai.svg",
                 },
               },
-              datePublished: "2025-01-01T00:00:00+05:30",
-              dateModified: "2025-01-01T00:00:00+05:30",
+              datePublished: "2026-01-01T00:00:00+05:30",
+              dateModified: "2026-01-01T00:00:00+05:30",
               mainEntityOfPage: "https://www.kritirai.com",
             }),
           }}
@@ -237,6 +237,7 @@ export default function Home() {
       <Badges />
       <Education />
       <Contact />
+
     </>
   );
 }

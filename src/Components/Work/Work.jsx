@@ -32,7 +32,7 @@ const Work = () => {
                     <div className={styles.projectOverlay}>
                       <div className={styles.projectLinks}>
                         <Link
-                          href={`/projects/${w.demo}`}
+                          href={`${w.demo}`}
                           target="_blank"
                           className={styles.demoLink}
                         >

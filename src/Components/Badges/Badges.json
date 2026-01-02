@@ -1,20 +1,24 @@
 [{
     "id":"1",
-    "image":"badges1.png"
+    "image":"badges1.png",
+    "title": "SQL Hackerrank"
 }
 ,
 {
     "id":"2",
-    "image":"badges3.png"
+    "image":"badges3.png",
+    "title": "Web Development Fundamentals IBM"
 },
 {
     "id":"3",
-    "image":"badges5.png"
+    "image":"badges5.png",
+    "title": "API Fundamentals Postman"
 }
 ,
 {
     "id":"4",
-    "image":"badges4.png"
+    "image":"badges4.png",
+    "title": "Linux Foundation Node.js"
 }
 
 
