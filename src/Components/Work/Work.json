@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Carrental Website",
+    "description": "Responsive car rental site built with Next.js and CSS, showcasing UI design and client-side routing.",
+    "tags": ["Next.js", "React", "CSS"],
+    "image": "project-1.png",
+    "demo": "carrental-website"
+  },
+  {
+    "id": 2,
+    "title": "Coupon Website",
+    "description": "Dynamic coupon-sharing platform using Next.js, Node.js, and React, with real-time deal updates and backend integration.",
+    "tags": ["Next.js", "React", "CSS", "Node.js"],
+    "image": "couponszone-p1.png",
+    "demo": "coupon-website"
+  },
+  {
+    "id": 3,
+    "title": "Employee Management System",
+    "description": "Employee Management System with NextAuth.js, Express, and MongoDB, supporting secure login.",
+    "tags": ["MongoDB", "Node.js", "Express", "Next.js", "NextAuth.js"],
+    "image": "empolyee.png",
+    "demo": "empolyee-managment"
+  }
+]
