@@ -1,0 +1,160 @@
+.aboutPage {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Light Theme */
+.lightTheme {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.lightTheme .breadcrumbSection {
+  background: linear-gradient(135deg, #f5f7fa 0%, #9ac1ff 100%);
+}
+
+.lightTheme .breadcrumbSection h1 {
+  color: #2c3e50;
+}
+
+.lightTheme .breadcrumbSection p {
+  color: #000000;
+}
+
+/* Dark Theme */
+.darkTheme {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e0e0e0;
+}
+
+.darkTheme .breadcrumbSection {
+  background: linear-gradient(135deg, #2d445c 0%, #010241 100%);
+}
+
+.darkTheme .breadcrumbSection h1 {
+  color: #ecf0f1;
+}
+
+.darkTheme .breadcrumbSection p {
+  color: #bdc3c7;
+}
+
+/* Breadcrumb Section */
+.breadcrumbSection {
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.breadcrumbSection h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumbSection p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* About Section */
+.aboutSection {
+  padding: 80px 0;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.aboutImage {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.profileImage {
+  border-radius: 20px;
+  z-index: 2;
+  position: relative;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.imageDecoration {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  border: 3px solid #2b6dff;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.aboutContent {
+  flex: 1;
+  min-width: 300px;
+}
+
+.aboutContent h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.aboutContent h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #2b6dff;
+  border-radius: 2px;
+}
+
+.aboutText p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.aboutText strong {
+  color: #2b6dff;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .aboutContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutContent h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumbSection {
+    padding: 80px 0 40px;
+  }
+
+  .breadcrumbSection h1 {
+    font-size: 2rem;
+  }
+
+  .aboutSection {
+    padding: 60px 0;
+  }
+}

@@ -1,0 +1,129 @@
+.contactBreadcrumb {
+  padding: 5rem 2rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.contactBreadcrumb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+.breadcrumbContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeInDown 0.6s ease-out;
+}
+.breadcrumbTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  transition: all 0.3s ease;
+}
+.breadcrumbPath {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+.breadcrumbLink {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.breadcrumbLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.breadcrumbLink:hover::after {
+  width: 100%;
+}
+.breadcrumbSeparator {
+  margin: 0 0.5rem;
+}
+.breadcrumbCurrent {
+  font-weight: 500;
+}
+.lightTheme {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #2c3e50;
+}
+.lightTheme::before {
+  background: rgba(255, 255, 255, 0.9);
+}
+.lightTheme .breadcrumbLink {
+  color: #3273ff;
+}
+.lightTheme .breadcrumbLink:hover {
+  color: #3273ff;
+}
+.lightTheme .breadcrumbCurrent {
+  color: #7f8c8d;
+}
+
+.darkTheme {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #ecf0f1;
+}
+.darkTheme::before {
+  background: rgba(0, 0, 0, 0.7);
+}
+.darkTheme .breadcrumbLink {
+  color: #3273ff;
+}
+.darkTheme .breadcrumbLink:hover {
+  color: #3273ff;
+}
+.darkTheme .breadcrumbCurrent {
+  color: #bdc3c7;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .contactBreadcrumb {
+    padding: 3rem 1.5rem;
+  }
+  .breadcrumbTitle {
+    font-size: 2.5rem;
+  }
+  .breadcrumbPath {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .contactBreadcrumb {
+    padding: 2rem 1rem;
+  }
+  .breadcrumbTitle {
+    font-size: 2rem;
+  }
+}
