@@ -1,47 +1,66 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import styles from './About.module.css';
-import { useTheme } from '../../context/ThemeContext';
-import { fadeIn } from '../variants';
-import html from '../../assets/svg/html.svg';
-import css from '../../assets/svg/css.svg';
-import js from '../../assets/svg/js.svg';
-import react from '../../assets/svg/react.svg';
-import node from '../../assets/svg/node-js.svg';
-import sql from '../../assets/svg/sql.svg';
-import next from '../../assets/svg/next-js.svg';
-import boot from '../../assets/svg/bootstrap.svg';
-import postman from '../../assets/svg/postman.svg';
-import tailwind from '../../assets/svg/tailwind.svg';
-import visual from '../../assets/svg/visual.svg';
-import git from '../../assets/svg/git.svg';
-import github from '../../assets/svg/github.svg';
-import vercel from '../../assets/svg/vercel.svg';
-import express from '../../assets/svg/express.png';
+import React from "react";
+import { motion } from "framer-motion";
+import { useTheme } from "../../context/ThemeContext";
+import Image from "next/image";
+import styles from "./About.module.css";
+import { fadeIn } from "../variants";
+import html from "../../assets/svg/html.svg";
+import css from "../../assets/svg/css.svg";
+import js from "../../assets/svg/js.svg";
+import react from "../../assets/svg/react.svg";
+import node from "../../assets/svg/node-js.svg";
+import nextjs from "../../assets/svg/next-js.svg";
+import express from "../../assets/svg/express.png";
+import npm from "../../assets/svg/npm.png";
+import sql from "../../assets/svg/sql.svg";
+import postgres from "../../assets/svg/postgresssql.png";
+import mongodb from "../../assets/svg/mongodb.png";
+import supabase from "../../assets/svg/supabase.png";
+import tailwind from "../../assets/svg/tailwind.svg";
+import bootstrap from "../../assets/svg/bootstrap.svg";
+import git from "../../assets/svg/git.svg";
+import github from "../../assets/svg/github.svg";
+import vercel from "../../assets/svg/vercel.svg";
+import postman from "../../assets/svg/postman.svg";
+import vscode from "../../assets/svg/visual.svg";
+import restapi from "../../assets/svg/rest-api.png";
+import googleAnalytics from "../../assets/svg/google-analytics.png";
+import googleSearch from "../../assets/svg/google-console-search.png";
+import bingSearch from "../../assets/svg/bing-search.png";
+import cpanel from "../../assets/svg/cpanel.png";
 const skills = [
-  { src: html, label: 'HTML' },
-  { src: css, label: 'CSS' },
-  { src: js, label: 'JavaScript' },
-  { src: react, label: 'React' },
-  { src: tailwind, label: 'Tailwind CSS' },
-  { src: boot, label: 'Bootstrap' },
-  { src: node, label: 'Node.js' },
-  { src: next, label: 'Next.js' },
-  { src: express, label: 'Express.js' },
-  { src: sql, label: 'SQL' },
+  { src: html, label: "HTML" },
+  { src: css, label: "CSS" },
+  { src: js, label: "JavaScript" },
+  { src: react, label: "React" },
+  { src: nextjs, label: "Next.js" },
+  { src: node, label: "Node.js" },
+  { src: express, label: "Express.js" },
+  { src: npm, label: "NPM" },
+  { src: tailwind, label: "Tailwind CSS" },
+  { src: bootstrap, label: "Bootstrap" },
+  { src: sql, label: "SQL" },
+  { src: postgres, label: "PostgreSQL" },
+  { src: mongodb, label: "MongoDB" },
+  { src: supabase, label: "Supabase" },
 ];
 const tools = [
-  { src: git, label: 'Git' },
-  { src: github, label: 'GitHub' },
-  { src: visual, label: 'VS Code' },
-  { src: postman, label: 'Postman' },
-  { src: vercel, label: 'Vercel' },
+  { src: git, label: "Git" },
+  { src: github, label: "GitHub" },
+  { src: vscode, label: "VS Code" },
+  { src: postman, label: "Postman" },
+  { src: vercel, label: "Vercel" },
+  { src: restapi, label: "REST API" },
+  { src: googleAnalytics, label: "Google Analytics" },
+  { src: googleSearch, label: "Google Search Console" },
+  { src: bingSearch, label: "Bing Webmaster Tools" },
+  { src: cpanel, label: "cPanel" },
 ];
 const SkillCard = ({ src, label, theme }) => (
   <motion.div
-    className={`${styles.skillCard} ${theme === 'dark' ? styles.cardDark : styles.cardLight}`}
+    className={`${styles.skillCard} ${
+      theme === "dark" ? styles.cardDark : styles.cardLight
+    }`}
     whileHover={{ y: -8, transition: { duration: 0.2 } }}
     whileTap={{ scale: 0.95 }}
   >
@@ -52,10 +71,14 @@ const SkillCard = ({ src, label, theme }) => (
           alt={`${label} logo`}
           width={50}
           height={50}
-          style={{ objectFit: 'contain' }}
+          style={{ objectFit: "contain" }}
         />
       </div>
-      <p className={`${styles.skillName} ${theme === 'dark' ? styles.textLight : styles.textDark}`}>
+      <p
+        className={`${styles.skillName} ${
+          theme === "dark" ? styles.textLight : styles.textDark
+        }`}
+      >
         {label}
       </p>
     </div>
@@ -67,7 +90,9 @@ const About = () => {
   return (
     <section
       id="skills"
-      className={`${styles.about} ${theme === 'dark' ? styles.bgDark : styles.bgLight}`}
+      className={`${styles.about} ${
+        theme === "dark" ? styles.bgDark : styles.bgLight
+      }`}
     >
       <div className={styles.aboutContainer}>
         <div className={styles.aboutBackground}>
@@ -78,26 +103,30 @@ const About = () => {
         </div>
         <motion.div
           className={styles.sTitle}
-          variants={fadeIn('down', 0.2)}
+          variants={fadeIn("down", 0.2)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.7 }}
         >
-          <h2 className={`${styles.skillsTitle} ${theme === 'dark' ? styles.tDark : styles.tLight}`}>
+          <h2
+            className={`${styles.skillsTitle} ${
+              theme === "dark" ? styles.tDark : styles.tLight
+            }`}
+          >
             Skills & Tools
           </h2>
         </motion.div>
         <div className={styles.aboutSection}>
           <motion.div
             className={styles.aboutGroup}
-            variants={fadeIn('right', 0.3)}
+            variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.7 }}
           >
             <motion.div
               className={styles.gridContainer}
-              variants={fadeIn('up', 0.4)}
+              variants={fadeIn("up", 0.4)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.7 }}
@@ -109,15 +138,14 @@ const About = () => {
           </motion.div>
           <motion.div
             className={styles.aboutGroup}
-            variants={fadeIn('left', 0.3)}
+            variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.7 }}
           >
-            
             <motion.div
               className={styles.gridContainer}
-              variants={fadeIn('up', 0.4)}
+              variants={fadeIn("up", 0.4)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.7 }}

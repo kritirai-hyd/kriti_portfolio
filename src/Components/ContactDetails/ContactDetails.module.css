@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;background: linear-gradient(135deg, #f5f7fa 0%, #9ac1ff 100%);
 }
 .contactBreadcrumb::before {
   content: '';

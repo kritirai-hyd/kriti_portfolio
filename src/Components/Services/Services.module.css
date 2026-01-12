@@ -72,8 +72,9 @@
   overflow: hidden;
 }
 .des {
-  color: inherit;
+  color: #00152a;
   opacity: 0.85;
+  font-weight: 700;
 }
 
 .servicesBtn {
