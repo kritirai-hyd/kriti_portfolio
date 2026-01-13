@@ -1,3 +1,4 @@
+/* ===================== GENERAL ===================== */
 .about {
   position: relative;
   padding: 6rem 1.5rem;
@@ -6,12 +7,8 @@
   box-sizing: border-box;
 }
 
-.bgLight {
-  background-color: #f9faff;
-}
-.bgDark {
-  background-color: #1a1a3a;
-}
+.bgLight { background-color: #f9faff; }
+.bgDark { background-color: #1a1a3a; }
 
 .tLight {
   font-size: 3rem;
@@ -40,6 +37,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .aboutBackground {
   position: absolute;
   top: 0;
@@ -59,20 +57,23 @@
   animation: float 18s ease-in-out infinite;
 }
 
-/* Background Shapes */
+/* ===================== BACKGROUND SHAPES ===================== */
 .shape1 { width: 300px; height: 300px; top: 10%; left: 5%; background: linear-gradient(135deg, #3e70ec, #79b8ff); }
 .shape2 { width: 400px; height: 400px; bottom: 10%; right: 5%; background: linear-gradient(135deg, #2a1454, #3e70ec); }
 .shape3 { width: 250px; height: 250px; top: 50%; left: 70%; background: linear-gradient(135deg, #79b8ff, #2a1454); }
 .shape4 { width: 200px; height: 200px; bottom: 30%; left: 10%; background: linear-gradient(135deg, #3e70ec, #2a1454); }
 
+/* ===================== FLOAT ANIMATION ===================== */
 @keyframes float {
   0%, 100% { transform: translate(0,0) scale(1); }
   33% { transform: translate(12px, -18px) scale(1.05); }
   66% { transform: translate(-8px, 12px) scale(0.95); }
 }
 
+/* ===================== SECTION TITLES ===================== */
 .sTitle { text-align: center; margin-bottom: 4rem; width: 100%; }
 
+/* ===================== ABOUT GROUP ===================== */
 .aboutSection { display: flex; gap: 4rem; width: 100%; }
 .aboutGroup { display: flex; flex-direction: column; align-items: center; width: 100%; }
 
@@ -80,6 +81,7 @@
 .groupTitle { font-size: 1.8rem; font-weight: 700; margin: 0 0 8px 0; }
 .groupUnderline { height: 3px; width: 50px; background: linear-gradient(90deg, #3e70ec, #79b8ff); margin: 0 auto; border-radius: 2px; }
 
+/* ===================== SKILLS GRID ===================== */
 .gridContainer { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 1.2rem; width: 100%; max-width: 600px; }
 
 .skillCard {
@@ -117,7 +119,32 @@
 .textLight { color: #f0f0f0; }
 .textDark { color: #2a2a2a; }
 
-
+/* ===================== RESPONSIVE ===================== */
 @media (max-width: 992px) { .aboutSection { flex-direction: column; gap: 3rem; } }
-@media (max-width: 768px) { .gridContainer { max-width: 100%; } }
-@media (max-width: 576px) { .skillCard { min-height: 90px; padding: 0.8rem 0.5rem; } }
+
+@media (max-width: 768px) {
+  .gridContainer { max-width: 100%; }
+  
+  /* Scale down shapes */
+  .shape1 { width: 150px; height: 150px; top: 5%; left: 2%; }
+  .shape2 { width: 200px; height: 200px; bottom: 5%; right: 2%; }
+  .shape3 { width: 120px; height: 120px; top: 40%; left: 60%; }
+  .shape4 { width: 100px; height: 100px; bottom: 20%; left: 5%; }
+
+  /* Float animation smaller movement */
+  @keyframes float {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(6px, -9px) scale(1.03); }
+    66% { transform: translate(-4px, 6px) scale(0.97); }
+  }
+}
+
+@media (max-width: 576px) {
+  .skillCard { min-height: 90px; padding: 0.8rem 0.5rem; }
+  
+  /* Reduce blur & opacity for mobile */
+  .bgShape { filter: blur(20px); opacity: 0.05; }
+
+  /* Optional: static shapes on very small screens */
+  @media (max-width: 480px) { .bgShape { animation: none; } }
+}
