@@ -1,8 +1,8 @@
 import Head from "next/head";
-import CertificateDetails from "@/Components/Certificate/CertificateDetails";
+import Gallery from "@/Components/Gallery/Gallery";
 
-export default function CertificatesPage() {
-
+export default function GalleryPage() {
+  // JSON-LD Structured Data
   const schemaData = [
     {
       "@context": "https://schema.org",
@@ -28,10 +28,10 @@ export default function CertificatesPage() {
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: "Certificates of Kriti Rai",
-      url: "https://www.kritirai.com/certificates",
+      name: "Gallery – Kriti Rai",
+      url: "https://www.kritirai.com/gallery",
       description:
-        "Professional certificates earned by Kriti Rai in full stack development, MERN stack, JavaScript, and modern web technologies.",
+        "Gallery showcasing projects, designs, certifications, and professional highlights by Kriti Rai, Full Stack Developer.",
     },
     {
       "@context": "https://schema.org",
@@ -46,8 +46,8 @@ export default function CertificatesPage() {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Certificates",
-          item: "https://www.kritirai.com/certificates",
+          name: "Gallery",
+          item: "https://www.kritirai.com/gallery",
         },
       ],
     },
@@ -57,30 +57,30 @@ export default function CertificatesPage() {
     <>
       <Head>
         {/* Primary SEO */}
-        <title>Certificates – Kriti Rai | Full Stack Developer</title>
+        <title>Gallery – Kriti Rai | Projects & Creative Work</title>
         <meta
           name="description"
-          content="View professional certificates earned by Kriti Rai, a Full Stack Developer specializing in MERN stack, React, Next.js, and modern web development."
+          content="Explore the gallery of Kriti Rai featuring projects, UI designs, certificates, and professional work as a Full Stack Developer."
         />
         <meta
           name="keywords"
-          content="Kriti Rai certificates, Full stack developer certifications, MERN stack certificates, React certification, Next.js certification"
+          content="Kriti Rai gallery, web developer projects, full stack portfolio, MERN stack projects, React gallery"
         />
         <meta name="author" content="Kriti Rai" />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://www.kritirai.com/certificates" />
+        <link rel="canonical" href="https://www.kritirai.com/gallery" />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="Gallery – Kriti Rai | Projects & Creative Work"
         />
         <meta
           property="og:description"
-          content="Explore verified certificates and professional achievements of Kriti Rai in web development and MERN stack."
+          content="Browse projects, designs, and professional highlights from Kriti Rai’s development journey."
         />
-        <meta property="og:url" content="https://www.kritirai.com/certificates" />
+        <meta property="og:url" content="https://www.kritirai.com/gallery" />
         <meta property="og:site_name" content="Kriti Rai" />
         <meta property="og:type" content="website" />
         <meta
@@ -93,11 +93,11 @@ export default function CertificatesPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="Gallery – Kriti Rai | Projects & Creative Work"
         />
         <meta
           name="twitter:description"
-          content="Professional certifications earned by Kriti Rai in MERN stack, React, and modern web technologies."
+          content="Projects, designs, certificates, and creative work by Full Stack Developer Kriti Rai."
         />
         <meta
           name="twitter:image"
@@ -114,7 +114,7 @@ export default function CertificatesPage() {
         />
       </Head>
 
-      <CertificateDetails />
+      <Gallery />
     </>
   );
 }

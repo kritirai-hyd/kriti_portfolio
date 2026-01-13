@@ -23,12 +23,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ Close menu on route change
+
   useEffect(() => {
     setIsActive(false);
   }, [pathname]);
 
-  // ✅ Close menu on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -60,7 +59,7 @@ export default function Header() {
 
       <nav className={clsx(styles.nav, isActive && styles.open)} ref={navRef}>
         <ul className={styles["nav-list"]}>
-          {["about", "services", "projects", "contact", "blog"].map((page) => (
+          {["about", "services", "projects", "contact", "blog", "gallery"].map((page) => (
             <li
               key={page}
               className={clsx(

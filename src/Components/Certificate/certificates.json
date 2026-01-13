@@ -35,13 +35,21 @@
   }
   ,
   {
-   "id": 3,
+   "id": 5,
    "image": "c-sql.png",
    "title": "SQL and Relational Databases",
    "org": "Cognitive Class",
    "date": "Issued: Jan 28 2025",
    "credential": "sql-and-relational-databases-cognitive-class"
   }
- 
+   ,
+  {
+   "id": 6,
+   "image": "c-sharp.png",
+   "title": "Foundational c sharp with Microsoft",
+   "org": "freeCodeCamp",
+   "date": "Issued: Dec 15 2024",
+   "credential": "foundational-c-sharp-with-microsoft"
+  }
 
 ]

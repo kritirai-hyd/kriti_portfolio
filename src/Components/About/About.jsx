@@ -4,6 +4,8 @@ import { useTheme } from "../../context/ThemeContext";
 import Image from "next/image";
 import styles from "./About.module.css";
 import { fadeIn } from "../variants";
+
+// Skills & Tools Assets
 import html from "../../assets/svg/html.svg";
 import css from "../../assets/svg/css.svg";
 import js from "../../assets/svg/js.svg";
@@ -28,6 +30,8 @@ import googleAnalytics from "../../assets/svg/google-analytics.png";
 import googleSearch from "../../assets/svg/google-console-search.png";
 import bingSearch from "../../assets/svg/bing-search.png";
 import cpanel from "../../assets/svg/cpanel.png";
+
+// Skills and Tools arrays
 const skills = [
   { src: html, label: "HTML" },
   { src: css, label: "CSS" },
@@ -44,6 +48,7 @@ const skills = [
   { src: mongodb, label: "MongoDB" },
   { src: supabase, label: "Supabase" },
 ];
+
 const tools = [
   { src: git, label: "Git" },
   { src: github, label: "GitHub" },
@@ -56,6 +61,8 @@ const tools = [
   { src: bingSearch, label: "Bing Webmaster Tools" },
   { src: cpanel, label: "cPanel" },
 ];
+
+// Individual Skill/Tool Card
 const SkillCard = ({ src, label, theme }) => (
   <motion.div
     className={`${styles.skillCard} ${
@@ -66,34 +73,25 @@ const SkillCard = ({ src, label, theme }) => (
   >
     <div className={styles.cardInner}>
       <div className={styles.skillIcon}>
-        <Image
-          src={src}
-          alt={`${label} logo`}
-          width={50}
-          height={50}
-          style={{ objectFit: "contain" }}
-        />
+        <Image src={src} alt={`${label} logo`} width={50} height={50} style={{ objectFit: "contain" }} />
       </div>
-      <p
-        className={`${styles.skillName} ${
-          theme === "dark" ? styles.textLight : styles.textDark
-        }`}
-      >
+      <p className={`${styles.skillName} ${theme === "dark" ? styles.textLight : styles.textDark}`}>
         {label}
       </p>
     </div>
     <div className={styles.cardGlow}></div>
   </motion.div>
 );
+
 const About = () => {
   const { theme } = useTheme();
+
   return (
     <section
       id="skills"
-      className={`${styles.about} ${
-        theme === "dark" ? styles.bgDark : styles.bgLight
-      }`}
+      className={`${styles.about} ${theme === "dark" ? styles.bgDark : styles.bgLight}`}
     >
+      {/* Animated Background Shapes */}
       <div className={styles.aboutContainer}>
         <div className={styles.aboutBackground}>
           <div className={`${styles.bgShape} ${styles.shape1}`}></div>
@@ -101,6 +99,8 @@ const About = () => {
           <div className={`${styles.bgShape} ${styles.shape3}`}></div>
           <div className={`${styles.bgShape} ${styles.shape4}`}></div>
         </div>
+
+        {/* Section Title */}
         <motion.div
           className={styles.sTitle}
           variants={fadeIn("down", 0.2)}
@@ -108,14 +108,10 @@ const About = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.7 }}
         >
-          <h2
-            className={`${styles.skillsTitle} ${
-              theme === "dark" ? styles.tDark : styles.tLight
-            }`}
-          >
-            Skills & Tools
-          </h2>
+          <h2 className={theme === "dark" ? styles.tDark : styles.tLight}>My Skills & Tools</h2>
         </motion.div>
+
+        {/* Skills */}
         <div className={styles.aboutSection}>
           <motion.div
             className={styles.aboutGroup}
@@ -124,18 +120,18 @@ const About = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.7 }}
           >
-            <motion.div
-              className={styles.gridContainer}
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.7 }}
-            >
+            <div className={styles.groupHeader}>
+              <h3 className={styles.groupTitle}>Skills</h3>
+              <div className={styles.groupUnderline}></div>
+            </div>
+            <div className={styles.gridContainer}>
               {skills.map((skill, index) => (
                 <SkillCard key={index} {...skill} theme={theme} />
               ))}
-            </motion.div>
+            </div>
           </motion.div>
+
+          {/* Tools */}
           <motion.div
             className={styles.aboutGroup}
             variants={fadeIn("left", 0.3)}
@@ -143,21 +139,20 @@ const About = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.7 }}
           >
-            <motion.div
-              className={styles.gridContainer}
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.7 }}
-            >
+            <div className={styles.groupHeader}>
+              <h3 className={styles.groupTitle}>Tools</h3>
+              <div className={styles.groupUnderline}></div>
+            </div>
+            <div className={styles.gridContainer}>
               {tools.map((tool, index) => (
                 <SkillCard key={index} {...tool} theme={theme} />
               ))}
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
     </section>
   );
 };
+
 export default About;

@@ -90,55 +90,59 @@ const Contact = () => {
                 <form onSubmit={onSubmit} className={styles["contact-form"]}>
                   <div className={styles["form-row"]}>
                     <div className={styles["input-group"]}>
+                       <label htmlFor="firstName" className={styles.inputLabel}>
+        First Name
+      </label>
                       <input
                         type="text"
                         name="firstName"
                         className={styles["form-input"]}
                         required
                       />
-                      <label className={styles["input-label"]} htmlFor="firstName">
-                        First name
-                      </label>
+                     
                     </div>
                     <div className={styles["input-group"]}>
+                       <label htmlFor="lastName" className={styles.inputLabel}>
+        Last Name
+      </label>
                       <input
                         type="text"
                         name="lastName"
                         className={styles["form-input"]}
                         required
                       />
-                      <label className={styles["input-label"]} htmlFor="lastName">Last name</label>
-                    </div>
+                     </div>
                   </div>
 
                   <div className={styles["input-group"]}>
+                     <label htmlFor="email" className={styles.inputLabel}>
+      Email Address
+    </label>
                     <input
                       type="email"
                       name="email"
                       className={styles["form-input"]}
                       required
                     />
-                    <label className={styles["input-label"]} htmlFor="email">
-                      Email address
-                    </label>
+                   
                   </div>
 
                   <div className={styles["input-group"]}>
+                     <label htmlFor="phone" className={styles.inputLabel}>
+      Phone Number
+    </label>
                     <input
                       type="text"
                       name="phone"
                       className={styles["form-input"]}
                     />
-                    <label className={styles["input-label"]} htmlFor="phone">
-                      Phone number (optional)
-                    </label>
+                   
                   </div>
 
                   <div className={styles["input-group"]}>
-                     <label className={styles["input-label"]} htmlFor="message">
-                    Message
-
-                    </label>
+                     <label htmlFor="message" className={styles.inputLabel}>
+      Message
+    </label>
                     <textarea
                       name="message"
                       rows={5}

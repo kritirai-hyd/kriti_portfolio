@@ -1,8 +1,8 @@
 import Head from "next/head";
-import CertificateDetails from "@/Components/Certificate/CertificateDetails";
+import SEOBasics from "@/Components/Blog/SEOBasics";
 
-export default function CertificatesPage() {
-
+export default function SEOBasicsPage() {
+  // JSON-LD Structured Data
   const schemaData = [
     {
       "@context": "https://schema.org",
@@ -27,11 +27,24 @@ export default function CertificatesPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      name: "Certificates of Kriti Rai",
-      url: "https://www.kritirai.com/certificates",
+      "@type": "BlogPosting",
+      headline: "SEO Basics – Complete Beginner Guide",
       description:
-        "Professional certificates earned by Kriti Rai in full stack development, MERN stack, JavaScript, and modern web technologies.",
+        "Learn SEO basics including on-page SEO, technical SEO, and best practices to improve website ranking on Google.",
+      author: {
+        "@type": "Person",
+        name: "Kriti Rai",
+      },
+      publisher: {
+        "@type": "Person",
+        name: "Kriti Rai",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://www.kritirai.com/blog/seo-basics",
+      },
+      datePublished: "2025-01-12",
+      dateModified: "2025-01-12",
     },
     {
       "@context": "https://schema.org",
@@ -46,8 +59,14 @@ export default function CertificatesPage() {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Certificates",
-          item: "https://www.kritirai.com/certificates",
+          name: "Blog",
+          item: "https://www.kritirai.com/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "SEO Basics",
+          item: "https://www.kritirai.com/blog/seo-basics",
         },
       ],
     },
@@ -57,35 +76,41 @@ export default function CertificatesPage() {
     <>
       <Head>
         {/* Primary SEO */}
-        <title>Certificates – Kriti Rai | Full Stack Developer</title>
+        <title>SEO Basics – Beginner Guide | Kriti Rai</title>
         <meta
           name="description"
-          content="View professional certificates earned by Kriti Rai, a Full Stack Developer specializing in MERN stack, React, Next.js, and modern web development."
+          content="SEO Basics explained for beginners. Learn on-page SEO, technical SEO, keywords, and best practices to rank higher on Google."
         />
         <meta
           name="keywords"
-          content="Kriti Rai certificates, Full stack developer certifications, MERN stack certificates, React certification, Next.js certification"
+          content="SEO basics, beginner SEO guide, on-page SEO, technical SEO, search engine optimization"
         />
         <meta name="author" content="Kriti Rai" />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://www.kritirai.com/certificates" />
+        <link
+          rel="canonical"
+          href="https://www.kritirai.com/blog/seo-basics"
+        />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="SEO Basics – Beginner Guide | Kriti Rai"
         />
         <meta
           property="og:description"
-          content="Explore verified certificates and professional achievements of Kriti Rai in web development and MERN stack."
+          content="A complete beginner-friendly guide to SEO fundamentals, written by Full Stack Developer Kriti Rai."
         />
-        <meta property="og:url" content="https://www.kritirai.com/certificates" />
+        <meta
+          property="og:url"
+          content="https://www.kritirai.com/blog/seo-basics"
+        />
         <meta property="og:site_name" content="Kriti Rai" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta
           property="og:image"
-          content="https://www.kritirai.com/assets/svg/kritirai.svg"
+          content="https://www.kritirai.com/assets/images/seo-basics.png"
         />
         <meta property="og:locale" content="en_IN" />
 
@@ -93,15 +118,15 @@ export default function CertificatesPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="SEO Basics – Beginner Guide | Kriti Rai"
         />
         <meta
           name="twitter:description"
-          content="Professional certifications earned by Kriti Rai in MERN stack, React, and modern web technologies."
+          content="Learn SEO basics with this beginner-friendly guide covering keywords, on-page SEO, and technical SEO."
         />
         <meta
           name="twitter:image"
-          content="https://www.kritirai.com/assets/images/kriitrai.png"
+          content="https://www.kritirai.com/assets/images/seo-basics.png"
         />
         <meta name="twitter:creator" content="@dev_kritirai" />
 
@@ -114,7 +139,7 @@ export default function CertificatesPage() {
         />
       </Head>
 
-      <CertificateDetails />
+      <SEOBasics />
     </>
   );
 }

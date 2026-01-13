@@ -152,7 +152,7 @@ background-color: #001e60;
   .nav {
     border-left: 1px solid var(--border-color);
     z-index: 1050;
-    background-color: #ffffffe6;
+    background-color:#d6e5f5fc;
     flex-direction: column;
     gap: 40px;
     width: 100%;
@@ -165,6 +165,14 @@ background-color: #001e60;
     transform: translateX(100%);
     text-align: center;
     justify-content: start;
+  }
+  .nav-list li:hover{
+    background-color: #ffffff47;
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 7px;
+         color: #00533b;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   }
   .header{
       padding: 1.2rem 0px;
@@ -267,7 +275,8 @@ background-color: #001e60;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .logo {
-    margin-top: 20px;
+        margin-top: 20px;
+        margin-left: -12px;
   }
   .nav-list {
     gap: 28px;
@@ -296,7 +305,7 @@ background-color: #001e60;
   .burger {
     width: 24px;
     height: 19px;
-            margin-right: -16px;
+            margin-right: -32px;
   }
 }
 @media (min-width: 1200px) {

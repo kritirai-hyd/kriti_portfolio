@@ -1,8 +1,8 @@
 import Head from "next/head";
-import CertificateDetails from "@/Components/Certificate/CertificateDetails";
+import PortfolioTutorial from "@/Components/Blog/Portfolio";
 
-export default function CertificatesPage() {
-
+export default function PortfolioTutorialPage() {
+  // JSON-LD Structured Data
   const schemaData = [
     {
       "@context": "https://schema.org",
@@ -27,11 +27,24 @@ export default function CertificatesPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      name: "Certificates of Kriti Rai",
-      url: "https://www.kritirai.com/certificates",
+      "@type": "BlogPosting",
+      headline: "How to Build a Developer Portfolio – Step-by-Step Guide",
       description:
-        "Professional certificates earned by Kriti Rai in full stack development, MERN stack, JavaScript, and modern web technologies.",
+        "Learn how to build a professional developer portfolio from scratch using modern web technologies like React and Next.js.",
+      author: {
+        "@type": "Person",
+        name: "Kriti Rai",
+      },
+      publisher: {
+        "@type": "Person",
+        name: "Kriti Rai",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://www.kritirai.com/blog/portfolio-tutorial",
+      },
+      datePublished: "2025-01-12",
+      dateModified: "2025-01-12",
     },
     {
       "@context": "https://schema.org",
@@ -46,8 +59,14 @@ export default function CertificatesPage() {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Certificates",
-          item: "https://www.kritirai.com/certificates",
+          name: "Blog",
+          item: "https://www.kritirai.com/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Portfolio Tutorial",
+          item: "https://www.kritirai.com/blog/portfolio-tutorial",
         },
       ],
     },
@@ -57,35 +76,41 @@ export default function CertificatesPage() {
     <>
       <Head>
         {/* Primary SEO */}
-        <title>Certificates – Kriti Rai | Full Stack Developer</title>
+        <title>How to Build a Developer Portfolio | Kriti Rai</title>
         <meta
           name="description"
-          content="View professional certificates earned by Kriti Rai, a Full Stack Developer specializing in MERN stack, React, Next.js, and modern web development."
+          content="Step-by-step tutorial on how to build a professional developer portfolio using React, Next.js, and modern web development practices."
         />
         <meta
           name="keywords"
-          content="Kriti Rai certificates, Full stack developer certifications, MERN stack certificates, React certification, Next.js certification"
+          content="developer portfolio tutorial, portfolio website, React portfolio, Next.js portfolio, web developer portfolio"
         />
         <meta name="author" content="Kriti Rai" />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://www.kritirai.com/certificates" />
+        <link
+          rel="canonical"
+          href="https://www.kritirai.com/blog/portfolio-tutorial"
+        />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="How to Build a Developer Portfolio | Kriti Rai"
         />
         <meta
           property="og:description"
-          content="Explore verified certificates and professional achievements of Kriti Rai in web development and MERN stack."
+          content="Learn how to create a developer portfolio that stands out and helps you get hired."
         />
-        <meta property="og:url" content="https://www.kritirai.com/certificates" />
+        <meta
+          property="og:url"
+          content="https://www.kritirai.com/blog/portfolio-tutorial"
+        />
         <meta property="og:site_name" content="Kriti Rai" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta
           property="og:image"
-          content="https://www.kritirai.com/assets/svg/kritirai.svg"
+          content="https://www.kritirai.com/assets/images/portfolio-tutorial.png"
         />
         <meta property="og:locale" content="en_IN" />
 
@@ -93,15 +118,15 @@ export default function CertificatesPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="How to Build a Developer Portfolio | Kriti Rai"
         />
         <meta
           name="twitter:description"
-          content="Professional certifications earned by Kriti Rai in MERN stack, React, and modern web technologies."
+          content="A complete guide to building a professional developer portfolio using modern web tools."
         />
         <meta
           name="twitter:image"
-          content="https://www.kritirai.com/assets/images/kriitrai.png"
+          content="https://www.kritirai.com/assets/images/portfolio-tutorial.png"
         />
         <meta name="twitter:creator" content="@dev_kritirai" />
 
@@ -114,7 +139,7 @@ export default function CertificatesPage() {
         />
       </Head>
 
-      <CertificateDetails />
+      <PortfolioTutorial />
     </>
   );
 }

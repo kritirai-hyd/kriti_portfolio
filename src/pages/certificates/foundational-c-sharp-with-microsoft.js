@@ -1,8 +1,8 @@
 import Head from "next/head";
-import CertificateDetails from "@/Components/Certificate/CertificateDetails";
+import { Foundational } from "@/Components/Certificate/Foundational";
 
-export default function CertificatesPage() {
-
+export default function FoundationalCertificatePage() {
+  // JSON-LD Structured Data
   const schemaData = [
     {
       "@context": "https://schema.org",
@@ -27,11 +27,16 @@ export default function CertificatesPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      name: "Certificates of Kriti Rai",
-      url: "https://www.kritirai.com/certificates",
+      "@type": "EducationalOccupationalCredential",
+      name: "Foundational Web Development Certificate",
       description:
-        "Professional certificates earned by Kriti Rai in full stack development, MERN stack, JavaScript, and modern web technologies.",
+        "Foundational certificate earned by Kriti Rai covering HTML, CSS, JavaScript, and core web development fundamentals.",
+      credentialCategory: "Certificate",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "freeCodeCamp",
+      },
+      url: "https://www.kritirai.com/certificates/foundational",
     },
     {
       "@context": "https://schema.org",
@@ -49,6 +54,12 @@ export default function CertificatesPage() {
           name: "Certificates",
           item: "https://www.kritirai.com/certificates",
         },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Foundational Certificate",
+          item: "https://www.kritirai.com/certificates/foundational",
+        },
       ],
     },
   ];
@@ -57,35 +68,41 @@ export default function CertificatesPage() {
     <>
       <Head>
         {/* Primary SEO */}
-        <title>Certificates – Kriti Rai | Full Stack Developer</title>
+        <title>Foundational Certificate – Kriti Rai | Web Development</title>
         <meta
           name="description"
-          content="View professional certificates earned by Kriti Rai, a Full Stack Developer specializing in MERN stack, React, Next.js, and modern web development."
+          content="View the Foundational Web Development certificate earned by Kriti Rai, covering HTML, CSS, JavaScript, and core programming concepts."
         />
         <meta
           name="keywords"
-          content="Kriti Rai certificates, Full stack developer certifications, MERN stack certificates, React certification, Next.js certification"
+          content="foundational certificate, web development certificate, HTML CSS JavaScript certificate, Kriti Rai certificates"
         />
         <meta name="author" content="Kriti Rai" />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://www.kritirai.com/certificates" />
+        <link
+          rel="canonical"
+          href="https://www.kritirai.com/certificates/foundational"
+        />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="Foundational Certificate – Kriti Rai"
         />
         <meta
           property="og:description"
-          content="Explore verified certificates and professional achievements of Kriti Rai in web development and MERN stack."
+          content="Foundational Web Development Certificate earned by Kriti Rai."
         />
-        <meta property="og:url" content="https://www.kritirai.com/certificates" />
+        <meta
+          property="og:url"
+          content="https://www.kritirai.com/certificates/foundational"
+        />
         <meta property="og:site_name" content="Kriti Rai" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://www.kritirai.com/assets/svg/kritirai.svg"
+          content="https://www.kritirai.com/assets/images/foundational-certificate.png"
         />
         <meta property="og:locale" content="en_IN" />
 
@@ -93,15 +110,15 @@ export default function CertificatesPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Certificates – Kriti Rai | Full Stack Developer"
+          content="Foundational Certificate – Kriti Rai"
         />
         <meta
           name="twitter:description"
-          content="Professional certifications earned by Kriti Rai in MERN stack, React, and modern web technologies."
+          content="Foundational Web Development Certificate earned by Kriti Rai."
         />
         <meta
           name="twitter:image"
-          content="https://www.kritirai.com/assets/images/kriitrai.png"
+          content="https://www.kritirai.com/assets/images/foundational-certificate.png"
         />
         <meta name="twitter:creator" content="@dev_kritirai" />
 
@@ -114,7 +131,7 @@ export default function CertificatesPage() {
         />
       </Head>
 
-      <CertificateDetails />
+      <Foundational />
     </>
   );
 }

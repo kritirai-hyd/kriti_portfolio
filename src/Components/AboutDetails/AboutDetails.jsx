@@ -8,7 +8,7 @@ import { useTheme } from "../../context/ThemeContext";
 
 import styles from './AboutDetails.module.css';
 
-import kriti from "../../assets/image/kriitrai.png";
+import kriti from "../../assets/image/kritirai-2.jpeg";
 import Certificate from '../Certificate/Certificate';
 import About from '../About/About';
 

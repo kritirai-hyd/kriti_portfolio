@@ -24,7 +24,7 @@ const Blog = () => {
             <div className={styles.cardContent}>
               <h3>{post.title}</h3>
               <p>{post.desc}</p>
-              <a href={post.link}>Read More</a>
+              <Link href={`/blog/${post.link}`}>Read More</Link>
             </div>
           </div>
         )})}

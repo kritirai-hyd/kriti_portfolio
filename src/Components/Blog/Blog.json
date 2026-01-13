@@ -4,83 +4,42 @@
     "desc": "Learn how to make your website look great on all devices using media queries and flexible layouts.",
     "img": "responsive-design.png",
     "alt": "Responsive Design Best Practices – Blog by Kriti Rai",
-    "link": "https://www.kritirai.com"
+    "link": "responsive-design-best-practices"
   },
   {
     "title": "CSS Grid vs Flexbox: When to Use What",
     "desc": "A beginner-friendly comparison of layout systems with real examples.",
     "img": "grid.png",
     "alt": "CSS Grid vs Flexbox Comparison – Frontend Blog by Kriti Rai",
-    "link": "https://www.kritirai.com"
+    "link": "when-to-use-what-css-grid-vs-flexbox"
   },
   {
     "title": "Build a Portfolio Website Using HTML, CSS, and JavaScript",
     "desc": "A step-by-step guide to creating your own portfolio to showcase your work.",
     "img": "portfolio.png",
     "alt": "How to Build a Portfolio Website – Tutorial by Kriti Rai",
-    "link": "https://www.kritirai.com"
+    "link": "build-a-portfolio-website"
   },
   {
     "title": "Top 5 VS Code Extensions for Frontend Developers",
     "desc": "Boost your productivity with the best tools for writing cleaner and faster code.",
-    "img": "responsive-design.png",
+    "img": "build-a-portfolio-website.png",
     "alt": "Top 5 VS Code Extensions for Frontend Developers – Kriti Rai Blog",
-    "link": "https://www.kritirai.com"
-  },
-  {
-    "title": "What is an API? How to Build a Simple REST API with Node.js",
-    "desc": "Explains APIs and guides you through building one with Express.js.",
-    "img": "responsive-design.png",
-    "alt": "Intro to REST API with Node.js – Web Development Guide by Kriti Rai",
-    "link": "https://www.kritirai.com"
-  },
-  {
-    "title": "MongoDB vs MySQL: Which One Should You Learn First?",
-    "desc": "A beginner’s guide to choosing the right database with pros and cons.",
-    "img": "responsive-design.png",
-    "alt": "MongoDB vs MySQL for Beginners – Database Comparison by Kriti Rai",
-    "link": "https://www.kritirai.com"
-  },
-  {
-    "title": "User Authentication with Node.js and JWT (Beginner-Friendly)",
-    "desc": "Learn how login systems work and how to build one securely.",
-    "img": "responsive-design.png",
-    "alt": "Node.js and JWT User Authentication Guide – Secure Login Tutorial",
-    "link": "https://www.kritirai.com"
+    "link": "top-5-vs-code-extensions-for-frontend-developers"
   },
   {
     "title": "Basic SEO for Developers: Title, Meta Tags & Alt Text",
     "desc": "Simple tips to make your website more search engine friendly.",
-    "img": "responsive-design.png",
+    "img": "seo-basics.png",
     "alt": "Basic SEO for Developers – Tips on Titles, Meta Tags, Alt Text",
-    "link": "https://www.kritirai.com"
+    "link": "basic-seo-for-developers-title-meta-tags-alt-text"
   },
-  {
-    "title": "What Are Core Web Vitals and Why Should Developers Care?",
-    "desc": "Google uses them for ranking—learn how to improve your scores.",
-    "img": "responsive-design.png",
-    "alt": "Understanding Core Web Vitals – SEO and Performance Guide",
-    "link": "https://www.kritirai.com"
-  },
-  {
-    "title": "Top 10 Easy LeetCode Problems Every Beginner Should Solve",
-    "desc": "A curated list with tips to start your DSA journey.",
-    "img": "responsive-design.png",
-    "alt": "Top 10 Beginner-Friendly LeetCode Problems – DSA Starter Guide",
-    "link": "https://www.kritirai.com"
-  },
-  {
-    "title": "How Solving DSA Helped Me Think Like a Developer",
-    "desc": "Personal experience-based blog to motivate beginners.",
-    "img": "responsive-design.png",
-    "alt": "Thinking Like a Developer Through DSA – Kriti Rai’s Journey",
-    "link": "https://www.kritirai.com"
-  },
+
   {
     "title": "Portfolio with SEO Optimization and Lighthouse 100 Score",
     "desc": "A blazing-fast, SEO-optimized portfolio crafted for maximum visibility and performance.",
-    "img": "responsive-design.png",
+    "img": "portfolio-with-seo-optimization-and-lighthouse-100-score.png",
     "alt": "SEO-Optimized Portfolio with Lighthouse 100 Score – Case Study",
-    "link": "https://www.kritirai.com"
+    "link": "portfolio-with-seo-optimization-and-lighthouse-100-score"
   }
 ]
