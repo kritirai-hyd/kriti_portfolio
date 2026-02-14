@@ -1,60 +1,14 @@
 
 .contact-section {
  padding: 5rem 1rem;
-<<<<<<< HEAD
 background: var(--page-bg);
-=======
- transition: all 0.3s ease;
-}
-.contact-page.dark-theme {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #e0e0e0;
-}
-
-.contact-page.dark-theme .breadcrumb-section {
-  background: linear-gradient(135deg, #2d445c 0%, #010241 100%);
-}
-
-.contact-page.dark-theme .breadcrumb-section h1 {
-  color: #ecf0f1;
-}
-
-.contact-page.dark-theme .breadcrumb-section p {
-  color: #bdc3c7;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 
 .contact-container {
  max-width: 1200px;
  margin: 0 auto;
 }
-<<<<<<< HEAD
 
-=======
-.tLight{
-  font-size:1.8rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3e70ec 0%, #2a1454 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
- .tDark{
-  font-size: 1.8rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #e7eeff 0%, #b1caff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .section-header {
  text-align: center;
  margin-bottom: 3rem;
@@ -97,7 +51,6 @@ background: var(--page-bg);
  }
 }
 
-<<<<<<< HEAD
 
 .contact-form-wrapper {
  border-radius: 16px;
@@ -105,14 +58,6 @@ background: var(--page-bg);
  box-shadow: var(--card-shadow);
  transition: all 0.3s ease;
  background:var(--card-bg);
-=======
-/* Contact Form */
-.contact-form-wrapper {
- border-radius: 16px;
- padding: 2.5rem;
- box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
- transition: all 0.3s ease;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 
 .form-header {
@@ -230,20 +175,7 @@ display: flex;
  overflow: hidden;
 }
 
-<<<<<<< HEAD
 
-=======
-.submit-btn::before {
- content: '';
- position: absolute;
- top: 0;
- left: -100%;
- width: 100%;
- height: 100%;
- background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
- transition: 0.5s;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 .submit-btn:hover::before {
  left: 100%;
@@ -258,18 +190,6 @@ display: flex;
  pointer-events: none;
 }
 
-<<<<<<< HEAD
-=======
-.spinner {
- width: 20px;
- height: 20px;
- border: 3px solid rgba(255, 255, 255, 0.3);
- border-radius: 50%;
- border-top-color: white;
- animation: spin 1s ease-in-out infinite;
-}
-
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 @keyframes spin {
  to { transform: rotate(360deg); }
 }
@@ -308,18 +228,11 @@ display: flex;
 .contact-info {
  border-radius: 16px;
  padding: 2.5rem;
-<<<<<<< HEAD
  box-shadow: var(--card-shadow);
  display: flex;
  flex-direction: column;
  height: 100%;
  background: var(--card-bg);
-=======
- box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
- display: flex;
- flex-direction: column;
- height: 100%;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 
 .info-title {
@@ -418,58 +331,6 @@ color: #fff;
  box-shadow: 0 5px 15px rgba(110, 142, 251, 0.3);
 }
 
-<<<<<<< HEAD
-=======
-/* Theme Styles */
-.light-theme {
- background: linear-gradient(135deg, #ffffff 0%, #b8d4ff 100%);
- color: #2d3748;
-}
-
-.light-theme .contact-form-wrapper,
-.light-theme .contact-info {
- background: white;
-}
-
-.light-theme .form-input {
- background: #ffffff;
- color: #1f2838;
-}
-
-.light-theme .form-input:focus {
- background: white;
-}
-
-.dark-theme {
- background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
- color: #e2e8f0;
-}
-
-.dark-theme .contact-form-wrapper,
-.dark-theme .contact-info {
- background: #2d3748;
-}
-
-.dark-theme .form-input {
-
- color: #e2e8f0;
- border-color: #4a5568;
-}
-
-.dark-theme .form-input:focus {
- background: #2d3748;
- border-color: #4c5c92;
-}
-
-.dark-theme .input-label {
- background: #2d3748;
-}
-
-.dark-theme .success-message h3 {
- color: #e2e8f0;
-}
-
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 @media (max-width: 480px) {
   .contact-section {
     padding: 2rem 1rem;

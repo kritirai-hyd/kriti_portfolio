@@ -1,21 +1,11 @@
-<<<<<<< HEAD
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-=======
-import React from "react";
-import { motion } from "framer-motion";
-import { useTheme } from "../../context/ThemeContext";
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import Image from "next/image";
 import styles from "./About.module.css";
 import { fadeIn } from "../variants";
 
-<<<<<<< HEAD
 /* Skills & Tools Assets */
-=======
-// Skills & Tools Assets
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import html from "../../assets/svg/html.svg";
 import css from "../../assets/svg/css.svg";
 import js from "../../assets/svg/js.svg";
@@ -40,14 +30,9 @@ import googleAnalytics from "../../assets/svg/google-analytics.png";
 import googleSearch from "../../assets/svg/google-console-search.png";
 import bingSearch from "../../assets/svg/bing-search.png";
 import cpanel from "../../assets/svg/cpanel.png";
-<<<<<<< HEAD
 import Heading from "../ui/Heading/Heading";
 
 /* Skills */
-=======
-
-// Skills and Tools arrays
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 const skills = [
   { src: html, label: "HTML" },
   { src: css, label: "CSS" },
@@ -65,10 +50,7 @@ const skills = [
   { src: supabase, label: "Supabase" },
 ];
 
-<<<<<<< HEAD
 /* Tools */
-=======
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 const tools = [
   { src: git, label: "Git" },
   { src: github, label: "GitHub" },
@@ -82,7 +64,6 @@ const tools = [
   { src: cpanel, label: "cPanel" },
 ];
 
-<<<<<<< HEAD
 /* Reusable Card */
 const SkillCard = ({ src, label }) => (
   <motion.div
@@ -100,31 +81,10 @@ const SkillCard = ({ src, label }) => (
       />
     </div>
     <p className={styles.skillName}>{label}</p>
-=======
-// Individual Skill/Tool Card
-const SkillCard = ({ src, label, theme }) => (
-  <motion.div
-    className={`${styles.skillCard} ${
-      theme === "dark" ? styles.cardDark : styles.cardLight
-    }`}
-    whileHover={{ y: -8, transition: { duration: 0.2 } }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <div className={styles.cardInner}>
-      <div className={styles.skillIcon}>
-        <Image src={src} alt={`${label} logo`} width={50} height={50} style={{ objectFit: "contain" }} />
-      </div>
-      <p className={`${styles.skillName} ${theme === "dark" ? styles.textLight : styles.textDark}`}>
-        {label}
-      </p>
-    </div>
-    <div className={styles.cardGlow}></div>
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   </motion.div>
 );
 
 const About = () => {
-<<<<<<< HEAD
   return (
     <section id="skills" className={styles.about}>
       <div className={styles.aboutContainer}>
@@ -145,58 +105,12 @@ const About = () => {
             <div className={styles.gridContainer}>
               {skills.map((skill, i) => (
                 <SkillCard key={i} {...skill} />
-=======
-  const { theme } = useTheme();
-
-  return (
-    <section
-      id="skills"
-      className={`${styles.about} ${theme === "dark" ? styles.bgDark : styles.bgLight}`}
-    >
-      {/* Animated Background Shapes */}
-      <div className={styles.aboutContainer}>
-        <div className={styles.aboutBackground}>
-          <div className={`${styles.bgShape} ${styles.shape1}`}></div>
-          <div className={`${styles.bgShape} ${styles.shape2}`}></div>
-          <div className={`${styles.bgShape} ${styles.shape3}`}></div>
-          <div className={`${styles.bgShape} ${styles.shape4}`}></div>
-        </div>
-
-        {/* Section Title */}
-        <motion.div
-          className={styles.sTitle}
-          variants={fadeIn("down", 0.2)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.7 }}
-        >
-          <h2 className={theme === "dark" ? styles.tDark : styles.tLight}>My Skills & Tools</h2>
-        </motion.div>
-
-        {/* Skills */}
-        <div className={styles.aboutSection}>
-          <motion.div
-            className={styles.aboutGroup}
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.7 }}
-          >
-            <div className={styles.groupHeader}>
-              <h3 className={styles.groupTitle}>Skills</h3>
-              <div className={styles.groupUnderline}></div>
-            </div>
-            <div className={styles.gridContainer}>
-              {skills.map((skill, index) => (
-                <SkillCard key={index} {...skill} theme={theme} />
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
               ))}
             </div>
           </motion.div>
 
           {/* Tools */}
           <motion.div
-<<<<<<< HEAD
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView="show"
@@ -211,24 +125,6 @@ const About = () => {
             </div>
           </motion.div>
 
-=======
-            className={styles.aboutGroup}
-            variants={fadeIn("left", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.7 }}
-          >
-            <div className={styles.groupHeader}>
-              <h3 className={styles.groupTitle}>Tools</h3>
-              <div className={styles.groupUnderline}></div>
-            </div>
-            <div className={styles.gridContainer}>
-              {tools.map((tool, index) => (
-                <SkillCard key={index} {...tool} theme={theme} />
-              ))}
-            </div>
-          </motion.div>
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
         </div>
       </div>
     </section>

@@ -7,53 +7,16 @@
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-<<<<<<< HEAD
   
 }
 .bg{
 background:var(--page-bg);
-=======
-}
- .tLight{
-  font-size: 2.8rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #3e70ec 0%, #2a1454 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
-}
- .tDark{
-  font-size: 2.8rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #e7eeff 0%, #b1caff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 .projects {
   padding: 60px 0;
 
 }
 
-<<<<<<< HEAD
-=======
-.bgDark {
-  background: linear-gradient(135deg, #25326b 0%, #000e24 100%);
-  color: #f0f0f0;
-}
-
-.bgLight {
-  background-color: #ffffff;
-  color: #333;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 /* Title Section */
 .sTitle {
@@ -164,11 +127,7 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-<<<<<<< HEAD
   background:#5a78ff;
-=======
-  background: linear-gradient(135deg, #354475,  #044fb0);
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   color: white;
   text-decoration: none;
   border-radius: 50px;

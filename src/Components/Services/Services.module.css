@@ -1,24 +1,10 @@
 
 .services {
   padding: 6rem 2rem;
-<<<<<<< HEAD
    background: var(--s-card);
   transition: all 0.3s ease;
 }
 
-=======
-  transition: all 0.3s ease;
-}
-
-.bgLDark {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #f8fafc;
-}
-.servicesLight {
-  background: linear-gradient(135deg, #ffffff 0%, #b8d4ff 100%);
-  color: #0f172a;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 .sTitle {
   text-align: center;
@@ -39,32 +25,17 @@
 }
 
 .servicesCard {
-<<<<<<< HEAD
   background: var(--card-bg);
-=======
-  background: rgba(255, 255, 255, 0.8);
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   border-radius: 16px;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-bg);
 }
 
-=======
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
-  transition: all 0.3s ease;
-}
-.darkTheme .servicesCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #f8fafc;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .servicesCard:hover {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 15px 30px;
 }
@@ -78,11 +49,7 @@
 .title h3 {
   font-size: 1.2rem;
   font-weight: 900;
-<<<<<<< HEAD
   color: var(--text-color);
-=======
-  color: #002364;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 
 .desc {
@@ -94,15 +61,9 @@
   overflow: hidden;
 }
 .des {
-<<<<<<< HEAD
   color: var(--text-color);
   opacity: 0.85;
   font-weight: 500;
-=======
-  color: #00152a;
-  opacity: 0.85;
-  font-weight: 700;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 
 .servicesBtn {

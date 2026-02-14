@@ -1,56 +1,10 @@
 .aboutPage {
   min-height: 100vh;
-<<<<<<< HEAD
 background: var(--page-bg);
 
   line-height: 1.6;
 }
 
-=======
-  transition: all 0.3s ease;
-
-  line-height: 1.6;
-}
-.lightTheme {
-  background-color: #f8f9fa;
-  color: #333;
-}
-.lightTheme .breadcrumbSection {
-  background: linear-gradient(135deg, #f5f7fa 0%, #9ac1ff 100%);
-}
-.lightTheme .breadcrumbSection h1 {
-  color: #2c3e50;
-}
-.lightTheme .breadcrumbSection p {
-  color: #000;
-}
-.darkTheme {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #e0e0e0;
-}
-.darkTheme .breadcrumbSection {
-  background: linear-gradient(135deg, #2d445c 0%, #010241 100%);
-}
-.darkTheme .breadcrumbSection h1 {
-  color: #ecf0f1;
-}
-.darkTheme .breadcrumbSection p {
-  color: #bdc3c7;
-}
-.breadcrumbSection {
-  padding: 100px 0 60px;
-  text-align: center;
-}
-.breadcrumbSection h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-.breadcrumbSection p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .aboutSection {
   padding: 80px 0;
 }
@@ -97,20 +51,7 @@ background: var(--page-bg);
   position: relative;
   display: inline-block;
 }
-<<<<<<< HEAD
 
-=======
-.aboutContent h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: #2b6dff;
-  border-radius: 2px;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .aboutText p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
@@ -125,45 +66,16 @@ background: var(--page-bg);
     flex-direction: column;
     text-align: center;
   }
-<<<<<<< HEAD
 
 }
 @media (max-width: 768px) {
  
-=======
-  .aboutContent h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-@media (max-width: 768px) {
-  .breadcrumbSection {
-    padding: 80px 0 40px;
-  }
-  .breadcrumbSection h1 {
-    font-size: 2rem;
-  }
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   .aboutSection {
     padding: 60px 0;
   }
 }
 @media (max-width: 576px) {
-<<<<<<< HEAD
 
-=======
-  .breadcrumbSection {
-    padding: 60px 15px 30px;
-  }
-  .breadcrumbSection h1 {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-  .breadcrumbSection p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   .aboutSection {
     padding: 40px 15px;
   }
@@ -209,13 +121,7 @@ background: var(--page-bg);
   }
 }
 @media (max-width: 400px) {
-<<<<<<< HEAD
 
-=======
-  .breadcrumbSection {
-    padding: 50px 10px 20px;
-  }
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   .aboutSection {
     padding: 30px 10px;
   }

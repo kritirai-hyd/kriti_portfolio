@@ -3,21 +3,14 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Certificate.module.css";
 import Link from "next/link";
-<<<<<<< HEAD
 import { useTheme } from "../context/ThemeContext";
 import Btn from "../ui/Btn/Btn";
 import certificates from "./certificates.json";
 import BreadCrumb from "../ui/BreadCrumb/BreadCrumb";
-=======
-import { useTheme } from "../../context/ThemeContext";
-import Btn from "../ui/Btn/Btn";
-import certificates from "./certificates.json";
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 const CertificateDetails = () => {
   const { theme } = useTheme();
 
   return (
-<<<<<<< HEAD
     <>    <BreadCrumb
   title="Certificates"
   path={[
@@ -25,19 +18,14 @@ const CertificateDetails = () => {
     { name: "Certificates" }
   ]}
 />
-=======
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
     <section
       className={`${styles["certificate-section"]} ${
         theme === "dark" ? styles["dark-theme"] : styles["light-theme"]
       }`}
       id="certificates"
     >
-<<<<<<< HEAD
  
 
-=======
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       <div className={styles.container}>
         <div className={styles["section-header"]}>
           <h2
@@ -64,11 +52,7 @@ const CertificateDetails = () => {
                       height={400}
                     />
                     <div className={styles["certificate-overlay"]}>
-<<<<<<< HEAD
                       <Link href={`${c.credential}`}>
-=======
-                      <Link href={`/certificates/${c.credential}`}>
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
                         {" "}
                         <button className={styles["view-button"]}>
                           View Certificate
@@ -112,11 +96,7 @@ const CertificateDetails = () => {
           })}
         </div>
       </div>
-<<<<<<< HEAD
     </section></>
-=======
-    </section>
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   );
 };
 

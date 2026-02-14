@@ -2,11 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Badges.module.css";
-<<<<<<< HEAD
 import { useTheme } from "../context/ThemeContext";
-=======
-import { useTheme } from "../../context/ThemeContext";
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import Heading from "../../Components/ui/Heading/Heading";
 import works from "./Badges.json";
 import Link from "next/link";

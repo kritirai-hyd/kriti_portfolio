@@ -1,6 +1,5 @@
 .servicesPage {
   min-height: 100vh;
-<<<<<<< HEAD
 background: var(--page-bg);
 }
 .services {
@@ -8,55 +7,6 @@ background: var(--page-bg);
 
 }
 
-=======
-  transition: all 0.3s ease;
-}
-.lightTheme {
-  background-color: #f6f6f6;
-  color: #333;
-}
-.lightTheme .breadcrumb {
-  background: linear-gradient(135deg, #f5f7fa 0%, #b0ceff 100%);
-}
-.darkTheme {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-.darkTheme .breadcrumb {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-}
-.breadcrumb {
-  padding: 100px 0 60px;
-  text-align: center;
-}
-.breadcrumb h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-.breadcrumbText {
-  font-size: 1.1rem;
-}
-.breadcrumbText a {
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-.breadcrumbText a:hover {
-  color: #e74c3c;
-}
-.services {
-  padding: 6rem 2rem;
-  transition: all 0.3s ease;
-}
-.bgLDark {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #f8fafc;
-}
-.servicesLight {
-  background: linear-gradient(135deg, #ffffff 0%, #b8d4ff 100%);
-  color: #0f172a;
-}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .serviceContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -65,29 +15,15 @@ background: var(--page-bg);
   margin: 0 auto;
 }
 .servicesCard {
-<<<<<<< HEAD
   background: var(--card-bg);
-=======
-  background: rgba(255, 255, 255, 0.8);
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   border-radius: 16px;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
   box-shadow:var(--card-shadow);
   border: 1px solid var(--card-bg);
-=======
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
-  transition: all 0.3s ease;
-}
-.darkTheme .servicesCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #f8fafc;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 .servicesCard:hover {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 15px 30px;
@@ -101,11 +37,7 @@ background: var(--page-bg);
 .title h3 {
   font-size: 1.2rem;
   font-weight: 900;
-<<<<<<< HEAD
 
-=======
-  color: #002364;
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 .desc {
   flex-grow: 1;
@@ -136,13 +68,7 @@ background: var(--page-bg);
   box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
 }
 @media (max-width: 768px) {
-<<<<<<< HEAD
 
-=======
-  .breadcrumb h1 {
-    font-size: 2rem;
-  }
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   .serviceContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -155,11 +81,5 @@ background: var(--page-bg);
   .services {
     padding: 3rem 1rem;
   }
-<<<<<<< HEAD
 
-=======
-  .breadcrumb h1 {
-    font-size: 1.8rem;
-  }
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }

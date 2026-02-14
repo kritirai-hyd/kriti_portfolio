@@ -4,22 +4,15 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import useLenis from '../hooks/useLenis';
-<<<<<<< HEAD
 import { useTheme } from "../context/ThemeContext";
-=======
-import { useTheme } from "../../context/ThemeContext";
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 import styles from './AboutDetails.module.css';
 
 import kriti from "../../assets/image/kritirai-2.jpeg";
 import Certificate from '../Certificate/Certificate';
 import About from '../About/About';
-<<<<<<< HEAD
 import BreadCrumb from '../ui/BreadCrumb/BreadCrumb';
 import Counter from '../Counter/Counter';
-=======
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 const AboutDetails = () => {
   useLenis();
@@ -27,7 +20,6 @@ const AboutDetails = () => {
 
   return (
     <div className={`${styles.aboutPage} ${theme === 'dark' ? styles.darkTheme : styles.lightTheme}`}>
-<<<<<<< HEAD
 <BreadCrumb
   title="Skills & Expertise"
   path={[
@@ -37,31 +29,6 @@ const AboutDetails = () => {
 />
 
 
-=======
-
-      <section className={styles.breadcrumbSection}>
-        <div className="container">
-          <motion.h1 
-            variants={fadeIn('up', 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            Skills & Expertise
-          </motion.h1>
-          <motion.p 
-            variants={fadeIn('up', 0.3)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            Home / Skills
-          </motion.p>
-        </div>
-      </section>
-
-      {/* About Section */}
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       <section className={styles.aboutSection}>
         <div className={`container ${styles.aboutContainer}`}>
           <motion.div 
@@ -114,11 +81,7 @@ const AboutDetails = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 <Counter />
-=======
-
->>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       <About />
       <Certificate />
     </div>
