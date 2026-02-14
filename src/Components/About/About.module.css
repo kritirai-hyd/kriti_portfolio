@@ -1,10 +1,14 @@
 /* ===================== GENERAL ===================== */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .about {
   position: relative;
   padding: 6rem 1.5rem;
   overflow: hidden;
   width: 100%;
+<<<<<<< HEAD
   background: var(--page-bg);
   color: var(--text-color);
 }
@@ -15,6 +19,27 @@
   font-size: 3rem;
   font-weight: 800;
   background: var(--gradient-primary);
+=======
+  box-sizing: border-box;
+}
+
+.bgLight { background-color: #f9faff; }
+.bgDark { background-color: #1a1a3a; }
+
+.tLight {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3e70ec, #2a1454);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  margin: 0;
+}
+.tDark {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #e7eeff, #b1caff);
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
@@ -26,6 +51,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
+<<<<<<< HEAD
 }
 
 /* ===================== BACKGROUND SHAPES ===================== */
@@ -33,6 +59,18 @@
 .aboutBackground {
   position: absolute;
   inset: 0;
+=======
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aboutBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
@@ -44,6 +82,7 @@
   opacity: 0.07;
   filter: blur(50px);
   animation: float 18s ease-in-out infinite;
+<<<<<<< HEAD
   background: var(--gradient-secondary);
 }
 
@@ -101,6 +140,36 @@
   width: 100%;
   max-width: 600px;
 }
+=======
+}
+
+/* ===================== BACKGROUND SHAPES ===================== */
+.shape1 { width: 300px; height: 300px; top: 10%; left: 5%; background: linear-gradient(135deg, #3e70ec, #79b8ff); }
+.shape2 { width: 400px; height: 400px; bottom: 10%; right: 5%; background: linear-gradient(135deg, #2a1454, #3e70ec); }
+.shape3 { width: 250px; height: 250px; top: 50%; left: 70%; background: linear-gradient(135deg, #79b8ff, #2a1454); }
+.shape4 { width: 200px; height: 200px; bottom: 30%; left: 10%; background: linear-gradient(135deg, #3e70ec, #2a1454); }
+
+/* ===================== FLOAT ANIMATION ===================== */
+@keyframes float {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(12px, -18px) scale(1.05); }
+  66% { transform: translate(-8px, 12px) scale(0.95); }
+}
+
+/* ===================== SECTION TITLES ===================== */
+.sTitle { text-align: center; margin-bottom: 4rem; width: 100%; }
+
+/* ===================== ABOUT GROUP ===================== */
+.aboutSection { display: flex; gap: 4rem; width: 100%; }
+.aboutGroup { display: flex; flex-direction: column; align-items: center; width: 100%; }
+
+.groupHeader { text-align: center; margin-bottom: 2rem; width: 100%; }
+.groupTitle { font-size: 1.8rem; font-weight: 700; margin: 0 0 8px 0; }
+.groupUnderline { height: 3px; width: 50px; background: linear-gradient(90deg, #3e70ec, #79b8ff); margin: 0 auto; border-radius: 2px; }
+
+/* ===================== SKILLS GRID ===================== */
+.gridContainer { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 1.2rem; width: 100%; max-width: 600px; }
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 .skillCard {
   position: relative;
@@ -109,11 +178,16 @@
   text-align: center;
   cursor: pointer;
   overflow: hidden;
+<<<<<<< HEAD
   transition: all 0.3s ease;
+=======
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   min-height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+<<<<<<< HEAD
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
   border: 1px solid var(--border-color);
@@ -182,4 +256,57 @@
     filter: blur(20px);
     opacity: 0.05;
   }
+=======
+}
+.skillCard:hover { transform: translateY(-5px); }
+
+.cardLight {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 6px 24px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.cardDark {
+  background: rgba(26,26,46,0.6);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.cardInner { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+.cardGlow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(62,112,236,0.15), rgba(121,184,255,0.07)); opacity: 0; transition: opacity 0.3s; border-radius: 16px; z-index: 1; }
+.skillCard:hover .cardGlow { opacity: 1; }
+
+.skillIcon { margin-bottom: 0.8rem; display: flex; justify-content: center; align-items: center; height: 60px; width: 100%; }
+.skillName { font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.2; }
+.textLight { color: #f0f0f0; }
+.textDark { color: #2a2a2a; }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 992px) { .aboutSection { flex-direction: column; gap: 3rem; } }
+
+@media (max-width: 768px) {
+  .gridContainer { max-width: 100%; }
+  
+  /* Scale down shapes */
+  .shape1 { width: 150px; height: 150px; top: 5%; left: 2%; }
+  .shape2 { width: 200px; height: 200px; bottom: 5%; right: 2%; }
+  .shape3 { width: 120px; height: 120px; top: 40%; left: 60%; }
+  .shape4 { width: 100px; height: 100px; bottom: 20%; left: 5%; }
+
+  /* Float animation smaller movement */
+  @keyframes float {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(6px, -9px) scale(1.03); }
+    66% { transform: translate(-4px, 6px) scale(0.97); }
+  }
+}
+
+@media (max-width: 576px) {
+  .skillCard { min-height: 90px; padding: 0.8rem 0.5rem; }
+  
+  /* Reduce blur & opacity for mobile */
+  .bgShape { filter: blur(20px); opacity: 0.05; }
+
+  /* Optional: static shapes on very small screens */
+  @media (max-width: 480px) { .bgShape { animation: none; } }
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .footer {
   width: 100%;
@@ -24,12 +25,35 @@
 }
 
 
+=======
+.footer {
+  padding: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.light {
+  background: #ffffff;
+  color: #333;
+}
+.dark {
+  background: #1e1e1e;
+  color: #ddd;
+}
+.content {
+  text-align: center;
+}
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .text {
   margin: 0;
   font-size: 0.9rem;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 @media screen and (min-width: 720px) {
   .text {
     font-size: 1rem;

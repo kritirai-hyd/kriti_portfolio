@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import Head from "next/head";
 import About from "@/Components/About/About";
 import Contact from "@/Components/Contact/Contact";
@@ -9,7 +14,10 @@ import Certificate from "@/Components/Certificate/Certificate";
 import useLenis from "@/Components/hooks/useLenis";
 import Counter from "@/Components/Counter/Counter";
 import Badges from "@/Components/Badges/Badges";
+<<<<<<< HEAD
 import Scroll from "@/Components/Scroll/Scroll";
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 export default function Home() {
   useLenis();
@@ -17,6 +25,7 @@ export default function Home() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         {/* Primary title for Google */}
         <title>Kriti Rai | Full Stack Developer in India</title>
 
@@ -36,22 +45,67 @@ export default function Home() {
         <meta property="og:site_name" content="Kriti Rai" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.kritirai.com/assets/images/kriitrai.png" />
+=======
+        <title>Kriti Rai | Full Stack Developer in India</title>
+        <meta
+          name="description"
+          content="Kriti Rai is a skilled full stack developer specializing in MERN stack, SEO-optimized web applications, responsive design, and scalable backend systems."
+        />
+        <meta
+          name="keywords"
+          content="Kriti Rai, Full stack developer India, MERN stack developer 2026, Kriti Rai portfolio, Web developer in Delhi, Web developer in Hyderabad, Hire full stack developer India, MERN stack projects, Kriti Rai web development services, JavaScript developer India, Responsive design developer, Full stack portfolio site, SEO optimized portfolio developer"
+        />
+        <meta name="author" content="Kriti Rai" />
+        <link rel="canonical" href="https://www.kritirai.com" />
+        <meta
+          property="og:title"
+          content="Kriti Rai | Full Stack Developer | MERN Portfolio 2026"
+        />
+        <meta
+          property="og:description"
+          content="Kriti Rai is a skilled full stack developer specializing in MERN stack, SEO-optimized web applications, responsive design, and scalable backend systems."
+        />
+        <meta property="og:url" content="https://www.kritirai.com" />
+        <meta property="og:site_name" content="Kriti Rai" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.kritirai.com/assets/images/kriitrai.png"
+        />
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
         <meta property="og:locale" content="en_IN" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+<<<<<<< HEAD
         <meta name="twitter:title" content="Kriti Rai | Full Stack Developer in India" />
         <meta name="twitter:description" content="See Kriti Rai’s MERN stack portfolio with performance-optimized projects and mobile-ready designs. Available for hire in India." />
         <meta name="twitter:image" content="https://www.kritirai.com/assets/images/kriitrai.png" />
         <meta name="twitter:creator" content="@dev_kritirai" />
 
         {/* JSON-LD: WebSite + Organization */}
+=======
+        <meta
+          name="twitter:title"
+          content="Kriti Rai | Full Stack Developer | MERN Portfolio 2026"
+        />
+        <meta
+          name="twitter:description"
+          content="See Kriti Rai’s MERN stack portfolio with performance-optimized projects, backend logic, and mobile-ready designs. Available for hire in India."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.kritirai.com/assets/images/kriitrai.png"
+        />
+        <meta name="twitter:creator" content="@dev_kritirai" />
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+<<<<<<< HEAD
               "url": "https://www.kritirai.com",
               "name": "Kriti Rai",
               "publisher": {
@@ -70,12 +124,28 @@ export default function Home() {
         />
 
         {/* Breadcrumb */}
+=======
+              url: "https://www.kritirai.com",
+              name: "Kriti Rai",
+              description:
+                "Explore Kriti Rai’s portfolio showcasing MERN stack projects, SEO-first development,  responsive web applications and scalable backend systems.",
+              publisher: {
+                "@type": "Organization",
+                name: "Kriti Rai",
+                logo: "https://www.kritirai.com/assets/svg/kritirai.svg",
+                url: "https://www.kritirai.com",
+              },
+            }),
+          }}
+        />
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
+<<<<<<< HEAD
               "itemListElement": [
                 {
                   "@type": "ListItem",
@@ -101,6 +171,31 @@ export default function Home() {
         />
 
         {/* FAQ Schema */}
+=======
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.kritirai.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "About",
+                  item: "https://www.kritirai.com/about",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Projects",
+                  item: "https://www.kritirai.com/projects",
+                },
+              ],
+            }),
+          }}
+        />
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,6 +205,7 @@ export default function Home() {
               mainEntity: [
                 {
                   "@type": "Question",
+<<<<<<< HEAD
                   "name": "What technologies does Kriti Rai use?",
                   "acceptedAnswer": {
                     "@type": "Answer",
@@ -129,12 +225,70 @@ export default function Home() {
           }}
         />
          <script
+=======
+                  name: "What technologies does Kriti Rai use?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Kriti Rai specializes in the MERN stack (MongoDB, Express, React, Node.js), along with modern frontend and backend technologies.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How can I hire Kriti Rai?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "You can contact Kriti Rai via the Contact page on her portfolio website or email directly to discuss your project requirements.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              name: "Full Stack Development services 2026",
+              startDate: "2026-08-01T10:00:00+05:30",
+              endDate: "2026-08-01T17:00:00+05:30",
+              url: "https://www.kritirai.com/workshops",
+              location: {
+                "@type": "Place",
+                name: "Online",
+                url: "https://www.kritirai.com",
+              },
+              description:
+                "Explore Kriti Rai’s portfolio showcasing MERN stack projects, SEO-first development,  responsive web applications and scalable backend systems.",
+              organizer: {
+                "@type": "Organization",
+                name: "Kriti Rai",
+                url: "https://www.kritirai.com",
+              },
+              eventStatus: "https://schema.org/EventScheduled",
+              offers: {
+                "@type": "Offer",
+                url: "https://www.kritirai.com/workshops",
+                price: "0",
+                priceCurrency: "INR",
+                availability: "https://schema.org/InStock",
+              },
+            }),
+          }}
+        />
+        <script
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Article",
+<<<<<<< HEAD
               headline: "Full Stack Developer in India | Kriti Rai",
+=======
+              headline: "Kriti Rai | Full Stack Developer Portfolio 2026",
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
               description:
                 "Explore Kriti Rai’s portfolio showcasing MERN stack projects, SEO-first development, responsive web applications and scalable backend systems.",
               image: "https://www.kritirai.com/assets/svg/kritirai.svg",
@@ -157,12 +311,47 @@ export default function Home() {
             }),
           }}
         />
+<<<<<<< HEAD
       </Head>
 
 
       <Hero />
 
 <Scroll />
+=======
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Kriti Rai",
+              url: "https://www.kritirai.com",
+              image: "https://www.kritirai.com/assets/svg/kritirai.svg",
+              sameAs: [
+                "https://www.linkedin.com/in/kritirai",
+                "https://github.com/kritirai",
+                "https://twitter.com/dev_kritirai",
+              ],
+              jobTitle: "Full Stack Developer",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Hyderabad",
+                addressRegion: "India",
+                addressCountry: "IN",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Professional",
+                email: "mailto:kritirai.hyd@gmail.com",
+              },
+            }),
+          }}
+        />
+      </Head>
+
+      <Hero />
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       <Counter />
       <About />
       <Services />
@@ -171,6 +360,12 @@ export default function Home() {
       <Badges />
       <Education />
       <Contact />
+<<<<<<< HEAD
     </>
   );
 }
+=======
+</>
+  );
+}
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0

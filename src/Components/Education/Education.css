@@ -6,9 +6,13 @@
   align-items: center;
   transition: all 0.3s ease;
 }
+<<<<<<< HEAD
 .bg{
   background: var(--page-bg);
 }
+=======
+
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 .education-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -39,7 +43,11 @@
   padding: 2rem 0;
   opacity: 0;
   transform: translateY(20px);
+<<<<<<< HEAD
 
+=======
+  transition: opacity 0.8s ease, transform 0.8s ease;
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 }
 
 .education-timeline.animate {

@@ -11,13 +11,17 @@ import g from '../../assets/image/kriitrai.png';
 import h from '../../assets/image/kritirai-9.jpeg';
 import i from '../../assets/image/kritirai-2.jpeg';
 import j from '../../assets/image/kriitrai.jpeg';
+<<<<<<< HEAD
 import BreadCrumb from '../ui/BreadCrumb/BreadCrumb';
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 const awardImages = [a, b, c, d, e, f];
 const portfolioImages = [g, h, i, j];
 
 export default function Gallery() {
   return (
+<<<<<<< HEAD
 <div className={styles.bg}>
 
   <BreadCrumb
@@ -25,6 +29,9 @@ export default function Gallery() {
         path={[{ name: "Home", link: "/" }, { name: "Gallery" }]}
       />
       <section className={styles.container}>
+=======
+    <section className={styles.container}>
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 
 
       <header className={styles.header}>
@@ -84,6 +91,9 @@ export default function Gallery() {
       </div>
 
     </section>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   );
 }

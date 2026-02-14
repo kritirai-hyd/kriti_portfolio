@@ -3,7 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Increment from './Increment';
 import { fadeIn } from "../variants";
+<<<<<<< HEAD
 import { useTheme } from '../context/ThemeContext';
+=======
+import { useTheme } from '../../context/ThemeContext';
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import styles from './Counter.module.css';
 
 const Counter = () => {

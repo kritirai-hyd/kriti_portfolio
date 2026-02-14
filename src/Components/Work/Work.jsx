@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Work.module.css";
+<<<<<<< HEAD
 import { useTheme } from '../context/ThemeContext';
+=======
+import { useTheme } from '../../context/ThemeContext';
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import Heading from "../ui/Heading/Heading";
 import works from "./Work.json";
 import Link from "next/link";
@@ -10,10 +14,18 @@ const Work = () => {
   const { theme } = useTheme();
   return (
     <>
+<<<<<<< HEAD
    <div className={styles.bg}>
        <div
         id="projects"
         className={styles.projects}
+=======
+      <div
+        id="projects"
+        className={`${styles.projects} ${
+          theme === "dark" ? styles.bgDark : styles.bgLight
+        }`}
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       >
         <Heading heading="My Projects" />
         <section className={styles.portfolioContainer}>
@@ -56,7 +68,10 @@ const Work = () => {
           })}
         </section>
       </div>
+<<<<<<< HEAD
    </div>
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
     </>
   );
 };

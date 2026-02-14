@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import "@/styles/globals.css";
 
@@ -6,10 +7,23 @@ import "../Components/Education/Education.css";
 
 
 import { ThemeProvider } from "../Components/context/ThemeContext";
+=======
+
+
+import React, { useEffect } from "react";
+import "@/styles/globals.css";
+
+
+import '../Components/Education/Education.css';
+import '../Components/Hero/Hero.css';
+
+import { ThemeProvider } from "../context/ThemeContext";
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
 
 export default function App({ Component, pageProps }) {
+<<<<<<< HEAD
   const defaultTitle = "Kriti Rai | Full Stack Developer in India";
   const defaultDescription =
     "Kriti Rai is a Full Stack Developer specializing in MERN stack, SEO-optimized web applications, responsive design, and scalable backend systems.";
@@ -90,6 +104,37 @@ export default function App({ Component, pageProps }) {
   </Head>;
   return (
     <ThemeProvider>
+=======
+  useEffect(() => {
+     
+      const handleContextMenu = (e) => {
+        e.preventDefault();
+      };
+  
+      const handleKeyDown = (e) => {
+       
+        if (
+          e.key === 'F12' ||
+          (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) ||
+          (e.ctrlKey && e.key.toUpperCase() === 'U')
+        ) {
+          e.preventDefault();
+          return false;
+        }
+      };
+  
+      document.addEventListener('contextmenu', handleContextMenu);
+      document.addEventListener('keydown', handleKeyDown);
+  
+      return () => {
+        document.removeEventListener('contextmenu', handleContextMenu);
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []);
+  return (
+    <ThemeProvider>
+      
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       <Header />
       <Component {...pageProps} />
       <Footer />

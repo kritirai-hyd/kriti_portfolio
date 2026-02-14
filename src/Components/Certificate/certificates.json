@@ -6,7 +6,11 @@
    "title": "Responsive Web Design",
   "org": "freeCodeCamp",
    "date": "Issued: April 10 2024",
+<<<<<<< HEAD
    "credential": "https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/responsive-web-design"
+=======
+   "credential": "responsive-design-certificates"
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   },
   {
    "id": 2,
@@ -14,7 +18,11 @@
    "title": "JavaScript Algorithms & Data Structures",
    "org": "freeCodeCamp",
   "date": "Issued: May 4 2024",
+<<<<<<< HEAD
    "credential": "https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/javascript-algorithms-and-data-structures-v8"
+=======
+   "credential": "javaScrip-algorithms-&-data-structures"
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   },
   {
    "id": 3,
@@ -22,7 +30,11 @@
    "title": "SQL and Relational Databases",
    "org": "Hackerank",
    "date": "Issued: Jan 28 2025",
+<<<<<<< HEAD
    "credential": "https://www.hackerrank.com/certificates/22f1961a6cff"
+=======
+   "credential": "sql-and-relational-databases"
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   }
   ,
   {
@@ -31,7 +43,11 @@
    "title": "Postman API Fundamentals Student Experts",
    "org": "Postman",
    "date": "Issued: Jan 26 2025",
+<<<<<<< HEAD
    "credential": "https://accounts.skilljar.com/accounts/profile/rst126clzdyy?d=rst126clzdyy&next=%2F"
+=======
+   "credential": "postman-api-expert-cert"
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   }
   ,
   {
@@ -40,7 +56,11 @@
    "title": "SQL and Relational Databases",
    "org": "Cognitive Class",
    "date": "Issued: Jan 28 2025",
+<<<<<<< HEAD
    "credential": "https://www.linkedin.com/in/dev-kritirai/overlay/Certifications/1504451508/treasury/?profileId=ACoAAES3sZEBcuuxhTdNUg1pzSjjoN3lbykBuLI"
+=======
+   "credential": "sql-and-relational-databases-cognitive-class"
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   }
    ,
   {
@@ -49,7 +69,11 @@
    "title": "Foundational c sharp with Microsoft",
    "org": "freeCodeCamp",
    "date": "Issued: Dec 15 2024",
+<<<<<<< HEAD
    "credential": "https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/foundational-c-sharp-with-microsoft"
+=======
+   "credential": "foundational-c-sharp-with-microsoft"
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   }
 
 ]

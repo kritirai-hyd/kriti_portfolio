@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import useLenis from "../hooks/useLenis";
+<<<<<<< HEAD
 import { useTheme } from "../context/ThemeContext";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
@@ -23,6 +24,49 @@ const ServicesDetails = () => {
       <section
         id="services"
         className={styles.services}
+=======
+import { useTheme } from "../../context/ThemeContext";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import Link from "next/link";
+import services from "./Services.json";
+import { SquareArrowOutUpRight } from "lucide-react";
+import styles from "./ServicesDetails.module.css";
+
+const ServicesDetails = () => {
+  useLenis();
+  const { theme } = useTheme();
+
+  return (
+    <div className={`${styles.servicesPage} ${theme === "dark" ? styles.darkTheme : styles.lightTheme}`}>
+
+      <section className={styles.breadcrumb}>
+        <div className="container">
+          <motion.h1
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            Services
+          </motion.h1>
+          <motion.p
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className={styles.breadcrumbText}
+          >
+            <Link href="/">Home</Link> / Services
+          </motion.p>
+        </div>
+      </section>
+
+
+      <section
+        id="services"
+        className={`${styles.services} ${theme === "dark" ? styles.bgLDark : styles.servicesLight}`}
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
         aria-label="Services offered"
       >
         <motion.div
@@ -40,12 +84,17 @@ const ServicesDetails = () => {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <div className={styles.title}>
+<<<<<<< HEAD
                 <h3 className={styles.subtitle}>{item.title}</h3>
                 <Link
                   href={`${item.link}`}
                   title={`Explore ${item.title} services`}
                   className={styles.servicesBtn}
                 >
+=======
+                <h3>{item.title}</h3>
+                <Link href="https://www.kritirai.com/services" title={`Explore ${item.title} services`} className={styles.servicesBtn}>
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
                   <SquareArrowOutUpRight size={20} />
                 </Link>
               </div>
@@ -59,4 +108,8 @@ const ServicesDetails = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 export default ServicesDetails;

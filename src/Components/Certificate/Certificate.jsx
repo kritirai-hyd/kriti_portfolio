@@ -2,7 +2,11 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Certificate.module.css";
 import Link from "next/link";
+<<<<<<< HEAD
 import { useTheme } from '../context/ThemeContext';
+=======
+import { useTheme } from '../../context/ThemeContext';
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import Btn from "../ui/Btn/Btn";
 import certificates from "./certificates.json";
 import Heading from "../ui/Heading/Heading";
@@ -63,7 +67,11 @@ const Certificate = () => {
 
                     <div className={styles["certificate-actions"]}>
                       <Link
+<<<<<<< HEAD
                         href={`${c.credential}`}
+=======
+                        href={`/certificates/${c.credential}`}
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
                         rel="noopener noreferrer"
                         className={`${styles["credential-link"]} ${
                           theme === "dark" ? styles.tDbtn : styles.tLbtn

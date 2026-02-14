@@ -1,7 +1,11 @@
 "use client";
 import React, { useState, useEffect } from 'react'
 
+<<<<<<< HEAD
 import { useTheme } from "../context/ThemeContext";
+=======
+import { useTheme } from "../../context/ThemeContext";
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 import Heading from '../ui/Heading/Heading';
 
 const Education = () => {
@@ -32,8 +36,12 @@ const Education = () => {
 
 
   return (
+<<<<<<< HEAD
 <div className="bg">
       <div id="education" className="education-container">
+=======
+    <div id="education" className={`education-container ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       <div className="education-content">
    
        <Heading heading="Education Journey" />
@@ -75,7 +83,10 @@ const Education = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   )
 }
 

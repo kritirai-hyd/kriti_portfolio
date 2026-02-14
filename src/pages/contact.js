@@ -1,6 +1,10 @@
 import Head from "next/head";
+<<<<<<< HEAD
 import BreadCrumb from "@/Components/ui/BreadCrumb/BreadCrumb";
 import Contact from "@/Components/Contact/Contact";
+=======
+import ContactDetails from "@/Components/ContactDetails/ContactDetails";
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 export default function ContactPage() {
   const schemaData = [
     {
@@ -98,12 +102,16 @@ export default function ContactPage() {
           }}
         />
       </Head>
+<<<<<<< HEAD
        <BreadCrumb
         title="Contact"
         path={[{ name: "Home", link: "/" }, { name: "Contact" }]}
       />
 
     <Contact />
+=======
+      <ContactDetails />
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
     </>
   );
 }

@@ -15,7 +15,10 @@ import cz3 from "../../assets/image/couponszone-p3.png";
 import c4 from "../../assets/image/creative-coder-p4.png";
 import c5 from "../../assets/image/creative-coder-p5.png";
 import c6 from "../../assets/image/creative-coder-p6.png";
+<<<<<<< HEAD
 import BreadCrumb from "../ui/BreadCrumb/BreadCrumb";
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
 const projects = [
   {
     title: "Car Rental Website",
@@ -65,6 +68,7 @@ const projects = [
 const WorkDetails = () => {
   useLenis();
   return (
+<<<<<<< HEAD
 <>
     <div className={styles.page}>
   
@@ -72,6 +76,20 @@ const WorkDetails = () => {
         title="Projects"
         path={[{ name: "Home", link: "/" }, { name: "Projects" }]}
       />
+=======
+    <div className={styles.page}>
+      <div className={styles.worksBreadcrumb}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className={styles.bread}
+        >
+          <h1>Projects</h1>
+          <p>Home / Projects</p>
+        </motion.div>
+      </div>
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
       <section className={styles.works}>
         <div className={styles.worksContainer}>
           {projects.map((project, i) => (
@@ -128,7 +146,10 @@ const WorkDetails = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 </>
+=======
+>>>>>>> 38539456c0d6ded47a8dd538a9d68180295bfbe0
   );
 };
 export default WorkDetails;
