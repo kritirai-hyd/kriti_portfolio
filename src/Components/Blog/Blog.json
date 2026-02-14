@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Responsive Design Best Practices",
+    "desc": "Learn how to make your website look great on all devices using media queries and flexible layouts.",
+    "img": "responsive-design.png",
+    "alt": "Responsive Design Best Practices – Blog by Kriti Rai",
+    "link": "responsive-design-best-practices"
+  },
+  {
+    "title": "CSS Grid vs Flexbox: When to Use What",
+    "desc": "A beginner-friendly comparison of layout systems with real examples.",
+    "img": "grid.png",
+    "alt": "CSS Grid vs Flexbox Comparison – Frontend Blog by Kriti Rai",
+    "link": "when-to-use-what-css-grid-vs-flexbox"
+  },
+  {
+    "title": "Build a Portfolio Website Using HTML, CSS, and JavaScript",
+    "desc": "A step-by-step guide to creating your own portfolio to showcase your work.",
+    "img": "portfolio.png",
+    "alt": "How to Build a Portfolio Website – Tutorial by Kriti Rai",
+    "link": "build-a-portfolio-website"
+  },
+  {
+    "title": "Top 5 VS Code Extensions for Frontend Developers",
+    "desc": "Boost your productivity with the best tools for writing cleaner and faster code.",
+    "img": "build-a-portfolio-website.png",
+    "alt": "Top 5 VS Code Extensions for Frontend Developers – Kriti Rai Blog",
+    "link": "top-5-vs-code-extensions-for-frontend-developers"
+  },
+  {
+    "title": "Basic SEO for Developers: Title, Meta Tags & Alt Text",
+    "desc": "Simple tips to make your website more search engine friendly.",
+    "img": "seo-basics.png",
+    "alt": "Basic SEO for Developers – Tips on Titles, Meta Tags, Alt Text",
+    "link": "basic-seo-for-developers-title-meta-tags-alt-text"
+  },
+
+  {
+    "title": "Portfolio with SEO Optimization and Lighthouse 100 Score",
+    "desc": "A blazing-fast, SEO-optimized portfolio crafted for maximum visibility and performance.",
+    "img": "portfolio-with-seo-optimization-and-lighthouse-100-score.png",
+    "alt": "SEO-Optimized Portfolio with Lighthouse 100 Score – Case Study",
+    "link": "portfolio-with-seo-optimization-and-lighthouse-100-score"
+  }
+]

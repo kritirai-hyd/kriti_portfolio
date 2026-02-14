@@ -1,0 +1,453 @@
+/* Education.css */
+.education-container {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.bg{
+  background: var(--page-bg);
+}
+.education-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #52629c, #032579);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.education-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+/* Timeline */
+.education-timeline {
+  position: relative;
+  padding: 2rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+
+}
+
+.education-timeline.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+  
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.marker-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+   margin-left: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: linear-gradient(to bottom, #52629c, #032579);
+  box-shadow: 0 4px 10px rgba(110, 142, 251, 0.3);
+}
+ .tLight{
+  font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #3e70ec 0%, #2a1454 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+ .tDark{
+  font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e7eeff 0%, #b1caff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+.marker-line {
+  height: 2rem;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(110, 142, 251, 0.5), transparent);
+}
+
+.timeline-content {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+.tDark{
+  color: #fff;
+}
+.tLog{
+  color: #302b2b;
+}
+/* ========== Base Styles ========== */
+.education-container {
+  padding: 60px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* ========== Theme Toggle Styles ========== */
+.light-theme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.dark-theme {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* ========== Text Color Utilities ========== */
+.tLog {
+  color: #333333; /* Light theme - institution name */
+}
+
+.tDog {
+  color: #dddddd; /* Dark theme - institution name */
+}
+
+.tLp {
+  color: #555555; /* Light theme - paragraph */
+}
+
+.tDp {
+  color: #bbbbbb; /* Dark theme - paragraph */
+}
+
+/* ========== Timeline Animation ========== */
+.education-timeline {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.education-timeline.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Timeline Styles ========== */
+
+.timeline-item {
+  position: relative;
+  margin-left: 60px;
+  margin-bottom: 50px;
+}
+
+
+.marker-line {
+  flex: 1;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.timeline-content {
+  background-color: inherit;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* ========== Education Card ========== */
+.education-card {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.education-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* ========== Status Badge ========== */
+.status-badge {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-badge.in-progress .status-dot {
+  background-color: #FF9800;
+}
+
+.status-badge.completed .status-dot {
+  background-color:#005714;
+}
+
+/* Education Card */
+.education-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #52629c, #032579);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.education-date {
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-left: 1rem;
+}
+
+.institution {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.education-description {
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-badge.in-progress {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+}
+
+.status-badge.in-progress .status-dot {
+  background-color: #ffc107;
+}
+
+.status-badge.completed {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: #005714;
+}
+
+.status-badge.completed .status-dot {
+  background-color: #28a745;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(to right, #6e8efb, #a777e3);
+  transition: width 1.5s ease-in-out;
+}
+
+/* Achievement Tag */
+.achievement-tag {
+  margin-top: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background-color: rgba(110, 142, 251, 0.15);
+  color: #6e8efb;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+
+.light-theme .education-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  color:#323232;
+}
+
+.light-theme .education-card {
+  background: white;box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.light-theme .education-date {
+  background-color: #f1f3f9;
+  color: #323232;
+}
+
+.dark-theme .education-container {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: #e2e8f0;
+}
+
+.dark-theme .education-card {
+  background: #2d3748;
+}
+
+.dark-theme .education-date {
+  background-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.dark-theme .progress-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 2rem 1rem;
+  }
+  .timeline-item{
+      margin-left: 0px;
+  }
+  .education-title {
+    font-size: 2rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+  }
+  
+  .education-date {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+  }
+  
+  .timeline-marker {
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .marker-line {
+    height: 2px;
+    width: 1.5rem;
+    background: linear-gradient(to right, rgba(110, 142, 251, 0.5), transparent);
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  .education-title {
+    font-size: 1.75rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.15rem;
+  }
+  
+  .education-card {
+    padding: 1.25rem;
+  }
+}
+.dark-theme{
+  background-color: rgb(23, 30, 71);
+}

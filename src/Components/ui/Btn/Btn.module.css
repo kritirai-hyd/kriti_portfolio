@@ -1,0 +1,12 @@
+
+.downlaod{
+        border: 2px solid #0000;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+     background: linear-gradient(135deg, #3e70ec 0%, #2a1454 100%);
+    box-shadow: 0 10px 25px #3e70ec4d;
+    color: #fff;
+    display: flex;
+    margin: 0 auto;
+}

@@ -1,0 +1,152 @@
+
+.counterSection {
+  padding: 6rem 1rem;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+      
+}
+.lightMode{
+  background: linear-gradient(135deg, #ffffff 0%, #b8d4ff 100%);
+}
+
+.darkMode {
+  background:linear-gradient(135deg, #25326b 0%, #000e24 100%);
+  color: #f7f7f7;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+display: flex
+;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.statBlock {
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 280px;
+    padding: 1rem;
+}
+
+
+.statNumber {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  display: flex
+;
+  color: #004ac2;
+}
+
+.darkMode .statNumber {
+  color: #60a5fa;
+}
+
+
+.statDescription {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.darkMode .statDescription {
+  color: #ccc;
+}
+
+
+
+@media (min-width: 1024px) {
+  .wrapper {
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+.counterSection {
+  padding: 5rem 1rem;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.lightMode {
+  background: linear-gradient(135deg, #ffffff 0%, #b8d4ff 100%);
+}
+
+.darkMode {
+  background: linear-gradient(135deg, #25326b 0%, #000e24 100%);
+  color: #f7f7f7;
+}
+
+
+
+
+
+@media (min-width: 640px) {
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .statBlock {
+    flex: 1 1 200px;
+    margin: 0.5rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .statNumber {
+    font-size: 3.5rem;
+  }
+
+  .statDescription {
+    font-size: 1.2rem;
+  }
+
+  .wrapper {
+    justify-content: space-around;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+.statDescription{
+  font-size: 1rem;
+}
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .statBlock {
+    max-width: 280px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  }
+}

@@ -1,14 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+
+  --page-bg: #f8fafc;
+  --text-color: #1e293b;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --heading-gradient: linear-gradient(135deg, #3e70ec 0%, #2a1454 100%);
+
+  --header-bg: rgb(255 255 255 / 39%);
+  --header-border: rgba(255, 255, 255, 0.6);
+  --nav-bg-mobile: #d6e5f5fc;
+  --burger-color: #001e60;
+
+--s-card:#fff;
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --image-bg: #f1f5f9;
+
+
+  --accent-color: #115cff;
+  --badge-bg: rgba(94, 124, 255, 0.226);
+  --button-gradient: linear-gradient(135deg, #6a85f1, #0045df);
+
+ --page-bg: #f8fafc;
+  --text-color: #1e293b;
+
+  --card-bg: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+  --accent-color: #115cff;
+  --button-gradient: linear-gradient(135deg, #6a85f1, #0045df);
+  --image-bg: #f1f5f9;
+  --footer-bg: rgba(255, 255, 255, 0.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+[data-theme="dark"] {
+  --page-bg: #0f172a;
+  --text-color: #e2e8f0;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --heading-gradient: linear-gradient(135deg, #e7eeff 0%, #b1caff 100%);
+  --header-bg: rgba(20, 20, 35, 0.7);
+  --header-border: rgba(255, 255, 255, 0.08);
+  --nav-bg-mobile: #111827;
+  --burger-color: #ffffff;
+
+  --card-bg: rgba(0, 0, 0, 0.726);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --image-bg: #1e293b;
+
+  --accent-color: #79b8ff;
+  --badge-bg: rgba(121, 184, 255, 0.15);
+  --button-gradient: linear-gradient(135deg, #5b6bff, #3b82f6);
+
+  --footer-bg: rgba(30, 30, 30, 0.85); --page-bg: #0f172a;
+  --text-color: #e2e8f0;
+
+  --card-bg: #1e293b; /* solid color for testing */
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+  --accent-color: #79b8ff;
+  --button-gradient: linear-gradient(135deg, #5b6bff, #3b82f6);
+  --image-bg: #0f172a;
+  --s-card:linear-gradient(135deg, rgb(37, 50, 107) 0%, rgb(0, 14, 36) 100%);
 }
+
 
 html,
 body {
@@ -17,12 +79,12 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: 0.3s ease;
 }
+
 
 * {
   box-sizing: border-box;
@@ -33,6 +95,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+li{
+  list-style: none;
 }
 
 @media (prefers-color-scheme: dark) {

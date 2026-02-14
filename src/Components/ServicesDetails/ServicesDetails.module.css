@@ -1,0 +1,85 @@
+.servicesPage {
+  min-height: 100vh;
+background: var(--page-bg);
+}
+.services {
+  padding: 6rem 2rem;
+
+}
+
+.serviceContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.servicesCard {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow:var(--card-shadow);
+  border: 1px solid var(--card-bg);
+}
+.servicesCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 15px 30px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.title h3 {
+  font-size: 1.2rem;
+  font-weight: 900;
+
+}
+.desc {
+  flex-grow: 1;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.des {
+  color: inherit;
+  opacity: 0.85;
+}
+.servicesBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding:.5rem .45rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #333467, #3964a5);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.servicesBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+@media (max-width: 768px) {
+
+  .serviceContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .services {
+    padding: 4rem 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .services {
+    padding: 3rem 1rem;
+  }
+
+}

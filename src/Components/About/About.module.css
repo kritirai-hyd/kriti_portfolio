@@ -1,0 +1,185 @@
+/* ===================== GENERAL ===================== */
+
+.about {
+  position: relative;
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+  width: 100%;
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+/* ===================== TITLE ===================== */
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================== BACKGROUND SHAPES ===================== */
+
+.aboutBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bgShape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.07;
+  filter: blur(50px);
+  animation: float 18s ease-in-out infinite;
+  background: var(--gradient-secondary);
+}
+
+.shape1 { width: 300px; height: 300px; top: 10%; left: 5%; }
+.shape2 { width: 400px; height: 400px; bottom: 10%; right: 5%; }
+.shape3 { width: 250px; height: 250px; top: 50%; left: 70%; }
+.shape4 { width: 200px; height: 200px; bottom: 30%; left: 10%; }
+
+/* ===================== FLOAT ===================== */
+
+@keyframes float {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(12px,-18px) scale(1.05); }
+  66% { transform: translate(-8px,12px) scale(0.95); }
+}
+
+/* ===================== GROUP ===================== */
+
+.aboutSection {
+  display: flex;
+  gap: 4rem;
+}
+
+.aboutGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.groupHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.groupTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.groupUnderline {
+  height: 3px;
+  width: 50px;
+  background: var(--gradient-primary);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ===================== SKILLS GRID ===================== */
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.skillCard {
+  position: relative;
+  padding: 1.2rem 0.8rem;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.cardInner {
+  position: relative;
+  z-index: 2;
+}
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 16px;
+}
+
+.skillCard:hover .cardGlow {
+  opacity: 0.08;
+}
+
+.skillIcon {
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.skillName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 992px) {
+  .aboutSection {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .shape1 { width: 150px; height: 150px; }
+  .shape2 { width: 200px; height: 200px; }
+  .shape3 { width: 120px; height: 120px; }
+  .shape4 { width: 100px; height: 100px; }
+}
+
+@media (max-width: 576px) {
+  .skillCard {
+    min-height: 90px;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .bgShape {
+    filter: blur(20px);
+    opacity: 0.05;
+  }
+}

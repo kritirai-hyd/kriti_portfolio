@@ -1,0 +1,46 @@
+.breadcrumbSection {
+  padding: 100px 0 60px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.breadcrumbSection h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumbSection p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Light theme */
+.lightTheme {
+  background: linear-gradient(135deg, #ffffff 0%, #b8d4ff 100%);
+  color: #001e60;
+}
+
+.lightTheme h1 {
+  color: #001e60;
+}
+
+.lightTheme p a {
+  color: #001e60;
+
+}
+
+/* Dark theme */
+.darkTheme {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e0e0e0;
+}
+
+.darkTheme h1 {
+  color: #ecf0f1;
+}
+
+.darkTheme p a {
+  color: #79b8ff;
+
+}
