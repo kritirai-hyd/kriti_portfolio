@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import Image from "next/image";
 import styles from "./Certificate.module.css";
@@ -80,7 +80,7 @@ const CertificateDetails = () => {
 
                     <div className={styles["certificate-actions"]}>
                       <Link
-                        href={`/certificates/${c.credential}`}
+                        href={`${c.credential}`}
                         rel="noopener noreferrer"
                         className={`${styles["credential-link"]} ${
                           theme === "dark" ? styles.tDbtn : styles.tLbtn

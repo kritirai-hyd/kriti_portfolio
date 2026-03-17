@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import useLenis from "../hooks/useLenis";
 import { useTheme } from "../context/ThemeContext";

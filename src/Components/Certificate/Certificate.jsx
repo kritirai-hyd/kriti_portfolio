@@ -35,7 +35,7 @@ const Certificate = () => {
                       height={400}
                     />
                     <div className={styles["certificate-overlay"]}>
-                      <Link href={`/certificates/${c.credential}`}>
+                      <Link href={`${c.credential}`}>
                         {" "}
                         <button className={styles["view-button"]}>
                           View Certificate

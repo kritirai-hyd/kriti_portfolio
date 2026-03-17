@@ -1,9 +1,10 @@
-"use client";
+
 import React from "react";
 import { usePDF } from "react-to-pdf";
 import styles from "./Kritirai.module.css";
 import {
   Award,
+  Download,
   File,
   Github,
   Lightbulb,
@@ -19,9 +20,11 @@ const Kritirai = () => {
 
   return (
     <>
-      <div className={styles.container}>
+    <div className={styles.bg}>     
+          <br /> 
+       <div className={styles.container}>
         <button onClick={() => toPDF()} className={styles.download}>
-          <i className="fa fa-download"></i> Download PDF Resume
+       <Download />  Download PDF Resume
         </button>
         <div ref={targetRef}>
           <div className={styles.resumeContainer}>
@@ -67,21 +70,14 @@ const Kritirai = () => {
                 on real-world projects to enhance practical skills in web
                 development.
               </p>
-              <div className={styles.keyHighlights}>
-                <span className={styles.highlight}>3+ Personal Projects</span>
-                <span className={styles.highlight}>
-                  4 Professional Certifications
-                </span>
-
-                <span className={styles.highlight}> Responsive Web Design</span>
-              </div>
+           
             </section>
 
             <div className={styles.resumeGrid}>
               <div className={styles.mainCol}>
                 <section className={styles.section}>
                   <h2 className={styles.sectionTitle}>
-                    <i className="fa fa-code"></i> Featured Projects
+                  Featured Projects
                   </h2>
 
                   <div className={styles.item}>
@@ -89,19 +85,9 @@ const Kritirai = () => {
                       <div>
                         <div className={styles.itemHeader}>
                           <span>Car Rental Website</span>
-                          <span className={styles.projectStatus}>
-                            <i className="fa fa-external-link-alt"></i> Live
-                            Demo Available
-                          </span>
+                         
                         </div>
-                        <div className={styles.projectLinks}>
-                          <a href="#" className={styles.projectLink}>
-                            <i className="fa fa-eye"></i> View Demo
-                          </a>
-                          <a href="#" className={styles.projectLink}>
-                            <i className="fa fa-code"></i> Source Code
-                          </a>
-                        </div>
+               
                       </div>
                     </div>
                     <div className={styles.itemSub}>
@@ -143,19 +129,9 @@ const Kritirai = () => {
                       <div>
                         <div className={styles.itemHeader}>
                           <span>Coupon Website</span>
-                          <span className={styles.projectStatus}>
-                            <i className="fa fa-external-link-alt"></i> Live
-                            Demo Available
-                          </span>
+                        
                         </div>
-                        <div className={styles.projectLinks}>
-                          <a href="#" className={styles.projectLink}>
-                            <i className="fa fa-eye"></i> View Demo
-                          </a>
-                          <a href="#" className={styles.projectLink}>
-                            <i className="fa fa-code"></i> Source Code
-                          </a>
-                        </div>
+             
                       </div>
                     </div>
                     <div className={styles.itemSub}>
@@ -198,9 +174,7 @@ const Kritirai = () => {
                       <div>
                         <div className={styles.itemHeader}>
                           <span>Employee Management System</span>
-                          <span className={styles.projectStatus}>
-                            <i className="fa fa-lock"></i> Private Repository
-                          </span>
+                        
                         </div>
                       </div>
                     </div>
@@ -248,7 +222,7 @@ const Kritirai = () => {
 
                 <section className={styles.section}>
                   <h2 className={styles.sectionTitle}>
-                    <i className="fa fa-graduation-cap"></i> Education &
+                    Education &
                     Academic Background
                   </h2>
                   <div className={styles.item}>
@@ -267,7 +241,7 @@ const Kritirai = () => {
                       Current Grade: A (8.5 CGPA)
                     </div>
                     <div className={styles.academicHighlights}>
-                      <h4>Relevant Coursework:</h4>
+                      <h4 style={{padding: "0 15px"}}>Relevant Coursework:</h4>
                       <ul className={styles.courseworkList}>
                         <li>Web Technologies & Applications</li>
                         <li>Database Management Systems</li>
@@ -316,7 +290,7 @@ const Kritirai = () => {
                     <span className={styles.skillTag}>JavaScript</span>
                 
                     <span className={styles.skillTag}>React.js & Hooks</span>
-                    <span className={styles.advancedTag}>Next.js</span>
+                    <span className={styles.skillTag}>Next.js</span>
                  
                     <span className={styles.skillTag}>Bootstrap 5</span>
                     <span className={styles.skillTag}>
@@ -353,7 +327,7 @@ const Kritirai = () => {
                   </div>
 
                   <h3 className={styles.skillCategory}>
-                    <i className="fa fa-cogs"></i> Development Tools & Others
+                    <i className="fa fa-cogs"></i> Development Tools
                   </h3>
                   <div className={styles.skillsContainer}>
                     <span className={styles.skillTag}>Git & GitHub</span>
@@ -369,19 +343,16 @@ const Kritirai = () => {
                     <span className={styles.skillTag}>Debugging</span>
                   </div>
 
-                  <h3 className={styles.skillCategory}>
-                   Currently Learning
-                  </h3>
+          
                   <div className={styles.skillsContainer} style={{justifyContent:"center"}}>
               
-                    <span className={styles.learningTag} style={{textAlignt:"center"}}>Python</span>
-                  </div>
+                     </div>
                 </section>
 
                 <section className={styles.section}>
+                  <br />
                   <h2 className={styles.sectionTitle}>
-                 Certifications &
-                    Achievements
+                 Certifications
                   </h2>
                   <ul className={styles.certificationList}>
                     <li>
@@ -496,6 +467,8 @@ const Kritirai = () => {
           </div>
         </div>
       </div>
+
+</div>
     </>
   );
 };

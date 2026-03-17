@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-// import kriti from "../../assets/image/kriti-rai.jpeg";
 import github from "../../assets/svg/githubi.svg";
 import xcion from "../../assets/svg/x-icon.svg";
 import linkedin from "../../assets/svg/linkedin.svg";
-
 import kriti from "../../assets/image/kritirai-2.jpeg";
 
 import styles from "./Hero.module.css";
@@ -15,34 +13,66 @@ import { useTheme } from "../context/ThemeContext";
 
 const Hero = () => {
   const { theme } = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
+  const vantaRef = useRef(null);
+  const [vantaEffect, setVantaEffect] = useState(null);
 
-  const toggleNav = () => setIsOpen(!isOpen);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Dynamically load Three.js and Vanta.js
+      const loadScripts = async () => {
+        if (!window.THREE) {
+          const threeScript = document.createElement("script");
+          threeScript.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js";
+          threeScript.async = true;
+          document.body.appendChild(threeScript);
 
-  const scrollItems = [
-    "Frontend Web Developer",
-    "Backend Web Developer",
-    "Full Stack Web Developer",
-    "SEO Expert"
-  ];
+          threeScript.onload = () => {
+            const vantaScript = document.createElement("script");
+            vantaScript.src = "https://cdn.jsdelivr.net/gh/tengbao/vanta@latest/dist/vanta.birds.min.js";
+            vantaScript.async = true;
+            document.body.appendChild(vantaScript);
+
+            vantaScript.onload = () => {
+              if (!vantaEffect && window.VANTA) {
+                setVantaEffect(
+                  window.VANTA.BIRDS({
+                    el: vantaRef.current,
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 600,
+                    minWidth: 300,
+                    scale: 1.0,
+                    scaleMobile: 1.0,
+                    color1: "#3e70ec",
+                    color2: "#0011a8",
+                    wingSpan: 20.0,
+                    quantity: 3.0,
+                    backgroundAlpha: 0,
+                  })
+                );
+              }
+            };
+          };
+        }
+      };
+
+      loadScripts();
+    }
+
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
 
   return (
-    <div className={`${styles.hero} ${theme === "dark" ? styles.bgDark : styles.bgLight}`}>
-      <div className={styles.heroBackground}>
-        <div className={styles.gradientBlob}></div>
-        <div className={styles.gradientBlob2}></div>
-        <div className={styles.gridPattern}></div>
-        <div className={styles.floatingShapes}>
-          <div className={styles.shape1}></div>
-          <div className={styles.shape2}></div>
-          <div className={styles.shape3}></div>
-        </div>
-      </div>
+    <div ref={vantaRef} style={{ width: "100%", height: "100vh" }} className={`${styles.hero} ${theme === "dark" ? styles.bgDark : styles.bgLight}`}>
+      <div className={styles.vantabg}></div>
 
-      <div className={styles.heroContainer}>
-        <div className={styles.heroWrapper}>
+      <div className={styles.container}>
+        <div className={styles.subContainer}>
           {/* Left Section */}
-          <div className={styles.heroLeft}>
+          <div className={styles.left}>
             <motion.h1
               className={styles.introText}
               initial={{ opacity: 0, y: 20 }}
@@ -53,7 +83,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.p
-              className={`${styles.heroDescription} ${
+              className={`${styles.description} ${
                 theme === "dark" ? styles.clDark : styles.clLight
               }`}
               initial={{ opacity: 0, y: 20 }}
@@ -105,20 +135,20 @@ const Hero = () => {
           </div>
 
           {/* Right Section */}
-          <div className={styles.heroRight}>
+          <div className={styles.right}>
             <motion.div
-              className={styles.profileImageWrapper}
+              className={styles.profile}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className={styles.profileFrame}>
-                <div className={styles.profileGlow}></div>
-                <div className={styles.profileBorderAnimation}></div>
+              <div className={styles.circle}>
+                <div className={styles.bglight}></div>
+                <div className={styles.border}></div>
                 <Image
                   src={kriti}
                   alt="Kriti Rai - Full Stack Developer"
-                  className={styles.profileImage}
+                  className={styles.image}
                   width={320}
                   height={340}
                   priority

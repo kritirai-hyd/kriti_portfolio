@@ -1,5 +1,4 @@
-"use client";
-
+// hooks/useLenis.js
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
@@ -20,8 +19,6 @@ export default function useLenis() {
 
     requestAnimationFrame(raf);
 
-    return () => {
-      lenis.destroy(); // cleanup
-    };
+    return () => lenis.destroy();
   }, []);
 }

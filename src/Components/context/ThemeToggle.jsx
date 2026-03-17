@@ -1,8 +1,6 @@
-
-
+// components/ThemeToggle.js
 import Image from "next/image";
-import { useTheme } from "./ThemeContext";
-
+import { useTheme } from "../context/ThemeContext";
 import lightIcon from "../../assets/svg/toggle-l.svg";
 import darkIcon from "../../assets/svg/toggle-d.svg";
 

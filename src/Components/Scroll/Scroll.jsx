@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import star from "../../assets/svg/star.svg";
+import star from "../../assets/star.png";
 import styles from "./Scroll.module.css";
+
 
 const Scroll = () => {
   const scrollItems = [
@@ -12,29 +13,40 @@ const Scroll = () => {
   ];
 
   return (
-  <div className={styles.bg}>
-      <div className={styles.scrollBanner}>
+<div className={styles.bg}>
+
+  <div className={styles.scrollBanner}>
+    <div className={styles.scrollTrack}>
       {scrollItems.map((item, index) => (
         <div key={index} className={styles.scrollItem}>
           <Image
-            className={styles.starIcon}
+          
             src={star}
             width={20}
             height={20}
             alt="Star Icon"
           />
           <span>{item}</span>
+        
+        </div>
+      ))}
+      {/* Duplicate for seamless loop */}
+      {scrollItems.map((item, index) => (
+        <div key={`dup-${index}`} className={styles.scrollItem}>
           <Image
-            className={styles.starIcon}
+          
             src={star}
             width={20}
             height={20}
             alt="Star Icon"
           />
+          <span>{item}</span>
+      
         </div>
       ))}
     </div>
   </div>
+</div>
   );
 };
 

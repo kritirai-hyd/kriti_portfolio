@@ -4,7 +4,11 @@ import email from "../../assets/svg/email.svg";
 import loc from "../../assets/svg/location.svg";
 import phone from "../../assets/svg/phone.svg";
 import send from "../../assets/svg/send.svg";
+import github from "../../assets/svg/githubi.svg";
+import xcion from "../../assets/svg/x-icon.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
 import Image from "next/image";
+import facebook from '../../assets/svg/facebook.svg'
 import { useTheme } from "../context/ThemeContext";
 import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 import Heading from "../ui/Heading/Heading";
@@ -229,28 +233,28 @@ const Contact = () => {
                   className={styles["social-link"]}
                   aria-label="LinkedIn profile"
                 >
-                  <Linkedin />
+                 <Image src={linkedin} width={35} height={35} alt="Full Stack Web Developer in india" />
                 </a>
                 <a
                   href="https://github.com/kritirai-hyd"
                   className={styles["social-link"]}
                   aria-label="Github profile"
                 >
-                  <Github />
+             <Image src={github} width={35} height={35} alt="Full Stack Web Developer in india" />
                 </a>
                 <a
                   href="https://x.com/dev_kritirai"
                   className={styles["social-link"]}
                   aria-label="Twitter profile"
                 >
-                  <Twitter />
+              <Image src={xcion} width={35} height={35} alt="Full Stack Web Developer" />
                 </a>
                  <a
                   href="https://www.facebook.com/kritirai.dev"
                   className={styles["social-link"]}
                   aria-label="Facebook profile"
                 >
-                  <Facebook />
+                <Image src={facebook} width={35} height={35} alt="Full Stack Web Developer" />
                 </a>
               </div>
             </div>

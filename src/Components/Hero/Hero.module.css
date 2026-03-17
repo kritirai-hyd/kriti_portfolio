@@ -44,175 +44,8 @@
     justify-content: center;
 }
 
-/* Hero Background Elements */
-.heroBackground { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    z-index: 0; 
-    overflow: hidden; 
-}
-
-.gradientBlob { 
-    position: absolute; 
-    top: -100px; 
-    right: -100px; 
-    width: 500px; 
-    height: 500px; 
-    border-radius: 50%; 
-    background: radial-gradient(circle, rgba(62, 112, 236, 0.15) 0%, transparent 70%);
-    filter: blur(80px); 
-    animation: float 15s ease-in-out infinite, pulse 8s ease-in-out infinite; 
-}
-
-.gradientBlob2 { 
-    position: absolute; 
-    bottom: -150px; 
-    left: -150px; 
-    width: 600px; 
-    height: 600px; 
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(121, 184, 255, 0.1) 0%, transparent 70%);
-    filter: blur(90px); 
-    animation: floatReverse 18s ease-in-out infinite, pulse 10s ease-in-out infinite 2s;
-}
-
-.gridPattern {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background-image:
-        linear-gradient(rgba(62, 112, 236, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(62, 112, 236, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px; 
-    opacity: 0.3;
-}
-
-.floatingShapes { 
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    top: 0; 
-    left: 0; 
-}
-
-.shape1, .shape2, .shape3 {
-    position: absolute; 
-    border-radius: 50%; 
-    opacity: 0.1;
-}
-
-.shape1 { 
-    width: 100px; 
-    height: 100px; 
-    top: 20%; 
-    left: 10%; 
-    background: linear-gradient(135deg, #3e70ec, #79b8ff); 
-    animation: float 12s ease-in-out infinite, scale 15s ease-in-out infinite; 
-}
-
-.shape2 { 
-    width: 80px; 
-    height: 80px; 
-    top: 60%; 
-    right: 15%; 
-    background: linear-gradient(135deg, #2a1454, #3e70ec); 
-    animation: floatReverse 14s ease-in-out infinite, scale 12s ease-in-out infinite; 
-}
-
-.shape3 { 
-    width: 120px; 
-    height: 120px; 
-    bottom: 10%; 
-    left: 20%; 
-    background: linear-gradient(135deg, #79b8ff, #2a1454); 
-    animation: float 16s ease-in-out infinite, scale 18s ease-in-out infinite; 
-}
-
-/* Geometric Elements */
-.geometricElements { 
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    top: 0; 
-    left: 0; 
-    pointer-events: none; 
-}
-
-.squareElement { 
-    position: absolute; 
-    opacity: 0.07; 
-    background: linear-gradient(135deg, #3e70ec, #79b8ff); 
-    animation: rotate 20s linear infinite, pulseOpacity 15s ease-in-out infinite; 
-}
-
-.square1 { 
-    width: 60px; 
-    height: 60px; 
-    top: 15%; 
-    right: 20%; 
-    animation-delay: 0s; 
-}
-
-.square2 { 
-    width: 40px; 
-    height: 40px; 
-    bottom: 25%; 
-    left: 15%; 
-    background: linear-gradient(135deg, #2a1454, #3e70ec); 
-    animation-delay: 3s; 
-}
-
-.square3 { 
-    width: 80px; 
-    height: 80px; 
-    top: 70%; 
-    right: 10%; 
-    background: linear-gradient(135deg, #79b8ff, #2a1454); 
-    animation-delay: 6s; 
-}
-
-.triangleElement { 
-    position: absolute; 
-    width: 0; 
-    height: 0; 
-    opacity: 0.08; 
-    animation: floatTriangle 18s ease-in-out infinite, pulseOpacity 12s ease-in-out infinite; 
-}
-
-.triangle1 { 
-    top: 25%; 
-    left: 5%; 
-    border-left: 40px solid transparent; 
-    border-right: 40px solid transparent; 
-    border-bottom: 70px solid #3e70ec; 
-    animation-delay: 1s; 
-}
-
-.triangle2 { 
-    bottom: 15%; 
-    right: 8%; 
-    border-left: 50px solid transparent; 
-    border-right: 50px solid transparent; 
-    border-top: 85px solid #79b8ff; 
-    animation-delay: 4s; 
-}
-
-.triangle3 { 
-    top: 10%; 
-    right: 25%; 
-    border-left: 35px solid transparent; 
-    border-right: 35px solid transparent; 
-    border-bottom: 60px solid #2a1454; 
-    animation-delay: 7s; 
-}
-
 /* Hero content wrappers */
-.heroContainer { 
+.container { 
     width: 100%; 
     max-width: 1200px; 
     margin: 0 auto; 
@@ -221,7 +54,7 @@
     z-index: 2;
 }
 
-.heroWrapper { 
+.subContainer { 
     display: grid; 
     grid-template-columns: 1fr; 
     gap: 3rem; 
@@ -232,7 +65,7 @@
 }
 
 @media (min-width: 992px) { 
-    .heroWrapper { 
+    .subContainer { 
         grid-template-columns: 1.2fr 1fr; 
         gap: 4rem; 
         padding: 8rem 0 4rem; 
@@ -240,7 +73,7 @@
 }
 
 /* Left Section */
-.heroLeft {
+.left {
     position: relative;
     z-index: 2;
 }
@@ -256,7 +89,7 @@
     background-clip: text; 
 }
 
-.heroDescription { 
+.description { 
     font-size: 1.1rem; 
     line-height: 1.7; 
     margin-bottom: 2.5rem; 
@@ -267,7 +100,7 @@
     .introText { 
         font-size: 3.5rem; 
     } 
-    .heroDescription { 
+    .description { 
         font-size: 1.2rem; 
     } 
 }
@@ -284,13 +117,7 @@
     flex-wrap: wrap;
 }
 
-.downloadBtn {
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
+
 
 .cvLight {
     background: #ffffff;
@@ -308,16 +135,28 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
+
     display: block;
 }
 
-.downloadBtn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(62, 112, 236, 0.3);
+.downloadBtn {
+    padding: 0.75rem 2rem;
+    border-radius:10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;   
+     border: 1.5px solid #3e70ec;
+
+     color: var(--clr);
+}
+.downloadBtn:hover{
+    background-color: #3e70ec;
+    color: #fff;
 }
 
+
 /* Right Section */
-.heroRight { 
+.right { 
     display: flex; 
     justify-content: center; 
     align-items: center; 
@@ -325,14 +164,14 @@
     z-index: 2;
 }
 
-.profileImageWrapper { 
+.profile { 
     position: relative; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
 }
 
-.profileFrame { 
+.circle { 
     position: relative; 
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
     overflow: hidden; 
@@ -340,7 +179,7 @@
     animation: morphing 15s ease-in-out infinite; 
 }
 
-.profileGlow { 
+.bglight { 
     position: absolute; 
     top: -10%; 
     left: -10%; 
@@ -353,7 +192,7 @@
     animation: pulse 8s ease-in-out infinite, rotate 20s linear infinite; 
 }
 
-.profileBorderAnimation { 
+.border { 
     position: absolute; 
     top: -2px; 
     left: -2px; 
@@ -367,7 +206,7 @@
     opacity: 0.7; 
 }
 
-.profileImage { 
+.image { 
     width: 100%; 
     height: auto; 
     display: block; 
@@ -378,7 +217,7 @@
     transition: all 0.5s ease; 
 }
 
-.profileFrame:hover .profileImage { 
+.circle:hover .image { 
     transform: scale(1.03); 
 }
 
@@ -492,4 +331,49 @@
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Vanta canvas background */
+.vantabg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind hero content */
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Above Vanta */
+}/* Hero container */
+#HERO {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Vanta canvas automatically gets this class */
+.vanta-canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0; /* behind all hero content */
+}
+
+/* Hero content on top */
+.container {
+  position: relative;
+  z-index: 2;
 }

@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import services from "./Service.json";
 import Link from "next/link";

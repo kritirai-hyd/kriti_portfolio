@@ -1,16 +1,25 @@
 .scrollBanner {
-  display: flex;
-  background: linear-gradient(90deg, #3c6ae1 0%, #3443a1 100%);
-  padding: 15px 0;
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  background: linear-gradient(90deg, #002f4b 0%, #000738 100%);
+  padding: 15px 0;
   transform: rotate(-2deg);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .bg{
-  background: var(--card-bg);
+      background: var(--card-bg);
 }
+
+.scrollTrack {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll 8s linear infinite;
+}
+
+.scrollBanner:hover .scrollTrack {
+  animation-play-state: paused;
+}
+
 .scrollItem {
   display: flex;
   align-items: center;
@@ -19,8 +28,6 @@
   font-weight: 600;
   font-size: 0.9rem;
   white-space: nowrap;
-  padding: 0 1.5rem;
-  animation: scroll 20s linear infinite;
 }
 
 .starIcon {
@@ -32,10 +39,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% - 1.5rem));
+    transform: translateX(-50%);
   }
-}
-
-.scrollBanner:hover .scrollItem {
-  animation-play-state: paused;
 }

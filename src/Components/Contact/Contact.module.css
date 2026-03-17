@@ -306,7 +306,7 @@ display: flex;
  font-weight: 600;
  margin-bottom: 1rem;
  border-bottom: 1px solid rgb(238, 238, 238);
- text-align: center;
+ text-align: center;margin-bottom: 30px;
 }
 
 .social-icons {
@@ -317,13 +317,15 @@ display: flex;
 
 .social-link {
 color: #fff;
-    background: linear-gradient(135deg, #6f86d5, #06196a);
-    border-radius: 10px;
-    padding: 0.4rem 1rem;
-    font-size: .9rem;
+    background: linear-gradient(135deg, #ffffff, #f5f5f5);
+    border-radius: 8px;
+    padding: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
     text-decoration: none;
-
-
+margin-top: 30px;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .social-link:hover {
