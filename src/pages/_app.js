@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import "@/styles/globals.css";
 
@@ -95,4 +96,10 @@ export default function App({ Component, pageProps }) {
       <Footer />
     </ThemeProvider>
   );
+=======
+import "@/styles/globals.css";
+
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+>>>>>>> 819317e (Initial commit from Create Next App)
 }
