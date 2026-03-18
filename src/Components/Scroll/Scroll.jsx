@@ -10,6 +10,19 @@ const Scroll = () => {
     "Backend Web Developer",
     "Full Stack Web Developer",
     "SEO Expert",
+   "Frontend Web Developer",
+    "Backend Web Developer",
+    "Full Stack Web Developer",
+    "SEO Expert", "Frontend Web Developer",
+    "Backend Web Developer",
+    "Full Stack Web Developer",
+    "SEO Expert", "Frontend Web Developer",
+    "Backend Web Developer",
+    "Full Stack Web Developer",
+    "SEO Expert", "Frontend Web Developer",
+    "Backend Web Developer",
+    "Full Stack Web Developer",
+    "SEO Expert",
   ];
 
   return (
