@@ -1,28 +1,51 @@
-import React, { useState } from "react";
+"use client";
+import React, { useState, useRef } from "react";
 import styles from "./Contact.module.css";
+import Image from "next/image";
 import email from "../../assets/svg/email.svg";
 import loc from "../../assets/svg/location.svg";
 import phone from "../../assets/svg/phone.svg";
+
 import send from "../../assets/svg/send.svg";
 import github from "../../assets/svg/githubi.svg";
 import xcion from "../../assets/svg/x-icon.svg";
 import linkedin from "../../assets/svg/linkedin.svg";
-import Image from "next/image";
-import facebook from '../../assets/svg/facebook.svg'
-import { useTheme } from "../context/ThemeContext";
-import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
+import facebook from "../../assets/svg/facebook.svg";
 import Heading from "../ui/Heading/Heading";
+import { useTheme } from "../context/ThemeContext";
+
 const Contact = () => {
   const { theme } = useTheme();
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  // ✅ message state
+  const [message, setMessage] = useState("");
+
+  // ✅ ref for focus
+  const textareaRef = useRef(null);
+
+  // ✅ quick message handler
+  const handleQuickMessage = (msg) => {
+    setMessage(msg);
+    textareaRef.current?.focus();
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
+
     const formData = new FormData(event.target);
+
+    // ensure message state is used
+    formData.set("message", message);
+
     formData.append("access_key", "f9a52860-113e-4c0b-bc85-581bc2af8241");
+
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
+
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -32,8 +55,10 @@ const Contact = () => {
         },
         body: json,
       }).then((res) => res.json());
+
       if (res.success) {
         setIsSubmitted(true);
+        setMessage(""); // reset message
         event.target.reset();
       }
     } catch (error) {
@@ -42,16 +67,15 @@ const Contact = () => {
       setIsLoading(false);
     }
   };
+
   return (
-    <section
-      id="contact"
-      className={styles["contact-section"]}
-    >
+    <section id="contact" className={styles["contact-section"]}>
       <div className={styles["contact-container"]}>
         <Heading
           heading="Get In Touch"
           para="Let's create something amazing together"
         />
+
         <div className={styles["contact-grid"]}>
           <div className={styles["contact-form-wrapper"]}>
             {isSubmitted ? (
@@ -70,7 +94,7 @@ const Contact = () => {
               <>
                 <div className={styles["form-header"]}>
                   <h2
-                    className={`styles['section-title']} ${
+                    className={`${
                       theme === "dark" ? styles.tDark : styles.tLight
                     }`}
                   >
@@ -80,11 +104,13 @@ const Contact = () => {
                     I design and code beautifully simple things, and I love what
                     I do.
                   </p>
+
                 </div>
+
                 <form onSubmit={onSubmit} className={styles["contact-form"]}>
                   <div className={styles["form-row"]}>
                     <div className={styles["input-group"]}>
-                      <label htmlFor="firstName" className={styles.inputLabel}>
+                      <label className={styles.inputLabel}>
                         First Name
                       </label>
                       <input
@@ -94,8 +120,9 @@ const Contact = () => {
                         required
                       />
                     </div>
+
                     <div className={styles["input-group"]}>
-                      <label htmlFor="lastName" className={styles.inputLabel}>
+                      <label className={styles.inputLabel}>
                         Last Name
                       </label>
                       <input
@@ -106,8 +133,9 @@ const Contact = () => {
                       />
                     </div>
                   </div>
+
                   <div className={styles["input-group"]}>
-                    <label htmlFor="email" className={styles.inputLabel}>
+                    <label className={styles.inputLabel}>
                       Email Address
                     </label>
                     <input
@@ -117,8 +145,9 @@ const Contact = () => {
                       required
                     />
                   </div>
+
                   <div className={styles["input-group"]}>
-                    <label htmlFor="phone" className={styles.inputLabel}>
+                    <label className={styles.inputLabel}>
                       Phone Number
                     </label>
                     <input
@@ -127,17 +156,73 @@ const Contact = () => {
                       className={styles["form-input"]}
                     />
                   </div>
+
                   <div className={styles["input-group"]}>
-                    <label htmlFor="message" className={styles.inputLabel}>
+                    <label className={styles.inputLabel}>
                       Message
                     </label>
                     <textarea
+                      ref={textareaRef}
                       name="message"
                       rows={5}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       className={`${styles["form-input"]} ${styles.textarea}`}
                       required
                     ></textarea>
                   </div>
+
+{/* ✅ Quick Action Buttons with Green Circles */}
+<div
+  style={{
+    marginTop: "1rem",
+    display: "flex",
+    gap: "1rem",
+    flexWrap: "wrap",
+  }}
+>
+  <button
+    type="button"
+    className={styles["quick-btn"]}
+    onClick={() =>
+      handleQuickMessage(
+        "Hi there,\n\nI’m currently open to new opportunities and would love to connect with you if you’re looking to hire. Let’s chat!\n\n"
+      )
+    }
+  >
+    <span style={{
+      display: "inline-block",
+      width: "10px",
+      height: "10px",
+      backgroundColor: "#86fa58",
+      borderRadius: "50%",
+      marginRight: "5px"
+    }}></span>
+  
+    Open to Hire
+  </button>
+
+  <button
+    type="button"
+    className={styles["quick-btn"]}
+    onClick={() =>
+      handleQuickMessage(
+        "Hello,\n\nI’m looking to explore exciting projects or roles. Please let me know if there’s a fit—I’d love to discuss!\n\n"
+      )
+    }
+  >
+    <span style={{
+      display: "inline-block",
+      width: "10px",
+      height: "10px",
+      backgroundColor: "#86fa58",
+      borderRadius: "50%",
+      marginRight: "5px"
+    }}></span>
+ 
+    Project / Role Talk
+  </button>
+</div>
                   <div className={styles["submit-wrapper"]}>
                     <button
                       type="submit"
@@ -155,7 +240,7 @@ const Contact = () => {
                             src={send}
                             width={20}
                             height={20}
-                            alt="Full Stack Developer | Kriti Rai"
+                            alt="Send"
                           />
                         </>
                       )}
@@ -165,98 +250,55 @@ const Contact = () => {
               </>
             )}
           </div>
+
+          {/* Contact Info (unchanged) */}
           <div className={styles["contact-info"]}>
-            <h3
-              className={styles['info-title']}
-            >
-              Contact Information
-            </h3>
+            <h3 className={styles["info-title"]}>Contact Information</h3>
             <p className={styles["info-subtitle"]}>
               Reach out through any of these channels
             </p>
+
             <div className={styles["info-items"]}>
               <div className={styles["info-item"]}>
                 <div className={styles["info-icon"]}>
-                  <Image
-                    src={email}
-                    width={24}
-                    height={24}
-                    alt="Send an email to Kriti Rai"
-                  />
+                  <Image src={email} width={24} height={24} alt="Email" />
                 </div>
-                <div className={styles["info-content"]}>
-                  <p className={styles["info-label"]}>Email</p>
-                  <a
-                    href="mailto:kritirai.hyd@gmail.com"
-                    className={styles["info-value"]}
-                  >
+                <div>
+                  <p>Email</p>
+                  <a href="mailto:kritirai.hyd@gmail.com">
                     Send me an email
                   </a>
                 </div>
               </div>
+
               <div className={styles["info-item"]}>
                 <div className={styles["info-icon"]}>
-                  <Image
-                    src={loc}
-                    width={24}
-                    height={24}
-                    alt="Full Stack Developer | Kriti Rai in Hyderabad, India"
-                  />
+                  <Image src={loc} width={24} height={24} alt="Location" />
                 </div>
-                <div className={styles["info-content"]}>
-                  <p className={styles["info-label"]}>Location</p>
-                  <span className={styles["info-value"]}>Hyderabad, India</span>
-                </div>
+                <span>Hyderabad, India</span>
               </div>
+
               <div className={styles["info-item"]}>
                 <div className={styles["info-icon"]}>
-                  <Image
-                    src={phone}
-                    width={24}
-                    height={24}
-                    alt="Websites developer"
-                  />
+                  <Image src={phone} width={24} height={24} alt="Phone" />
                 </div>
-                <div className={styles["info-content"]}>
-                  <p className={styles["info-label"]}>Phone</p>
-                  <span className={styles["info-value"]}>
-                    Available upon request
-                  </span>
-                </div>
+                <span>Available upon request</span>
               </div>
             </div>
-            <div className={styles["social-links"]}>
-              <p className={styles["social-title"]}>Follow me on</p>
-              <div className={styles["social-icons"]}>
-                <a
-                  href="https://www.linkedin.com/in/dev-kritirai"
-                  className={styles["social-link"]}
-                  aria-label="LinkedIn profile"
-                >
-                 <Image src={linkedin} width={35} height={35} alt="Full Stack Web Developer in india" />
-                </a>
-                <a
-                  href="https://github.com/kritirai-hyd"
-                  className={styles["social-link"]}
-                  aria-label="Github profile"
-                >
-             <Image src={github} width={35} height={35} alt="Full Stack Web Developer in india" />
-                </a>
-                <a
-                  href="https://x.com/dev_kritirai"
-                  className={styles["social-link"]}
-                  aria-label="Twitter profile"
-                >
-              <Image src={xcion} width={35} height={35} alt="Full Stack Web Developer" />
-                </a>
-                 <a
-                  href="https://www.facebook.com/kritirai.dev"
-                  className={styles["social-link"]}
-                  aria-label="Facebook profile"
-                >
-                <Image src={facebook} width={35} height={35} alt="Full Stack Web Developer" />
-                </a>
-              </div>
+
+            <div className={styles["social-icons"]}>
+              <a href="https://www.linkedin.com/in/dev-kritirai" className={styles.socialLink}>
+                <Image src={linkedin} width={30} height={30} alt="LinkedIn" />
+              </a>
+              <a href="https://github.com/kritirai-hyd" className={styles.socialLink}>
+                <Image src={github} width={30} height={30} alt="GitHub" />
+              </a>
+              <a href="https://x.com/dev_kritirai" className={styles.socialLink}>
+                <Image src={xcion} width={30} height={30} alt="X" />
+              </a>
+              <a href="https://www.facebook.com/kritirai.dev" className={styles.socialLink}>
+                <Image src={facebook} width={30} height={30} alt="Facebook" />
+              </a>
             </div>
           </div>
         </div>
@@ -264,4 +306,5 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;

@@ -5,7 +5,7 @@
 
 
   --page-bg: #f8fafc;
-  --text-color: #1e293b;
+  --text-color: #000000;
   --border-color: rgba(0, 0, 0, 0.1);
   --heading-gradient: linear-gradient(135deg, #3e70ec 0%, #2a1454 100%);
 
@@ -13,7 +13,8 @@
   --header-border: rgba(255, 255, 255, 0.6);
   --nav-bg-mobile: #d6e5f5fc;
   --burger-color: #001e60;
-
+--bg-colorr:rgb(199, 2, 78);
+--bg-colorred:rgb(0, 100, 5);
 --s-card:#fff;
   --card-bg: #ffffff;
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -54,6 +55,8 @@
   --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.5);
   --image-bg: #1e293b;
 --clr: #ffffff;
+--bg-color:rgb(255, 190, 215);
+--bg-colorred:rgb(162, 245, 166);
   --accent-color: #79b8ff;
   --badge-bg: rgba(121, 184, 255, 0.15);
   --button-gradient: linear-gradient(135deg, #5b6bff, #3b82f6);

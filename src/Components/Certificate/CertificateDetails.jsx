@@ -92,6 +92,7 @@ const CertificateDetails = () => {
                   </div>
                 </div>
               </div>
+              
             );
           })}
         </div>

@@ -1,59 +1,80 @@
-
 import React from "react";
 import Image from "next/image";
 import styles from "./Badges.module.css";
 import { useTheme } from "../context/ThemeContext";
 import Heading from "../../Components/ui/Heading/Heading";
-import works from "./Badges.json";
+import badges from "./Badges.json";
 import Link from "next/link";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight, Award } from "lucide-react";
+
 const Badges = () => {
   const { theme } = useTheme();
+
   return (
-    <div
-      id="projects"
-      className={`${styles.projects} ${
-        theme === "dark" ? styles.bgDark : styles.bgLight
-      }`}
+  <div className={styles.bg}>
+      <section
+      id="badges"
+      className={`${styles.badges}`}
     >
-      <Heading heading="Badges" />
-      <section className={styles.portfolioContainer}>
-        {works.map((w) => {
-          const img = require(`../../assets/image/${w.image}`);
+      <Heading heading="Badges & Achievements" />
+      
+      <div className={styles.portfolioContainer}>
+        {badges.map((badge, index) => {
+    
+          const imagePath = require(`../../assets/image/${badge.image}`);
+
           return (
             <div
-              key={w.id}
-              className={`${styles.projectCard} ${styles.animateFadeIn}`}
+              key={badge.id}
+              className={`${styles.badgeCard} ${styles.animateFadeIn}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={styles.projectImageContainer}>
+              <div className={styles.badgeImageContainer}>
                 <Image
-                  src={img}
-                  alt={w.title}
+                  src={imagePath}
+                  alt={badge.title}
                   width={280}
                   height={180}
-                  className={styles.projectImage}
+                  className={styles.badgeImage}
+                  priority={index < 2} // Prioritize first 2 images
                 />
-                {w.demo && (
-                  <div className={styles.projectOverlay}>
+                
+                {badge.credential && (
+                  <div className={styles.badgeOverlay}>
                     <Link
-                      href={w.demo}
+                      href={badge.credential}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.demoLink}
+                      className={styles.verifyLink}
                     >
-                      Demo <SquareArrowOutUpRight size={18} />
+                      <SquareArrowOutUpRight size={18} />
+                      Verify
                     </Link>
                   </div>
                 )}
               </div>
-              <div className={styles.projectContent}>
-                <h3 className={styles.projectTitle}>{w.title}</h3>
+              
+              <div className={styles.badgeContent}>
+                <h3 className={styles.badgeTitle}>{badge.title}</h3>
+                
+                {badge.issuer && (
+                  <p className={styles.badgeIssuer}>
+                    <Award size={14} />
+                    {badge.issuer}
+                  </p>
+                )}
+                
+                {badge.date && (
+                  <p className={styles.badgeDate}>{badge.date}</p>
+                )}
               </div>
             </div>
           );
         })}
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
   );
 };
+
 export default Badges;

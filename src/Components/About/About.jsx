@@ -75,8 +75,8 @@ const SkillCard = ({ src, label }) => (
       <Image
         src={src}
         alt={`${label} logo`}
-        width={50}
-        height={50}
+        width={35}
+        height={35}
         style={{ objectFit: "contain" }}
       />
     </div>
@@ -102,6 +102,7 @@ const About = () => {
             className={styles.aboutGroup}
           >
             <h3 className={styles.groupTitle}>Skills</h3>
+            
             <div className={styles.gridContainer}>
               {skills.map((skill, i) => (
                 <SkillCard key={i} {...skill} />

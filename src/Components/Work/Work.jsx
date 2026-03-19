@@ -1,129 +1,156 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+"use client";
+import { useState, useEffect, useRef } from "react";
 import styles from "./Work.module.css";
-import { useTheme } from "../context/ThemeContext";
+import Image from "next/image";
+
+// Import images
+import employeeImg from "../../assets/image/empolyee.png";
+import employeeImgm from "../../assets/image/empolyee-m.png";
+import project1Img from "../../assets/image/project-1.png";
+import project1Imgm from "../../assets/image/project-1-m.png";
+import couponsImg from "../../assets/image/couponszone-p1.png";
+import couponsImgm from "../../assets/image/couponszone-p2-m.png";
 import Heading from "../ui/Heading/Heading";
-import works from "./Work.json";
 import Link from "next/link";
-import { SquareArrowOutUpRight } from "lucide-react";
+const projects = [
+  {
+    id: 1,
+    title: "Car Rental Website",
+    description:
+      "Responsive car rental site built with Next.js and CSS, showcasing UI design and client-side routing.",
+    image: project1Img,
+    image1: project1Imgm,
+    demo: "https://www.vkgoacarrental.com",
+  },
+  {
+    id: 2,
+    title: "Coupon Website",
+    description:
+      "Dynamic coupon-sharing platform using Next.js, Node.js, and React, with real-time deal updates and backend integration.",
+    image: couponsImg,
+    image1: couponsImgm,
+    demo: "https://www.couponszone.co.in",
+  },
+  {
+    id: 3,
+    title: "Website Development",
+    description: "A full-stack website project using Next.js and MongoDB.",
+    image: employeeImg,
+    image1: employeeImgm,
+    demo: "https://www.creativecoder.net/",
+  },
+];
 
-/* Skills & Tools Icons */
-import nextjs from "../../assets/svg/next-js.svg";
-import react from "../../assets/svg/react.svg";
-import css from "../../assets/svg/css.svg";
-import node from "../../assets/svg/node-js.svg";
-import mongodb from "../../assets/svg/mongodb.png";
-import express from "../../assets/svg/express.png";
+export default function Work() {
+  const [active, setActive] = useState(0);
+  const intervalRef = useRef();
 
-const Work = () => {
-  const { theme } = useTheme();
-  const [visibleProjects, setVisibleProjects] = useState([]);
+  const next = () => setActive((prev) => (prev + 1) % projects.length);
+  const prev = () =>
+    setActive((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
 
-  // Animate cards on scroll
+  // Auto-play
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.show);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    const cards = document.querySelectorAll(`.${styles.projectCard}`);
-    cards.forEach((card) => observer.observe(card));
-
-    return () => observer.disconnect();
+    intervalRef.current = setInterval(next, 3000);
+    return () => clearInterval(intervalRef.current);
   }, []);
 
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
+
+  // Pause on hover
+  const handleMouseEnter = () => clearInterval(intervalRef.current);
+  const handleMouseLeave = () =>
+    (intervalRef.current = setInterval(next, 3000));
+
   return (
-    <div className={`${styles.bg} ${theme === "dark" ? "bgDark" : "bgLight"}`}>
-      <div id="projects" className={styles.projects}>
-        <Heading heading="My Projects" />
-        <section className={styles.portfolioContainer}>
-          {works.map((w) => {
-            const img = require(`../../assets/image/${w.image}`);
-            return (
-              <div className={`${styles.projectCard} ${styles.hidden}`} key={w.id}>
-                {/* Image with overlay */}
-                <div className={styles.projectImageContainer}>
-                  <Image
-                    src={img}
-                    alt={w.title}
-                    className={styles.projectImage}
-                  />
-                  <div className={styles.projectOverlay}>
-                    <Link
-                      href={w.demo}
-                      target="_blank"
-                      className={styles.demoLink}
-                    >
-                      <span>Live Demo</span>
-                      <SquareArrowOutUpRight size={18} />
-                    </Link>
-                  </div>
-                </div>
+    <div className={styles.bg}>
+      <div className={styles.container}>
 
-                {/* Content */}
-                <div className={styles.projectContent}>
-                  <h3 className={styles.projectTitle}>{w.title}</h3>
-                  <p className={styles.projectDescription}>{w.description}</p>
-             <div className={styles.projectTags}>
-  {w.tags.map((t) => {
-    let icon;
-    let color; // assign a unique color
-    switch (t.toLowerCase()) {
-      case "next.js":
-        icon = nextjs;
-        color = "#000000"; // black for Next.js
-        break;
-      case "react":
-        icon = react;
-        color = "#005870"; // React blue
-        break;
-      case "css":
-        icon = css;
-        color = "#264de4"; // CSS blue
-        break;
-      case "node.js":
-        icon = node;
-        color = "#024100"; // Node green
-        break;
-      case "express":
-        icon = express;
-        color = "#000000"; // Express white
-        break;
-      case "mongodb":
-        icon = mongodb;
-        color = "#0e6b00"; // Mongo green
-        break;
-      default:
-        icon = null;
-        color = "#002397"; // default purple
-    }
+  <Heading heading="Projects" />
+        {/* Project Title with demo link */}
+        <h3 className={styles.title}>
+          <a
+            href={projects[active].demo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {projects[active].title}
+      
 
-    return (
-      <span
-        key={t}
-        className={styles.tag}
-        style={{ backgroundColor: color + "13", color: color }} // light bg with main color text
-      >
-        {icon && <Image src={icon} width={20} height={20} alt={t} />}
-        {t}
-      </span>
-    );
-  })}
-</div>
-                </div>
-              </div>
-            );
-          })}
-        </section>
+          </a>
+            
+        </h3>
+
+        {/* Project Description */}
+        
+        {/* Project Preview */}
+        <div
+          className={styles.subcontainer}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <button onClick={prev} className={styles.arrow}>
+            ←
+          </button>
+
+          <div className={styles.previewContainer}>
+            {/* Laptop/Desktop */}
+            <div className={styles.laptop}>
+         <Link href={`${projects[active].demo}`}>     <Image
+                src={projects[active].image}
+                alt="project desktop"
+                fill
+                sizes="(max-width: 900px) 90vw, 800px"
+                style={{ objectFit: "contain" }}
+              /></Link>
+            </div>
+
+            {/* Mobile */}
+            <div className={styles.mobile}>
+             <Link href={`${projects[active].demo}`}>  <Image
+                src={projects[active].image1}
+                alt="project mobile"
+                fill
+                sizes="140px"
+                style={{ objectFit: "cover" }}
+              /></Link>
+            </div>
+          </div>
+
+          <button onClick={next} className={styles.arrow}>
+            →
+          </button>
+        </div>
+
+        {/* Thumbnails */}
+        <div className={styles.carousel}>
+          {projects.map((item, index) => (
+            <div
+              key={item.id}
+              className={`${styles.thumb} ${
+                active === index ? styles.active : ""
+              }`}
+              onClick={() => setActive(index)}
+            >
+              <Image
+                src={item.image}
+                alt="thumb"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+              <span className={styles.number}>{index + 1}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
-};
-
-export default Work;
+}
