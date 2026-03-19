@@ -75,7 +75,10 @@ const Education = () => {
       id="education"
     >
       <div className={styles.wrapper}>
-        <Heading heading="Education Journey" />
+      <Heading 
+  heading="Education Journey" 
+  para="A timeline of my academic background, showcasing the knowledge, skills, and foundation that shaped my career in technology." 
+/>
         
 
 

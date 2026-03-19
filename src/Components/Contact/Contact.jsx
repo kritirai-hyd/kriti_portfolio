@@ -156,22 +156,6 @@ const Contact = () => {
                       className={styles["form-input"]}
                     />
                   </div>
-
-                  <div className={styles["input-group"]}>
-                    <label className={styles.inputLabel}>
-                      Message
-                    </label>
-                    <textarea
-                      ref={textareaRef}
-                      name="message"
-                      rows={5}
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      className={`${styles["form-input"]} ${styles.textarea}`}
-                      required
-                    ></textarea>
-                  </div>
-
 {/* ✅ Quick Action Buttons with Green Circles */}
 <div
   style={{
@@ -183,7 +167,7 @@ const Contact = () => {
 >
   <button
     type="button"
-    className={styles["quick-btn"]}
+    className={styles["quick-btn1"]}
     onClick={() =>
       handleQuickMessage(
         "Hi there,\n\nI’m currently open to new opportunities and would love to connect with you if you’re looking to hire. Let’s chat!\n\n"
@@ -194,7 +178,7 @@ const Contact = () => {
       display: "inline-block",
       width: "10px",
       height: "10px",
-      backgroundColor: "#86fa58",
+      backgroundColor: "#cf0056",
       borderRadius: "50%",
       marginRight: "5px"
     }}></span>
@@ -204,7 +188,7 @@ const Contact = () => {
 
   <button
     type="button"
-    className={styles["quick-btn"]}
+    className={styles["quick-btn2"]}
     onClick={() =>
       handleQuickMessage(
         "Hello,\n\nI’m looking to explore exciting projects or roles. Please let me know if there’s a fit—I’d love to discuss!\n\n"
@@ -222,7 +206,42 @@ const Contact = () => {
  
     Project / Role Talk
   </button>
+  
+<button
+  type="button"
+  className={styles["quick-btn3"]}
+  onClick={() =>    handleQuickMessage(
+      "Hello,\n\nI’d like to connect with you regarding an opportunity / collaboration. Please let me know a good time to discuss.\n\n"
+  )   }
+>
+  <span style={{
+      display: "inline-block",
+      width: "10px",
+      height: "10px",
+      backgroundColor: "#3654b8",
+      borderRadius: "50%",
+      marginRight: "5px"
+    }}></span>
+  Custom Message
+</button>
 </div>
+
+                  <div className={styles["input-group"]}>
+                    <label className={styles.inputLabel}>
+                      Message
+                    </label>
+                    <textarea
+                      ref={textareaRef}
+                      name="message"
+                      rows={5}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className={`${styles["form-input"]} ${styles.textarea}`}
+                      required
+                    ></textarea>
+                  </div>
+
+
                   <div className={styles["submit-wrapper"]}>
                     <button
                       type="submit"

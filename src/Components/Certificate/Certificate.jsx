@@ -19,7 +19,10 @@ const Certificate = () => {
       id="certificates"
     >
       <div className={styles.container}>
-        <Heading heading="Certificates" />
+    <Heading 
+  heading="Certificates" 
+  para="A collection of certifications that showcase my skills, continuous learning, and commitment to staying updated with modern technologies." 
+/>
 
         <div className={styles["certificates-grid"]}>
           {certificates.slice(0, 3).map((cert) => {

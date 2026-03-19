@@ -3,7 +3,8 @@ import styles from './Btn.module.css'
 const Btn = ({ name }) => {
   return (
     <>
-        <button className={styles.downlaod}>{name}</button>
+
+        <button className={styles.download}>{name}</button>
     </>
   )
 }

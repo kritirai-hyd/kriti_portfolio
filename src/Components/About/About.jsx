@@ -89,8 +89,10 @@ const About = () => {
     <section id="skills" className={styles.about}>
       <div className={styles.aboutContainer}>
 
-        <Heading heading="My Skills & Tools" />
-
+      <Heading 
+  heading="My Skills & Tools" 
+  para="Technologies and tools I work with to create efficient, scalable, and user-friendly digital experiences." 
+/>
         <div className={styles.aboutSection}>
 
           {/* Skills */}

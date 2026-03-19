@@ -16,7 +16,10 @@ const Badges = () => {
       id="badges"
       className={`${styles.badges}`}
     >
-      <Heading heading="Badges & Achievements" />
+ <Heading 
+  heading="Badges & Achievements" 
+  para="A collection of badges and achievements that highlight my skills, accomplishments, and continuous learning journey." 
+/>
       
       <div className={styles.portfolioContainer}>
         {badges.map((badge, index) => {

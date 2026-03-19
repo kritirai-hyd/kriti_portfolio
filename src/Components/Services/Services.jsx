@@ -19,7 +19,10 @@ const Services = () => {
       aria-label="Services offered"
     >
      
-<Heading heading="Services" />
+<Heading 
+  heading="My Services" 
+  para="I offer a range of web development services focused on building modern, responsive, and high-performing digital solutions tailored to your needs." 
+/>
       <motion.div
         variants={fadeIn("up", 0.2)}
         initial="hidden"

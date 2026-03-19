@@ -13,7 +13,7 @@ const Heading = ({ heading, para }) => {
       >
         {heading}
       </h2>
-      {para && <p className={styles.subTitle}>{para}</p>}
+      <p className={styles.subTitle}>{para}</p>
     </div>
   );
 };

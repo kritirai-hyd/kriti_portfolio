@@ -74,7 +74,10 @@ export default function Work() {
     <div className={styles.bg}>
       <div className={styles.container}>
 
-  <Heading heading="Projects" />
+<Heading 
+  heading="My Projects" 
+  para="A showcase of my work where I’ve built responsive, user-friendly, and performance-driven web applications." 
+/>
         {/* Project Title with demo link */}
         <h3 className={styles.title}>
           <a

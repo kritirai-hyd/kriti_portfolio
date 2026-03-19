@@ -470,21 +470,49 @@ textarea:focus-visible {
   outline: 3px solid #4f46e5;
   outline-offset: 2px;
 }
-
-/* Quick Buttons */
-.quick-btn {
+.quick-btn1, .quick-btn2, .quick-btn3 {
   padding: 0.6rem 1rem;
   font-size: 0.9rem;
-  border: 1px solid #587efa;
-  color: #0029b1;
-  background: #ffffff;
-
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+/* Quick Buttons */
+.quick-btn1 {
 
-.quick-btn:hover {
+  border: 1px solid #fa589b;
+  color: #cf0056;
+  background: #ffffff;
+
+}
+
+.quick-btn1:hover {
+  background: #fa589b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.quick-btn2 {
+
+  border: 1px solid #86fa58;
+  color: #3ece05;
+  background: #ffffff;
+
+}
+
+.quick-btn2:hover {
+  background: #60be3b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.quick-btn3 {
+
+  border: 1px solid #587efa;
+  color: #0029b1;
+  background: #ffffff;
+
+}
+
+.quick-btn3:hover {
   background: #587efa;
   color: #ffffff;
   transform: translateY(-2px);

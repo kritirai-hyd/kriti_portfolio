@@ -1,12 +1,22 @@
 
-.downlaod{
-        border: 2px solid #0000;
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    font-weight: 600;
-     background: linear-gradient(135deg, #3e70ec 0%, #2a1454 100%);
-    box-shadow: 0 10px 25px #3e70ec4d;
-    color: #fff;
-    display: flex;
-    margin: 0 auto;
+.download{
+  display:flex;
+  align-items: center;
+  gap: 6px;
+  padding: 15px 14px;
+  border-radius: 6px;
+  border: 1px solid #3875fb;
+  color: #3875fb;
+  text-decoration: none;
+  font-size: 0.9rem;background-color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+
+  justify-content: center;
+}
+.download:hover{
+  background: #587efa;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
