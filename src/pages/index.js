@@ -1,15 +1,11 @@
 import Head from "next/head";
 import ClientWrapper from "@/Components/ClientWrapper";
-
-
 export default function Home() {
-
-
   return (
     <>
       <Head>
         {/* Primary title for Google */}
-        <title>Kriti Rai | Full Stack Developer in India</title>
+        <title>Full Stack Developer in India | Kriti Rai</title>
 
         {/* Basic Meta */}
         <meta
@@ -21,18 +17,18 @@ export default function Home() {
         <link rel="canonical" href="https://www.kritirai.com" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Kriti Rai | Full Stack Developer in India" />
+        <meta property="og:title" content="Full Stack Developer in India | Kriti Rai" />
         <meta property="og:description" content="Explore Kriti Rai’s portfolio showcasing MERN stack projects, responsive web apps, and scalable backend systems." />
         <meta property="og:url" content="https://www.kritirai.com" />
         <meta property="og:site_name" content="Kriti Rai" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.kritirai.com/assets/images/kriitrai.png" />
         <meta property="og:locale" content="en_IN" />
-<script src="three.r134.min.js"></script>
-<script src="vanta.birds.min.js"></script>
+        <script src="three.r134.min.js"></script>
+        <script src="vanta.birds.min.js"></script>
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kriti Rai | Full Stack Developer in India" />
+        <meta name="twitter:title" content="Full Stack Developer in India | Kriti Rai" />
         <meta name="twitter:description" content="See Kriti Rai’s MERN stack portfolio with performance-optimized projects and mobile-ready designs. Available for hire in India." />
         <meta name="twitter:image" content="https://www.kritirai.com/assets/images/kriitrai.png" />
         <meta name="twitter:creator" content="@dev_kritirai" />
@@ -120,7 +116,7 @@ export default function Home() {
             })
           }}
         />
-         <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -152,7 +148,7 @@ export default function Home() {
       </Head>
 
 
-<ClientWrapper />
+      <ClientWrapper />
     </>
   );
 }

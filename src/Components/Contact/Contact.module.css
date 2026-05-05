@@ -479,15 +479,14 @@ textarea:focus-visible {
 }
 /* Quick Buttons */
 .quick-btn1 {
-
-  border: 1px solid #fa589b;
-  color: #cf0056;
+  border: 1px solid #5e5e5e;
+  color: #5e5e5e;
   background: #ffffff;
 
 }
 
 .quick-btn1:hover {
-  background: #fa589b;
+  background:#5e5e5e;
   color: #ffffff;
   transform: translateY(-2px);
 }

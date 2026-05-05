@@ -167,7 +167,7 @@ const Contact = () => {
 >
   <button
     type="button"
-    className={styles["quick-btn1"]}
+    className={styles["quick-btn3"]}
     onClick={() =>
       handleQuickMessage(
         "Hi there,\n\nI’m currently open to new opportunities and would love to connect with you if you’re looking to hire. Let’s chat!\n\n"
@@ -178,7 +178,7 @@ const Contact = () => {
       display: "inline-block",
       width: "10px",
       height: "10px",
-      backgroundColor: "#cf0056",
+      backgroundColor: "#3654b8",
       borderRadius: "50%",
       marginRight: "5px"
     }}></span>
@@ -209,16 +209,15 @@ const Contact = () => {
   
 <button
   type="button"
-  className={styles["quick-btn3"]}
+  className={styles["quick-btn1"]}
   onClick={() =>    handleQuickMessage(
-      "Hello,\n\nI’d like to connect with you regarding an opportunity / collaboration. Please let me know a good time to discuss.\n\n"
-  )   }
+     ""  )   }
 >
   <span style={{
       display: "inline-block",
       width: "10px",
       height: "10px",
-      backgroundColor: "#3654b8",
+      backgroundColor: "#2e2e2e",
       borderRadius: "50%",
       marginRight: "5px"
     }}></span>
