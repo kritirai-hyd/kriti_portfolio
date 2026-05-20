@@ -70,18 +70,6 @@ export default function Home() {
                   "position": 1,
                   "name": "Home",
                   "item": "https://www.kritirai.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "About",
-                  "item": "https://www.kritirai.com/about"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Projects",
-                  "item": "https://www.kritirai.com/projects"
                 }
               ]
             })

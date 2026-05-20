@@ -26,47 +26,52 @@ const Contact = () => {
   // ✅ ref for focus
   const textareaRef = useRef(null);
 
-  // ✅ quick message handler
-  const handleQuickMessage = (msg) => {
-    setMessage(msg);
-    textareaRef.current?.focus();
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setIsLoading(true);
+  const payload = new FormData();
 
-    const formData = new FormData(event.target);
+  payload.append("access_key", "f9a52860-113e-4c0b-bc85-581bc2af8241");
+  payload.append("fullName", formData.fullName);
+  payload.append("email", formData.email);
+  payload.append("phone", formData.phone);
+  payload.append("location", formData.location);
+  payload.append("experience", formData.experience);
+  payload.append("skills", formData.skills);
+  payload.append("message", formData.message);
 
-    // ensure message state is used
-    formData.set("message", message);
+  if (formData.resume) {
+    payload.append("resume", formData.resume);
+  }
 
-    formData.append("access_key", "f9a52860-113e-4c0b-bc85-581bc2af8241");
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: payload,
+    });
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    const data = await res.json();
 
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      }).then((res) => res.json());
-
-      if (res.success) {
-        setIsSubmitted(true);
-        setMessage(""); // reset message
-        event.target.reset();
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setIsLoading(false);
+    if (data.success) {
+      alert("Application submitted successfully!");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        location: "",
+        experience: "",
+        skills: "",
+        resume: null,
+        message: "",
+      });
+    } else {
+      alert("Submission failed!");
     }
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong!");
+  }
+};
 
   return (
     <section id="contact" className={styles["contact-section"]}>
@@ -107,7 +112,7 @@ const Contact = () => {
 
                 </div>
 
-                <form onSubmit={onSubmit} className={styles["contact-form"]}>
+                <form onSubmit={handleSubmit} className={styles["contact-form"]}>
                   <div className={styles["form-row"]}>
                     <div className={styles["input-group"]}>
                       <label className={styles.inputLabel}>
