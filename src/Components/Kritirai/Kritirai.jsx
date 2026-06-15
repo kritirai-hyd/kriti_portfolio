@@ -14,7 +14,7 @@ import {
   Map,
   MapPin,
 } from "lucide-react";
-
+import Link from "next/link";
 const Kritirai = () => {
   const { toPDF, targetRef } = usePDF({ filename: "kritirai-cv.pdf" });
 
@@ -40,17 +40,17 @@ const Kritirai = () => {
                   <MapPin />
                   Hyderabad, Telangana, India
                 </div>
-                <div className={styles.locationInfo}>
+            <Link href="https://github.com/kritirai-hyd">     <div className={styles.locationInfo}>
                   <Mail /> kritirai.hyd@gmail.com
-                </div>
+                </div></Link>
                 <div className={styles.locationInfo}>
                    <Github />
                   Github
                 </div>
-                <div className={styles.locationInfo}>
+             <Link href="https://www.hackerrank.com/profile/kritirai_hyd">   <div className={styles.locationInfo}>
               <File />
                   Hackerrank
-                </div>
+                </div></Link>
       
      </div>
               </div>
@@ -169,53 +169,7 @@ const Kritirai = () => {
                     </div>
                   </div>
 
-                  <div className={styles.item}>
-                    <div className={styles.projectHeader}>
-                      <div>
-                        <div className={styles.itemHeader}>
-                          <span>Employee Management System</span>
-                        
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.itemSub}>
-                      Academic Project • 2024
-                    </div>
-                    <ul className={styles.list}>
-                      <li>
-                        Designed and developed a comprehensive employee
-                        management system with secure authentication
-                      </li>
-                      <li>
-                        Implemented role-based access control with NextAuth.js
-                        for admin and employee roles
-                      </li>
-                      <li>
-                        Built RESTful API endpoints for CRUD operations on
-                        employee data
-                      </li>
-                      <li>
-                        Created dashboard with data visualization for HR
-                        analytics
-                      </li>
-                      <li>
-                        Implemented file upload functionality for employee
-                        documents and profiles
-                      </li>
-                      <li>
-                        Added real-time notifications for important updates and
-                        announcements
-                      </li>
-                    </ul>
-                    <div className={styles.techStack}>
-                      <span className={styles.techTag}>Next.js 13</span>
-                      <span className={styles.techTag}>NextAuth.js</span>
-                      <span className={styles.techTag}>MongoDB</span>
-                      <span className={styles.techTag}>Mongoose</span>
-                      <span className={styles.techTag}>Chart.js</span>
-                      <span className={styles.techTag}>Cloudinary</span>
-                    </div>
-                  </div>
+              
 
                
                 </section>
@@ -238,7 +192,7 @@ const Kritirai = () => {
                       (Expected)
                     </div>
                     <div className={styles.grade}>
-                      Current Grade: A (8.5 CGPA)
+                      Grade: A (8.6 CGPA)
                     </div>
                     <div className={styles.academicHighlights}>
                       <h4 style={{padding: "0 15px"}}>Relevant Coursework:</h4>
@@ -282,14 +236,14 @@ const Kritirai = () => {
                   </h3>
                   <div className={styles.skillsContainer}>
                     <span className={styles.skillTag}>
-                      HTML5 & Semantic HTML
+                      HTML5
                     </span>
                     <span className={styles.skillTag}>
-                     CSS Grid/Flexbox
+                     CSS 
                     </span>
                     <span className={styles.skillTag}>JavaScript</span>
                 
-                    <span className={styles.skillTag}>React.js & Hooks</span>
+                    <span className={styles.skillTag}>React.js</span>
                     <span className={styles.skillTag}>Next.js</span>
                  
                     <span className={styles.skillTag}>Bootstrap 5</span>
@@ -327,7 +281,7 @@ const Kritirai = () => {
                   </div>
 
                   <h3 className={styles.skillCategory}>
-                    <i className="fa fa-cogs"></i> Development Tools
+                     Development Tools
                   </h3>
                   <div className={styles.skillsContainer}>
                     <span className={styles.skillTag}>Git & GitHub</span>
@@ -356,6 +310,7 @@ const Kritirai = () => {
                   </h2>
                   <ul className={styles.certificationList}>
                     <li>
+               <Link href="https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/responsive-web-design">
                       <div className={styles.certHeader}>
                         <strong>Responsive Web Design</strong>
                         <span className={styles.certOrg}>freeCodeCamp</span>
@@ -364,9 +319,9 @@ const Kritirai = () => {
                         Issued: April 10,
                         2024
                       </div>
-                    
+                    </Link>
                     </li>
-                    <li>
+                <Link href="https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/javascript-algorithms-and-data-structures-v8">     <li>
                       <div className={styles.certHeader}>
                         <strong>JavaScript Algorithms & Data Structures</strong>
                         <span className={styles.certOrg}>freeCodeCamp</span>
@@ -375,8 +330,8 @@ const Kritirai = () => {
                         Issued: May 4, 2024
                       </div>
                      
-                    </li>
-                    <li>
+                    </li></Link>
+                 <Link href="https://www.hackerrank.com/certificates/22f1961a6cff">    <li>
                       <div className={styles.certHeader}>
                         <strong>SQL and Relational Databases</strong>
                         <span className={styles.certOrg}>HackerRank</span>
@@ -386,8 +341,8 @@ const Kritirai = () => {
                         2024
                       </div>
                      
-                    </li>
-                    <li>
+                    </li></Link>
+               <li>
                       <div className={styles.certHeader}>
                         <strong>Web Development Fundamentals</strong>
                         <span className={styles.certOrg}>IBM SkillsBuild</span>
@@ -445,9 +400,7 @@ const Kritirai = () => {
                         IBM Certified Developer
                       </span>
                       <span className={styles.badge}>5★ SQL HackerRank</span>
-                      <span className={styles.badge}>Problem Solver</span>
-                      <span className={styles.badge}>100 Days of Code</span>
-                        </div>
+                      <span className={styles.badge}>Problem Solver</span>   </div>
                   </div>
                 </section>
               </div>

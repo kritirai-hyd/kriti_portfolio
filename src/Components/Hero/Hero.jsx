@@ -18,7 +18,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Dynamically load Three.js and Vanta.js
+  
       const loadScripts = async () => {
         if (!window.THREE) {
           const threeScript = document.createElement("script");
@@ -66,7 +66,7 @@ const Hero = () => {
   }, [vantaEffect]);
 
   return (
-    <div ref={vantaRef} style={{ width: "100%", height: "100vh" }} className={`${styles.hero} ${theme === "dark" ? styles.bgDark : styles.bgLight}`}>
+    <div ref={vantaRef} style={{ width: "100%", }} className={`${styles.bg} ${theme === "dark" ? styles.bgDark : styles.bgLight}`}>
       <div className={styles.vantabg}></div>
 
       <div className={styles.container}>

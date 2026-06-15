@@ -1,4 +1,4 @@
-// pages/_app.js
+
 import React, { useEffect } from "react";
 import "@/styles/globals.css";
 import Head from "next/head";
@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <ThemeProvider>
-      {/* Global Head - Appears on every page */}
+
       <Head>
         <title>Full Stack Developer in India | Kriti Rai</title>
         <meta

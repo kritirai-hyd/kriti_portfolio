@@ -1,14 +1,10 @@
-.hero {
+.bg {
     position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background: var(--card-bg);
 }
-
-
-/* Social Icons */
 .socialIcons {
     display: flex;
     gap: 1rem;
@@ -16,7 +12,6 @@
     margin: 0;
     padding: 0;
 }
-
 .socialItem {
     background: #ffffff14;
     border: 1px solid #fff3;
@@ -30,21 +25,17 @@
     justify-content: center;
     transition: all 0.3s ease;
 }
-
 .socialItem:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
         rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
         rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transform: translateY(-3px);
 }
-
 .socialItem a {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-/* Hero content wrappers */
 .container { 
     width: 100%; 
     max-width: 1200px; 
@@ -53,7 +44,6 @@
     position: relative;
     z-index: 2;
 }
-
 .subContainer { 
     display: grid; 
     grid-template-columns: 1fr; 
@@ -63,7 +53,6 @@
     position: relative; 
     z-index: 2; 
 }
-
 @media (min-width: 992px) { 
     .subContainer { 
         grid-template-columns: 1.2fr 1fr; 
@@ -71,13 +60,10 @@
         padding: 8rem 0 4rem; 
     } 
 }
-
-/* Left Section */
 .left {
     position: relative;
     z-index: 2;
 }
-
 .introText { 
     font-size: 2.5rem; 
     font-weight: 800; 
@@ -88,14 +74,12 @@
     -webkit-text-fill-color: transparent; 
     background-clip: text; 
 }
-
 .description { 
     font-size: 1.1rem; 
     line-height: 1.7; 
     margin-bottom: 2.5rem; 
     opacity: 0.9; 
 }
-
 @media (min-width: 768px) { 
     .introText { 
         font-size: 3.5rem; 
@@ -104,41 +88,31 @@
         font-size: 1.2rem; 
     } 
 }
-
-/* Hero Actions */
 .heroActions {
     margin-top: 2rem;
 }
-
 .cardFlex {
     display: flex;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
-
-
-
 .cvLight {
     background: #ffffff;
     box-shadow: 0 10px 30px rgba(62, 112, 236, 0.15);
     border: 1px solid rgba(62, 112, 236, 0.2);
 }
-
 .cvDark {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .downloadLink {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
-
     display: block;
 }
-
 .downloadBtn {
     padding: 0.75rem 2rem;
     border-radius:10px;
@@ -146,16 +120,12 @@
     position: relative;
     overflow: hidden;   
      border: 1.5px solid #3e70ec;
-
      color: var(--clr);
 }
 .downloadBtn:hover{
     background-color: #3e70ec;
     color: #fff;
 }
-
-
-/* Right Section */
 .right { 
     display: flex; 
     justify-content: center; 
@@ -163,14 +133,12 @@
     position: relative;
     z-index: 2;
 }
-
 .profile { 
     position: relative; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
 }
-
 .circle { 
     position: relative; 
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
@@ -178,7 +146,6 @@
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15); 
     animation: morphing 15s ease-in-out infinite; 
 }
-
 .bglight { 
     position: absolute; 
     top: -10%; 
@@ -191,7 +158,6 @@
     z-index: -1; 
     animation: pulse 8s ease-in-out infinite, rotate 20s linear infinite; 
 }
-
 .border { 
     position: absolute; 
     top: -2px; 
@@ -205,7 +171,6 @@
     animation: gradientBorder 6s ease infinite; 
     opacity: 0.7; 
 }
-
 .image { 
     width: 100%; 
     height: auto; 
@@ -216,18 +181,14 @@
     border: 6px solid rgba(255, 255, 255, 0.1); 
     transition: all 0.5s ease; 
 }
-
 .circle:hover .image { 
     transform: scale(1.03); 
 }
-
-/* Decorative elements */
 .decorativeElement { 
     position: absolute; 
     border-radius: 50%; 
     z-index: -1; 
 }
-
 .dec1 { 
     width: 40px; 
     height: 40px; 
@@ -237,7 +198,6 @@
     opacity: 0.6; 
     filter: blur(10px); 
 }
-
 .dec2 { 
     width: 30px; 
     height: 30px; 
@@ -247,7 +207,6 @@
     opacity: 0.6; 
     filter: blur(8px); 
 }
-
 .dec3 { 
     width: 25px; 
     height: 25px; 
@@ -257,7 +216,6 @@
     opacity: 0.6; 
     filter: blur(6px); 
 }
-
 .geoDec1 { 
     width: 20px; 
     height: 20px; 
@@ -269,7 +227,6 @@
     border-radius: 4px; 
     animation: pulse 4s ease-in-out infinite; 
 }
-
 .geoDec2 { 
     width: 0; 
     height: 0; 
@@ -282,38 +239,30 @@
     filter: blur(4px); 
     animation: pulse 5s ease-in-out infinite 1s; 
 }
-
-/* Animations */
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(5deg); }
 }
-
 @keyframes floatReverse {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(20px) rotate(-5deg); }
 }
-
 @keyframes pulse {
     0%, 100% { opacity: 0.2; }
     50% { opacity: 0.3; }
 }
-
 @keyframes pulseOpacity {
     0%, 100% { opacity: 0.07; }
     50% { opacity: 0.12; }
 }
-
 @keyframes scale {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
-
 @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
 @keyframes morphing {
     0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
     25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
@@ -321,58 +270,46 @@
     75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
     100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 }
-
 @keyframes floatTriangle {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-15px) rotate(5deg); }
 }
-
 @keyframes gradientBorder {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
-.hero {
+.bg {
     position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
-
-/* Vanta canvas background */
 .vantabg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Behind hero content */
+    z-index: 0;
 }
-
 .container {
     position: relative;
-    z-index: 2; /* Above Vanta */
+    z-index: 2;
 }/* Hero container */
 #HERO {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 }
-
-/* Vanta canvas automatically gets this class */
 .vanta-canvas {
   position: absolute !important;
   top: 0;
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  z-index: 0; /* behind all hero content */
+  z-index: 0;
 }
-
-/* Hero content on top */
 .container {
   position: relative;
   z-index: 2;

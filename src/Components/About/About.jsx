@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -65,13 +64,13 @@ const tools = [
 ];
 
 /* Reusable Card */
-const SkillCard = ({ src, label }) => (
+const Skill = ({ src, label }) => (
   <motion.div
-    className={styles.skillCard}
+    className={styles.cards}
     whileHover={{ y: -8 }}
     whileTap={{ scale: 0.95 }}
   >
-    <div className={styles.skillIcon}>
+    <div className={styles.img}>
       <Image
         src={src}
         alt={`${label} logo`}
@@ -80,54 +79,51 @@ const SkillCard = ({ src, label }) => (
         style={{ objectFit: "contain" }}
       />
     </div>
-    <p className={styles.skillName}>{label}</p>
+    <p className={styles.name}>{label}</p>
   </motion.div>
 );
 
 const About = () => {
   return (
     <section id="skills" className={styles.about}>
-      <div className={styles.aboutContainer}>
-
-      <Heading 
-  heading="My Skills & Tools" 
-  para="Technologies and tools I work with to create efficient, scalable, and user-friendly digital experiences." 
-/>
-        <div className={styles.aboutSection}>
-
+      <div className={styles.container}>
+        <Heading
+          heading="My Skills & Tools"
+          para="Technologies and tools I work with to create efficient, scalable, and user-friendly digital experiences."
+        />
+        <div className={styles.technologies}>
           {/* Skills */}
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className={styles.aboutGroup}
+            className={styles.card}
           >
-            <h3 className={styles.groupTitle}>Skills</h3>
-            
-            <div className={styles.gridContainer}>
+            <h3 className={styles.title}>Skills</h3>
+
+            <div className={styles.skills}>
               {skills.map((skill, i) => (
-                <SkillCard key={i} {...skill} />
+                <Skill key={i} {...skill} />
               ))}
             </div>
           </motion.div>
 
-          {/* Tools */}
+       
           <motion.div
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className={styles.aboutGroup}
+            className={styles.card}
           >
-            <h3 className={styles.groupTitle}>Tools</h3>
-            <div className={styles.gridContainer}>
+            <h3 className={styles.title}>Tools</h3>
+            <div className={styles.tools}>
               {tools.map((tool, i) => (
-                <SkillCard key={i} {...tool} />
+                <Skill key={i} {...tool} />
               ))}
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
