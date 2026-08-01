@@ -1,0 +1,190 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><title data-next-head="">How to Build a Developer Portfolio | Kriti Rai</title><meta name="description" content="Step-by-step tutorial on how to build a professional developer portfolio using React, Next.js, and modern web development practices." data-next-head=""/><meta name="keywords" content="developer portfolio tutorial, portfolio website, React portfolio, Next.js portfolio, web developer portfolio" data-next-head=""/><meta name="author" content="Kriti Rai" data-next-head=""/><link rel="canonical" href="https://www.kritirai.com/blog/portfolio-tutorial" data-next-head=""/><meta property="og:title" content="How to Build a Developer Portfolio | Kriti Rai" data-next-head=""/><meta property="og:description" content="Learn how to create a developer portfolio that stands out and helps you get hired." data-next-head=""/><meta property="og:url" content="https://www.kritirai.com/blog/portfolio-tutorial" data-next-head=""/><meta property="og:site_name" content="Kriti Rai" data-next-head=""/><meta property="og:type" content="article" data-next-head=""/><meta property="og:image" content="https://www.kritirai.com/assets/images/portfolio-tutorial.png" data-next-head=""/><meta property="og:locale" content="en_IN" data-next-head=""/><meta name="twitter:card" content="summary_large_image" data-next-head=""/><meta name="twitter:title" content="How to Build a Developer Portfolio | Kriti Rai" data-next-head=""/><meta name="twitter:description" content="A complete guide to building a professional developer portfolio using modern web tools." data-next-head=""/><meta name="twitter:image" content="https://www.kritirai.com/assets/images/portfolio-tutorial.png" data-next-head=""/><meta name="twitter:creator" content="@dev_kritirai" data-next-head=""/><link rel="preload" href="/_next/static/media/portfolio.cc5241a3.png" as="image" data-next-head=""/><link rel="preload" href="/_next/static/chunks/d83cc6c61db3595c.css" as="style"/><link rel="preload" href="/_next/static/chunks/702f6c47320e4c1d.css" as="style"/><script type="application/ld+json" data-next-head="">[{"@context":"https://schema.org","@type":"Person","name":"Kriti Rai","url":"https://www.kritirai.com","image":"https://www.kritirai.com/assets/images/kriti-rai.jpeg","jobTitle":"Full Stack Developer","sameAs":["https://www.linkedin.com/in/dev-kritirai","https://x.com/dev_kritirai","https://github.com/kritirai-hyd"],"worksFor":{"@type":"Organization","name":"Freelance"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Osmania University"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Build a Developer Portfolio – Step-by-Step Guide","description":"Learn how to build a professional developer portfolio from scratch using modern web technologies like React and Next.js.","author":{"@type":"Person","name":"Kriti Rai"},"publisher":{"@type":"Person","name":"Kriti Rai"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kritirai.com/blog/portfolio-tutorial"},"datePublished":"2025-01-12","dateModified":"2025-01-12"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.kritirai.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.kritirai.com/blog"},{"@type":"ListItem","position":3,"name":"Portfolio Tutorial","item":"https://www.kritirai.com/blog/portfolio-tutorial"}]}]</script><link rel="stylesheet" href="/_next/static/chunks/d83cc6c61db3595c.css" data-n-g=""/><link rel="stylesheet" href="/_next/static/chunks/702f6c47320e4c1d.css" data-n-p=""/><noscript data-n-css=""></noscript><script src="/_next/static/chunks/0e70328d3f7fcfc3.js" defer=""></script><script src="/_next/static/chunks/1252bd3a53314f1d.js" defer=""></script><script src="/_next/static/chunks/fb6b21fa05495ae2.js" defer=""></script><script src="/_next/static/chunks/cf5993002b27b6dd.js" defer=""></script><script src="/_next/static/chunks/turbopack-edd113a50d34f7c5.js" defer=""></script><script src="/_next/static/chunks/466801d53d15035e.js" defer=""></script><script src="/_next/static/chunks/turbopack-79670bbb0ddf9e6e.js" defer=""></script><script src="/_next/static/y167PqaBe0wdUn90tEVbT/_ssgManifest.js" defer=""></script><script src="/_next/static/y167PqaBe0wdUn90tEVbT/_buildManifest.js" defer=""></script></head><body><script>
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (!theme) {
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+                      ? 'dark'
+                      : 'light';
+                  }
+                  document.documentElement.setAttribute('data-theme', theme);
+                } catch(e) {}
+              })();
+            </script><link rel="preload" as="image" href="/_next/static/media/portfolio.cc5241a3.png"/><div id="__next"><header class="Header-module__yi2Pjq__header "><div class="Header-module__yi2Pjq__headerLeft"><a href="/"><img alt="Kriti Rai" loading="lazy" width="140" height="60" decoding="async" data-nimg="1" class="Header-module__yi2Pjq__logo" style="color:transparent" src="/_next/static/media/kritirai.b0cee432.svg"/></a></div><nav class="Header-module__yi2Pjq__nav "><ul class="Header-module__yi2Pjq__navList"><li class=""><a href="/about%20Me">About Me</a></li><li class=""><a href="/services">Services</a></li><li class=""><a href="/projects">Projects</a></li><li class=""><a href="/contact">Contact</a></li><li class=""><a href="/blog">Blog</a></li></ul><div class="Header-module__yi2Pjq__navThemeToggle"><button style="background:none;border:none;cursor:pointer" aria-label="Toggle Theme"><img alt="Toggle Theme" loading="lazy" width="28" height="28" decoding="async" data-nimg="1" style="color:transparent" src="/_next/static/media/toggle-d.675b6d58.svg"/></button></div></nav><div class="Header-module__yi2Pjq__mnavThemeToggle"><button style="background:none;border:none;cursor:pointer" aria-label="Toggle Theme"><img alt="Toggle Theme" loading="lazy" width="28" height="28" decoding="async" data-nimg="1" style="color:transparent" src="/_next/static/media/toggle-d.675b6d58.svg"/></button></div><button class="Header-module__yi2Pjq__burger " aria-label="Toggle Menu"><span></span><span></span><span></span></button></header><div class="ResponsiveDesign-module__QjVfZq__container"><header class="ResponsiveDesign-module__QjVfZq__blogHeader"><div class="ResponsiveDesign-module__QjVfZq__categoryTag">Web Development</div><h1 class="ResponsiveDesign-module__QjVfZq__blogTitle">Build a Portfolio Website Using HTML, CSS, and JavaScript</h1></header><div class="ResponsiveDesign-module__QjVfZq__featuredImage"><img alt="Modern portfolio website design" width="1200" height="600" decoding="async" data-nimg="1" class="ResponsiveDesign-module__QjVfZq__blogImage" style="color:transparent" src="/_next/static/media/portfolio.cc5241a3.png"/><div class="ResponsiveDesign-module__QjVfZq__imageCaption">A clean, modern portfolio website showcasing projects and skills</div></div><div><div class="ResponsiveDesign-module__QjVfZq__intro"><p class="ResponsiveDesign-module__QjVfZq__lead">Your portfolio website is your digital business card in today&#x27;s competitive tech landscape. In this comprehensive guide, we&#x27;ll build a modern, responsive portfolio from scratch using only HTML, CSS, and vanilla JavaScript—no frameworks required.</p></div><section class="ResponsiveDesign-module__QjVfZq__content"><h2>Why Build Your Own Portfolio?</h2><p>While templates and website builders are convenient, building your portfolio from scratch demonstrates your coding skills, allows complete customization, and gives you full control over performance and SEO. This project will showcase your abilities in the three core web technologies that every frontend developer must master.</p><div class="ResponsiveDesign-module__QjVfZq__principlesGrid"><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Skill Demonstration</h3><p>Shows potential employers your actual coding abilities, not just your ability to use a template.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Complete Control</h3><p>Full customization over design, animations, and functionality without template limitations.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Performance Optimization</h3><p>Zero framework overhead means faster load times and better Core Web Vitals scores.</p></div></div></section><section class="ResponsiveDesign-module__QjVfZq__content"><h2>Project Structure &amp; Setup</h2><p>Let&#x27;s start by organizing our project files efficiently:</p><div class="ResponsiveDesign-module__QjVfZq__example"><h4>File Structure</h4><pre>portfolio-website/
+├── index.html
+├── styles/
+│   ├── main.css
+│   ├── responsive.css
+│   └── animations.css
+├── scripts/
+│   └── main.js
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── projects/
+└── README.md</pre></div><h3>HTML5 Boilerplate</h3><p>Start with a semantic HTML5 structure:</p><div class="ResponsiveDesign-module__QjVfZq__example"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Your Name | Portfolio&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/main.css&quot;&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;assets/favicon.ico&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Navigation --&gt;
+    &lt;nav class=&quot;navbar&quot;&gt;
+        &lt;!-- We&#x27;ll build this in CSS/JS --&gt;
+    &lt;/nav&gt;
+    
+    &lt;!-- Main Content --&gt;
+    &lt;main&gt;
+        &lt;!-- Sections will go here --&gt;
+    &lt;/main&gt;
+    
+    &lt;!-- Footer --&gt;
+    &lt;footer&gt;
+        &lt;!-- Footer content --&gt;
+    &lt;/footer&gt;
+    
+    &lt;script src=&quot;scripts/main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div></section><section class="ResponsiveDesign-module__QjVfZq__content"><h2>Key components to Build</h2><div class="ResponsiveDesign-module__QjVfZq__principlesGrid"><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>1. Hero Section</h3><p>Create an impactful first impression with your name, title, and a call-to-action. Include subtle animations to draw attention.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>2. Projects Gallery</h3><p>Showcase 3-5 of your best projects with images, descriptions, technologies used, and links to live demos/GitHub.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>3. Skills Section</h3><p>Display your technical skills with progress bars or category grouping. Keep it visual and easy to scan.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>4. Contact Form</h3><p>Build a functional contact form with validation. Connect it to a service like Formspree or Netlify Forms.</p></div></div></section><section class="ResponsiveDesign-module__QjVfZq__content"><h2>Modern CSS Techniques</h2><h3>CSS Grid for Layout</h3><p>Use CSS Grid for complex layout sections like the projects gallery:</p><div class="ResponsiveDesign-module__QjVfZq__example"><pre>.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}</pre></div><h3>Flexbox for Alignment</h3><p>Use Flexbox for navigation and skill bars:</p><div class="ResponsiveDesign-module__QjVfZq__example"><pre>.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width 1.5s ease-out;
+}</pre></div><h3>CSS Variables for Consistency</h3><div class="ResponsiveDesign-module__QjVfZq__example"><pre>:root {
+    --primary: #2563eb;
+    --secondary: #7c3aed;
+    --text: #1f2937;
+    --light-text: #6b7280;
+    --bg: #ffffff;
+    --card-bg: #f8fafc;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+    /* Typography */
+    --font-main: &#x27;Inter&#x27;, system-ui, sans-serif;
+    --font-mono: &#x27;Fira Code&#x27;, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #f9fafb;
+        --light-text: #d1d5db;
+        --bg: #111827;
+        --card-bg: #1f2937;
+    }
+}</pre></div></section><section class="ResponsiveDesign-module__QjVfZq__content"><h2>JavaScript Functionality</h2><div class="ResponsiveDesign-module__QjVfZq__principlesGrid"><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Smooth Scrolling</h3><p>Implement smooth navigation between sections with scroll behavior polyfill for cross-browser compatibility.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Form Validation</h3><p>Create real-time form validation with helpful error messages and success feedback.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Interactive Elements</h3><p>Add interactive features like project filtering, dark mode toggle, and animated skill bars on scroll.</p></div></div><div class="ResponsiveDesign-module__QjVfZq__example"><h4>JavaScript: Smooth Scroll Implementation</h4><pre>// Smooth scrolling for navigation links
+document.querySelectorAll(&#x27;a[href^=&quot;#&quot;]&#x27;).forEach(anchor =&gt; {
+    anchor.addEventListener(&#x27;click&#x27;, function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute(&#x27;href&#x27;);
+        if(targetId === &#x27;#&#x27;) return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: &#x27;smooth&#x27;
+            });
+        }
+    });
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: &#x27;0px 0px -50px 0px&#x27;
+};
+
+const observer = new IntersectionObserver((entries) =&gt; {
+    entries.forEach(entry =&gt; {
+        if(entry.isIntersecting) {
+            entry.target.classList.add(&#x27;animate-in&#x27;);
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll(&#x27;.skill-bar, .project-card&#x27;).forEach(el =&gt; {
+    observer.observe(el);
+});</pre></div></section><section class="ResponsiveDesign-module__QjVfZq__content"><h2>Responsive Design Checklist</h2><div class="ResponsiveDesign-module__QjVfZq__Tables"><div class="ResponsiveDesign-module__QjVfZq__tableHeader"><span>Breakpoint</span><span>Target Devices</span><span>Key Adjustments</span></div><div class="ResponsiveDesign-module__QjVfZq__tableRow"><span>Mobile: &lt; 768px</span><span>Smartphones</span><span>Stack all sections, hamburger menu, larger touch targets</span></div><div class="ResponsiveDesign-module__QjVfZq__tableRow"><span>Tablet: 768px - 1024px</span><span>Tablets</span><span>2-column grids, adjusted font sizes, tablet-optimized navigation</span></div><div class="ResponsiveDesign-module__QjVfZq__tableRow"><span>Desktop: &gt; 1024px</span><span>Desktops &amp; Laptops</span><span>Multi-column layouts, hover effects, desktop navigation</span></div></div><div class="ResponsiveDesign-module__QjVfZq__example"><h4>Mobile-First Media Queries</h4><pre>/* Base styles (mobile first) */
+.container {
+    padding: 1rem;
+    width: 100%;
+}
+
+.nav-menu {
+    display: none;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        padding: 2rem 4rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .nav-menu {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+}</pre></div></section><section class="ResponsiveDesign-module__QjVfZq__content"><h2>Performance Optimization</h2><ul class="ResponsiveDesign-module__QjVfZq__List"><li><strong>Image Optimization:</strong> Use WebP format with JPEG/PNG fallbacks. Implement lazy loading with the <code>loading=&quot;lazy&quot;</code> attribute.</li><li><strong>Code Splitting:</strong> Separate CSS for critical and non-critical styles. Use <code>preload</code> for essential resources.</li><li><strong>Minification:</strong> Minify HTML, CSS, and JavaScript files for production. Remove unused CSS with tools like PurgeCSS.</li><li><strong>Caching:</strong> Implement proper cache headers and consider Service Workers for offline functionality.</li></ul></section><section class="ResponsiveDesign-module__QjVfZq__content"><h2>Deployment Options</h2><div class="ResponsiveDesign-module__QjVfZq__principlesGrid"><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>GitHub Pages (Free)</h3><p>Perfect for beginners. Push your code to a GitHub repository and enable GitHub Pages in settings.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Netlify (Free Tier)</h3><p>Drag-and-drop deployment with continuous deployment from Git. Includes forms, analytics, and HTTPS.</p></div><div class="ResponsiveDesign-module__QjVfZq__Card"><h3>Vercel (Free Tier)</h3><p>Excellent performance with edge network. Automatic SSL and easy integration with modern frameworks.</p></div></div></section><section class="ResponsiveDesign-module__QjVfZq__blogconclusion"><h2>Next Steps &amp; Enhancement Ideas</h2><p>Once your basic portfolio is live, consider these enhancements: Add a blog section to showcase your knowledge, implement a dark/light mode toggle, integrate a CMS like Sanity or Strapi for easy content updates, add performance monitoring with Google Analytics, or implement PWA features for app-like experience. Remember to regularly update your portfolio with new projects and skills—a stagnant portfolio is almost as bad as no portfolio at all!</p><p class="ResponsiveDesign-module__QjVfZq__lead" style="margin-top:2rem">Your portfolio is never truly &quot;finished.&quot; It&#x27;s a living document of your growth as a developer. Start simple, ship quickly, and iterate based on feedback and new skills you acquire.</p></section><div class="ResponsiveDesign-module__QjVfZq__bgbtns"><span class="ResponsiveDesign-module__QjVfZq__bgbtn">HTML5</span><span class="ResponsiveDesign-module__QjVfZq__bgbtn">CSS3</span><span class="ResponsiveDesign-module__QjVfZq__bgbtn">JavaScript</span><span class="ResponsiveDesign-module__QjVfZq__bgbtn">Portfolio</span><span class="ResponsiveDesign-module__QjVfZq__bgbtn">Web Development</span><span class="ResponsiveDesign-module__QjVfZq__bgbtn">Beginner Friendly</span></div></div></div><footer class="Footer-module__-FozCG__footer undefined"><div class="Footer-module__-FozCG__content"><p class="Footer-module__-FozCG__text">© <!-- -->2026<!-- --> <span>Kriti Rai</span>. All rights reserved.</p><div class="Footer-module__-FozCG__badges"><img alt="Copyscape Protected" loading="lazy" width="174" height="68" decoding="async" data-nimg="1" class="Footer-module__-FozCG__img" style="color:transparent" src="/_next/static/media/copyscap.fe34799d.png"/><img alt="DMCA Protected" loading="lazy" width="188" height="74" decoding="async" data-nimg="1" class="Footer-module__-FozCG__img" style="color:transparent" src="/_next/static/media/dmca.f671c48e.png"/></div></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/blog/build-a-portfolio-website","query":{},"buildId":"y167PqaBe0wdUn90tEVbT","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
