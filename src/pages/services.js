@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ServicesDetails from "@/Components/servicesDetails/ServicesDetails";
+import ServicesDetails from "@/components/servicesDetails/ServicesDetails";
 
 export default function ServicesPage() {
 

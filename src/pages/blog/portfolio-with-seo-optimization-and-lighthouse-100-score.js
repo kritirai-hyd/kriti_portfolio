@@ -1,5 +1,5 @@
 import Head from "next/head";
-import PortfolioSEO from "@/Components/blog/PortfolioSEO";
+import PortfolioSEO from "@/components/blog/PortfolioSEO";
 
 export default function PortfolioSEOPage() {
   // JSON-LD Structured Data

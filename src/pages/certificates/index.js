@@ -1,5 +1,5 @@
 import Head from "next/head";
-import CertificateDetails from "@/Components/certificate/CertificateDetails";
+import CertificateDetails from "@/components/certificate/CertificateDetails";
 
 export default function CertificatesPage() {
 

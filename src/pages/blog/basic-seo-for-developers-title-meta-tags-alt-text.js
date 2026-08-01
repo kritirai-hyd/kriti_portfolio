@@ -1,5 +1,5 @@
 import Head from "next/head";
-import SEOBasics from "@/Components/blog/SEOBasics";
+import SEOBasics from "@/components/blog/SEOBasics";
 
 export default function SEOBasicsPage() {
   // JSON-LD Structured Data

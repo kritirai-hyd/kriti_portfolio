@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Gallery from "@/Components/gallery/Gallery";
+import Gallery from "@/components/gallery/Gallery";
 
 export default function GalleryPage() {
   // JSON-LD Structured Data

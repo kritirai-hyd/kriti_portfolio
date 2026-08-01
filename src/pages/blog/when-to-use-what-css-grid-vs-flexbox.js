@@ -1,5 +1,5 @@
 import Head from "next/head";
-import GridVsFlexbox from "@/Components/blog/Flexbox";
+import GridVsFlexbox from "@/components/blog/Flexbox";
 
 export default function GridVsFlexboxPage() {
   // JSON-LD Structured Data

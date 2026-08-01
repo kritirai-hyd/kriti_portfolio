@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Kritirai from "@/Components/kritirai/Kritirai";
+import Kritirai from "@/components/kritirai/Kritirai";
 
 export default function ResumePage() {
 

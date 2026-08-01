@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Accessibility from "@/Components/servicesDetails/accessibility";
+import Accessibility from "@/components/servicesDetails/accessibility";
 
 export default function AccessibilityPage() {
 

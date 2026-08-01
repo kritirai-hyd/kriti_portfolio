@@ -1,5 +1,5 @@
 import Head from "next/head";
-import PerformanceOptimization from "@/Components/servicesDetails/performance-optimization";
+import PerformanceOptimization from "@/components/servicesDetails/performance-optimization";
 
 export default function PerformanceOptimizationPage() {
 

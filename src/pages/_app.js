@@ -1,10 +1,10 @@
 import React from "react";
 import "@/styles/globals.css";
 
-import { ThemeProvider } from "@/Components/context/ThemeContext";
-import Header from "@/Components/header/Header";
-import Footer from "@/Components/footer/Footer";
-import useLenis from "@/Components/hooks/useLenis";
+import { ThemeProvider } from "@/components/context/ThemeContext";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
+import useLenis from "@/components/hooks/useLenis";
 
 export default function App({ Component, pageProps }) {
 

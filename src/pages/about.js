@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AboutDetails from "@/Components/aboutDetails/AboutDetails";
+import AboutDetails from "@/components/aboutDetails/AboutDetails";
 
 export default function AboutPage() {
   // JSON-LD Structured Data

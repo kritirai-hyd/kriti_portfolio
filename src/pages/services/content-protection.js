@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ContentProtection from "@/Components/servicesDetails/content-protection";
+import ContentProtection from "@/components/servicesDetails/content-protection";
 
 export default function ContentProtectionPage() {
 

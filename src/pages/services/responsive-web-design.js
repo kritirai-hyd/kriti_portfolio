@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ResponsiveWebDesign from "@/Components/servicesDetails/responsive-web-design";
+import ResponsiveWebDesign from "@/components/servicesDetails/responsive-web-design";
 
 export default function ResponsiveWebDesignPage() {
 

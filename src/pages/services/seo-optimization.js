@@ -1,5 +1,5 @@
 import Head from "next/head";
-import SeoOptimization from "@/Components/servicesDetails/seo-optimization";
+import SeoOptimization from "@/components/servicesDetails/seo-optimization";
 
 export default function SeoOptimizationPage() {
 

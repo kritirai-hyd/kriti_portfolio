@@ -1,5 +1,5 @@
 import Head from "next/head";
-import VSCodeExtensions from "@/Components/blog/VSCodeExtensions";
+import VSCodeExtensions from "@/components/blog/VSCodeExtensions";
 
 export default function VSCodeExtensionsPage() {
   // JSON-LD Structured Data

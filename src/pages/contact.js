@@ -1,6 +1,6 @@
 import Head from "next/head";
-import BreadCrumb from "@/Components/ui/BreadCrumb/BreadCrumb";
-import Contact from "@/Components/contact/Contact";
+import BreadCrumb from "@/components/ui/BreadCrumb/BreadCrumb";
+import Contact from "@/components/contact/Contact";
 export default function ContactPage() {
   const schemaData = [
     {

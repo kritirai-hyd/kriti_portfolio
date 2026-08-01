@@ -1,5 +1,5 @@
 import Head from "next/head";
-import PortfolioTutorial from "@/Components/blog/Portfolio";
+import PortfolioTutorial from "@/components/blog/Portfolio";
 
 export default function PortfolioTutorialPage() {
   // JSON-LD Structured Data

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Blog from "@/Components/blog/Blog";
+import Blog from "@/components/blog/Blog";
 
 export default function BlogPage() {
 

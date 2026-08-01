@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ResponsiveDesign from "@/Components/blog/ResponsiveDesign";
+import ResponsiveDesign from "@/components/blog/ResponsiveDesign";
 
 export default function ResponsiveDesignPage() {
   // JSON-LD Structured Data

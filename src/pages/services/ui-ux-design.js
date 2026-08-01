@@ -1,5 +1,5 @@
 import Head from "next/head";
-import UiUxDesign from "@/Components/servicesDetails/ui-ux-design";
+import UiUxDesign from "@/components/servicesDetails/ui-ux-design";
 
 export default function UiUxDesignPage() {
 

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import WorkDetails from "@/Components/workDetails/WorkDetails";
+import WorkDetails from "@/components/workDetails/WorkDetails";
 
 export default function ProjectsPage() {
 
