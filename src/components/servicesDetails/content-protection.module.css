@@ -1,0 +1,528 @@
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.bg{
+  background-color: var(--page-bg);
+}
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.titleIcon {
+  font-size: 2.8rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+   color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
+/* Stats Section */
+.statsSection {
+  margin-bottom: 60px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.statCard {
+  background: linear-gradient(135deg, #93ceff 0%, #76a1ff 100%);
+  padding: 30px 20px;
+  border-radius: 12px; border: 1px solid var(--border-color);
+  text-align: center;
+  color: rgb(5, 5, 5);
+
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.statDescription {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+
+
+/* Services Section */
+.servicesSection {
+  margin-bottom: 60px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+  background: var(--card-bg);
+ border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  box-shadow:var(--card-shadow);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.1);
+
+}
+
+.serviceHeader {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+
+.serviceTitleSection {
+  flex: 1;
+}
+
+.serviceTitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.riskBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.serviceDescription {
+   color: var(--text-color);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.featuresTitle {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.featuresList li {
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.featuresList li:before {
+  content: "✓";
+  color: #05a100;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.serviceFooter {
+  padding-top: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.implementationStatus {
+  font-size: 0.9rem;
+   color: var(--text-color);
+}
+
+.statusActive {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Standards Section */
+.standardsSection {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.standardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+/* Tips Section */
+.tipsSection {
+  margin-bottom: 60px;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tipCard {
+  background: var(--card-bg);
+ border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+
+.tipIcon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.tipCard h4 {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.tipCard p {
+   color: var(--text-color);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .encryptionGrid,
+  .standardsGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .titleIcon {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  /* Stats Section */
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .statCard {
+    padding: 20px;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  /* Filter Section */
+  .filterContainer {
+    flex-direction: column;
+  }
+
+  .filterButton {
+    width: 100%;
+  }
+
+  /* Services Section */
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .serviceCard {
+    padding: 20px;
+  }
+
+  .serviceHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .serviceIcon {
+    margin: 0 auto;
+  }
+
+  .riskBadge {
+    display: inline-block;
+  }
+
+  /* Encryption Section */
+  .encryptionSection,
+  .standardsSection {
+    padding: 30px 20px;
+  }
+
+  .encryptionGrid,
+  .standardsGrid,
+  .tipsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* CTA Section */
+  .ctaSection {
+    padding: 40px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaDescription {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .serviceCard {
+    padding: 18px;
+  }
+
+  .serviceIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .serviceTitle {
+    font-size: 1.1rem;
+  }
+
+  .featuresList li {
+    font-size: 0.85rem;
+    padding: 4px 0 4px 20px;
+  }
+
+  .ctaButton {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Landscape Mode on Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .encryptionGrid,
+  .standardsGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Desktop View (4K) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+    padding: 60px 40px;
+  }
+
+  .mainTitle {
+    font-size: 3.5rem;
+  }
+
+  .titleIcon {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    max-width: 1000px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .statsGrid {
+    gap: 30px;
+  }
+
+  .statCard {
+    padding: 40px;
+  }
+
+  .statValue {
+    font-size: 3.5rem;
+  }
+
+  .servicesGrid {
+    gap: 40px;
+  }
+
+  .serviceCard {
+    padding: 40px;
+  }
+
+  .serviceIcon {
+    width: 80px;
+    height: 80px;
+    font-size: 3.5rem;
+  }
+
+  .serviceTitle {
+    font-size: 1.6rem;
+  }
+
+  .serviceDescription {
+    font-size: 1.1rem;
+  }
+
+  .featuresList li {
+    font-size: 1rem;
+    padding: 8px 0 8px 30px;
+  }
+
+  .encryptionCard,
+  .standardCard,
+  .tipCard {
+    padding: 35px;
+  }
+
+  .encryptionIcon,
+  .standardIcon,
+  .tipIcon {
+    font-size: 3rem;
+  }
+
+  .ctaSection {
+    padding: 80px 60px;
+  }
+
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+
+  .ctaButton {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+  }
+}

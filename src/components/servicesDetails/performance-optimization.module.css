@@ -1,0 +1,525 @@
+.bg{
+  background-color: var(--page-bg);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.titleIcon {
+  font-size: 2.8rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Section Titles */
+.ptitle {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
+/* Stats Section */
+.cardSection {
+  margin-bottom: 60px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cardtext {
+  background: linear-gradient(135deg, #93ceff 0%, #76a1ff 100%);
+  padding: 30px 20px;
+  border-radius: 12px; border: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-color);
+  
+}
+
+.cardtext:hover {
+  transform: translateY(-5px);
+}
+
+.cardnum {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.cardtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.carddesc  {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Services Section */
+.services {
+  margin-bottom: 60px;
+}
+
+.servicesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+  background: var(--card-bg);
+ border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 91, 234, 0.1);
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+ background: var(--card-bg);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  font-weight: 600;
+  flex: 1;
+}
+
+.serviceDescription {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.techniquesList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.list {
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.list:before {
+  content: "✓";
+  color: #16c000;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.feature {
+  background: var(--card-bg);
+  padding: 15px; border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.ftitle {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.flist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fcard {
+  background: var(--page-bg);
+  color: var(--text-color); border: 1px solid var(--border-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Process Section */
+.process {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--card-bg); border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+.processContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.Card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px; border: 1px solid var(--border-color);
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .processContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quickWinsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .titleIcon {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .ptitle {
+    font-size: 1.5rem;
+  }
+
+  /* Stats Section */
+  .card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .cardtext {
+    padding: 20px;
+  }
+
+  .cardnum {
+    font-size: 2rem;
+  }
+
+  /* Services Section */
+  .servicesContainer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .serviceCard {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .serviceIcon {
+    margin: 0 auto;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .list {
+    font-size: 0.85rem;
+  }
+
+  .flist {
+    justify-content: center;
+  }
+
+  /* Process Section */
+  .process {
+    padding: 30px 20px;
+  }
+
+  .processContainer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .Card {
+    padding: 20px;
+  }
+
+  .stepNumber {
+    font-size: 1.8rem;
+  }
+
+  /* Quick Wins Section */
+  .quickWinsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* CTA Section */
+  .ctaSection {
+    padding: 40px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaDescription {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .serviceCard {
+    padding: 18px;
+  }
+
+  .serviceIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .fcard {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+
+  .ctaButton {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Landscape Mode on Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quickWinsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Desktop View (4K) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+    padding: 60px 40px;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .titleIcon {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    max-width: 1000px;
+  }
+
+  .ptitle {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    gap: 30px;
+  }
+
+  .cardtext {
+    padding: 40px;
+  }
+
+  .cardnum {
+    font-size: 3.5rem;
+  }
+
+  .cardtitle {
+    font-size: 1.3rem;
+  }
+
+  .servicesContainer {
+    gap: 40px;
+  }
+
+  .serviceCard {
+    padding: 40px;
+  }
+
+  .serviceIcon {
+    width: 80px;
+    height: 80px;
+    font-size: 3.5rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .serviceDescription {
+    font-size: 1.1rem;
+  }
+
+  .list {
+    font-size: 1rem;
+    padding: 8px 0 8px 30px;
+  }
+
+  .Card {
+    padding: 35px;
+  }
+
+  .stepNumber {
+    font-size: 2.5rem;
+  }
+
+  .stepTitle {
+    font-size: 1.3rem;
+  }
+
+  .quickWinCard {
+    padding: 35px;
+  }
+
+  .quickWinIcon {
+    font-size: 2.5rem;
+  }
+
+  .ctaSection {
+    padding: 80px 60px;
+  }
+
+  .ctaTitle {
+    font-size: 2.8rem;
+  }
+
+  .ctaButton {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,519 @@
+.container {
+    max-width: 1200px;
+    padding: 5rem 1rem;
+    margin: 0 auto;
+    background: var(--card-bg);
+    min-height: 100vh;
+}
+.bg {
+    background: var(--page-bg);
+}
+.download {
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea 0%, #2f33ff 100%);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.25);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 auto 2rem auto;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.35);
+}
+.resumeContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 2.3rem;
+    box-shadow: 0 20px 60px var(--card-shadow);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+.header {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+.headerText h1 {
+    font-size: 3rem;
+    color: var(--h-color);
+    margin: 0 0 0.5rem 0;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.contactcontainer {
+    display: flex;
+    justify-content: space-around;
+}
+.tagline {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 1.9;
+}
+.locationInfo,
+.pronouns {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    color: var(--text-light);
+}
+.pronouns {
+    background: var(--accent);
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 0.9rem;
+}
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.contactInfo div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+.contactInfo i {
+    width: 20px;
+    color: var(--text-color);
+}
+.summarySection {
+    background: var(--page-bg);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border-color);
+}
+.sectionTitle {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border);
+}
+.summaryText {
+    line-height: 1.8;
+    color: var(--text);
+    margin: 0 0 1.5rem 0;
+    font-size: 1.05rem;
+}
+.keyHighlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--card-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+.resumeGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+.item {
+    background: var(--card-bg);
+    padding: 1.75rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+.projectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+.itemHeader span:first-child {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.projectStatus {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.projectLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.projectLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.projectLink:hover {
+    text-decoration: underline;
+}
+.itemSub {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+.list li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+.list li::before {
+    content: '.';
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+.techTag {
+    color: var(--text-color);
+    background: var(--page-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: .2rem 10px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+.educationDegree {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.educationPeriod {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.grade {
+    color: #186f02;
+    font-weight: 600;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    width: fit-content;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.academicHighlights {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+.courseworkList {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.courseworkList li {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+}
+.skillCategory {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 1.5rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.skillTag,
+.advancedTag,
+.learningTag {
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.skillTag {
+    background: var(--page-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+.certificationList {
+    list-style: none;
+    padding: 0;
+}
+.certificationList li {
+    background: var(--page-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+.certHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+.certHeader strong {
+    font-size: 1rem;
+    color: var(--text);
+}
+.certOrg {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: var(--page-bg);
+    border-radius: 10px;
+}
+.certDate {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.certDesc {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+.additionalInfo {
+    margin: 1.5rem 0;
+}
+.infoItem {
+    background: var(--page-bg);
+    padding: 1.25rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+.infoItem h4 {
+    color: var(--text);
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.infoItem p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+.badgesContainer {
+    margin-top: 2rem;
+}
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+.badge {
+    background: #000;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
+.footerContent p {
+    text-align: center;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.footerContent p i {
+    color: #ef4444;
+}
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+    .resumeContainer {
+        padding: 2rem;
+    }
+    .header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .headerText h1 {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .resumeGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .resumeContainer {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    .summaryText {
+        color: var(--text);
+        margin: 0 0 1.5rem;
+        font-size: .95rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+    .headerText h1 {
+        font-size: 2.25rem;
+    }
+    .contactcontainer {
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .tagline {
+        font-size: 1.1rem;
+    }
+    .courseworkList {
+        grid-template-columns: 1fr;
+    }
+    .itemHeader {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    .projectLinks {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 0.75rem;
+        margin-top: 3rem;
+    }
+    .resumeContainer {
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+    .headerText h1 {
+        font-size: 2rem;
+    }
+    .sectionTitle {
+        font-size: 1.2rem;
+    }
+    .item {
+        padding: 1.25rem;
+    }
+    .download {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media print {
+    .container {
+        padding: 0;
+        background: white;
+    }
+    .download {
+        display: none;
+    }
+    .resumeContainer {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+    }
+    .item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    .projectLink {
+        pointer-events: none;
+        color: var(--text);
+    }
+}

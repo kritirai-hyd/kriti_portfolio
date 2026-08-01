@@ -1,0 +1,680 @@
+.bg{
+  background-color: var(--page-bg);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.titleIcon {
+  font-size: 2.8rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+}
+
+
+/* Stats Section */
+.statsSection {
+  margin-bottom: 60px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.statDescription {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Compliance Section */
+.complianceSection {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 16px;
+}
+
+.complianceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.complianceCard {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+.complianceHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.complianceIcon {
+  font-size: 1.8rem;
+}
+
+.complianceTitle {
+  font-size: 1.2rem;
+ color: var(--text-color);
+  font-weight: 600;
+}
+
+.complianceDescription {
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.complianceList {
+  list-style: none;
+  padding: 0;
+}
+
+.complianceList li {
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+ color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.complianceList li:before {
+  content: "✓";
+  color: #00a10d;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Services Section */
+.servicesSection {
+  margin-bottom: 60px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+   background: var(--card-bg);
+  border: 1px solid var(--card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.1);
+
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+   background: var(--card-bg);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.serviceTitle {
+  font-size: 1.3rem;
+ color: var(--text-color);
+  font-weight: 600;
+  flex: 1;
+}
+
+.serviceDescription {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.featuresTitle,
+.deliverablesTitle {
+  font-size: 1rem;
+ color: var(--text-color);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.featuresList li {
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+ color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.featuresList li:before {
+  content: "✓";
+  color: #00a10d;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.deliverablesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.deliverableTag {
+   background: var(--page-bg);
+ color: var(--text-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Tools Section */
+.toolsSection {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 16px;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.toolCard {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: var(--card-shadow);
+}
+
+.toolIcon {
+  font-size: 2rem;
+}
+
+.toolInfo {
+  flex: 1;
+}
+
+.toolName {
+  font-size: 1rem;
+ color: var(--text-color);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.toolPurpose {
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+/* Process Section */
+.processSection {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.processCard {
+  text-align: center;
+  padding: 25px;
+  background: var(--card-bg);
+  border-radius: 12px;
+
+}
+
+.processCard:hover {
+  transform: translateY(-5px);
+}
+
+.processNumber {
+  font-size: 2rem;
+  font-weight: 700;
+ color: var(--text-color);
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.processTitle {
+  font-size: 1.1rem;
+ color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.processDescription {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .complianceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .toolsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quickWinsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .titleIcon {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  /* Stats Section */
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .statCard {
+    padding: 20px;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  /* Compliance Section */
+  .complianceSection {
+    padding: 30px 20px;
+  }
+
+  .complianceGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Services Section */
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .serviceCard {
+    padding: 20px;
+  }
+
+  .serviceHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .serviceIcon {
+    margin: 0 auto;
+  }
+
+  .serviceTitle {
+    text-align: center;
+  }
+
+  .deliverablesList {
+    justify-content: center;
+  }
+
+  /* Tools Section */
+  .toolsSection {
+    padding: 30px 20px;
+  }
+
+  .toolsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .toolCard {
+    padding: 15px;
+  }
+
+  /* Process Section */
+  .processSection {
+    padding: 30px 20px;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .processCard {
+    padding: 20px;
+  }
+
+  .processNumber {
+    font-size: 1.8rem;
+  }
+
+  /* Quick Wins Section */
+  .quickWinsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* CTA Section */
+  .ctaSection {
+    padding: 40px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaDescription {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .serviceCard {
+    padding: 18px;
+  }
+
+  .serviceIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .serviceTitle {
+    font-size: 1.1rem;
+  }
+
+  .deliverableTag {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+
+  .toolIcon {
+    font-size: 1.5rem;
+  }
+
+  .processNumber {
+    font-size: 1.5rem;
+  }
+
+  .ctaButton {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Landscape Mode on Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quickWinsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Desktop View (4K) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+    padding: 60px 40px;
+  }
+
+  .mainTitle {
+    font-size: 3.5rem;
+  }
+
+  .titleIcon {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    max-width: 1000px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .statsGrid {
+    gap: 30px;
+  }
+
+  .statCard {
+    padding: 40px;
+  }
+
+  .statValue {
+    font-size: 3.5rem;
+  }
+
+  .servicesGrid {
+    gap: 40px;
+  }
+
+  .serviceCard {
+    padding: 40px;
+  }
+
+  .serviceIcon {
+    width: 80px;
+    height: 80px;
+    font-size: 3.5rem;
+  }
+
+  .serviceTitle {
+    font-size: 1.6rem;
+  }
+
+  .serviceDescription {
+    font-size: 1.1rem;
+  }
+
+  .featuresList li,
+  .complianceList li {
+    font-size: 1rem;
+    padding: 8px 0 8px 30px;
+  }
+
+  .toolCard {
+    padding: 25px;
+  }
+
+  .toolIcon {
+    font-size: 2.5rem;
+  }
+
+  .processCard {
+    padding: 35px;
+  }
+
+  .processNumber {
+    font-size: 2.5rem;
+  }
+
+  .processTitle {
+    font-size: 1.3rem;
+  }
+
+  .quickWinCard {
+    padding: 35px;
+  }
+
+  .quickWinIcon {
+    font-size: 2.5rem;
+  }
+
+  .ctaSection {
+    padding: 80px 60px;
+  }
+
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+
+  .ctaButton {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+  }
+}
+

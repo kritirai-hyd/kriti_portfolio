@@ -1,0 +1,585 @@
+.bg{
+  background-color: var(--page-bg);
+}
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+ 
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Header Section */
+.servicesHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.servicesHeader h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Services Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.serviceCard {
+  background:var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+ border: 1px solid var(--border-color);
+  color: var(--text-color);
+  box-shadow:var(--card-shadow);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+   color: var(--text-color);
+}
+
+.serviceDescription {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  min-height: 80px;
+  font-size: 0.95rem;
+}
+
+.serviceBenefit {
+  padding: 15px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.95rem;
+}
+
+.benefitLabel {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-right: 8px;
+}
+
+.benefitText {
+  color: var(--text-color);
+  font-weight: 500;
+  background: var(--card-bg);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Device Showcase Section */
+.deviceShowcase {
+  margin: 60px 0;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 16px; border: 1px solid var(--border-color);
+}
+
+.showcaseTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.deviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.deviceCard {
+  background: var(--card-bg);
+  border-radius: 12px; border: 1px solid var(--border-color);
+  padding: 25px;
+  box-shadow:var(--card-shadow);
+
+}
+
+.deviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.deviceIcon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.deviceContent h4 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.deviceContent p {
+   color: var(--text-color);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.devicePreview {
+  background: var(--card-bg); border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.previewBar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: var(--card-bg);
+  border-radius: 6px;
+}
+
+.mobileview .previewDot {
+  width: 8px;
+  height: 8px;
+}
+
+.tabletview .previewDot {
+  width: 10px;
+  height: 10px;
+}
+
+.desktopview .previewDot {
+  width: 12px;
+  height: 12px;
+}
+
+.previewDot {
+  background: #999;
+  border-radius: 50%;
+}
+
+.previewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.previewLine {
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.approachSection {
+  margin: 60px 0;
+  padding: 50px 40px; border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border-radius: 16px;
+  color: var(--text-color);
+}
+
+.approachSection h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.approachList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.approachItem {
+  text-align: center;
+  padding: 25px; border: 1px solid var(--border-color);
+  background: var(--page-bg);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.approachItem:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.approachItem h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.approachItem p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: var(--text-color);
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  margin-top: 40px;
+  color: white;
+}
+
+.ctaSection h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.ctaSection p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Different Screen Sizes */
+
+/* Tablet View (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .servicesContainer {
+    padding: 30px 20px;
+  }
+
+  .servicesHeader h1 {
+    font-size: 2.2rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .deviceGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .deviceCard {
+    padding: 20px;
+  }
+
+  .deviceIcon {
+    font-size: 2.5rem;
+  }
+
+  .approachList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ctaSection h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile View (320px - 767px) */
+@media (max-width: 767px) {
+  .servicesContainer {
+    padding: 20px 15px;
+  }
+
+  .servicesHeader h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .serviceCard {
+    padding: 20px;
+  }
+
+  .serviceDescription {
+    min-height: auto;
+    font-size: 0.9rem;
+  }
+
+  .serviceCard h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Device Showcase - Stack vertically on mobile */
+  .deviceShowcase {
+    padding: 30px 15px;
+    margin: 40px 0;
+  }
+
+  .showcaseTitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .deviceGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .deviceCard {
+    padding: 20px;
+  }
+
+  .deviceIcon {
+    font-size: 2.5rem;
+  }
+
+  .deviceContent h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Approach Section */
+  .approachSection {
+    padding: 30px 20px;
+    margin: 40px 0;
+  }
+
+  .approachSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .approachList {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .approachItem {
+    padding: 20px;
+  }
+
+  .approachItem h4 {
+    font-size: 1.1rem;
+  }
+
+  .approachItem p {
+    font-size: 0.9rem;
+  }
+
+  /* CTA Section */
+  .ctaSection {
+    padding: 40px 15px;
+    margin-top: 30px;
+  }
+
+  .ctaSection h3 {
+    font-size: 1.4rem;
+  }
+
+  .ctaSection p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .ctaButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Hover effects disabled on mobile */
+  .serviceCard:hover,
+  .deviceCard:hover,
+  .approachItem:hover,
+  .ctaButton:hover {
+    transform: none;
+  }
+}
+
+/* Small Mobile View (up to 480px) */
+@media (max-width: 480px) {
+  .servicesHeader h1 {
+    font-size: 1.5rem;
+  }
+
+  .serviceCard {
+    padding: 18px;
+  }
+
+  .serviceBenefit {
+    font-size: 0.85rem;
+  }
+
+  .benefitText {
+    padding: 3px 10px;
+  }
+
+  .deviceCard {
+    padding: 15px;
+  }
+
+  .deviceIcon {
+    font-size: 2rem;
+  }
+
+  .previewBar {
+    padding: 6px;
+  }
+
+  .previewDot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .ctaButton {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Landscape Mode on Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .deviceGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .approachList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Desktop View (4K) */
+@media (min-width: 1920px) {
+  .servicesContainer {
+    max-width: 1600px;
+    padding: 60px 40px;
+  }
+
+  .servicesHeader h1 {
+    font-size: 3.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .serviceCard {
+    padding: 40px;
+  }
+
+  .serviceCard h3 {
+    font-size: 2rem;
+  }
+
+  .serviceDescription {
+    font-size: 1.1rem;
+    min-height: 100px;
+  }
+
+  .deviceGrid {
+    gap: 40px;
+  }
+
+  .deviceCard {
+    padding: 35px;
+  }
+
+  .deviceIcon {
+    font-size: 4rem;
+  }
+
+  .deviceContent h4 {
+    font-size: 1.5rem;
+  }
+
+  .deviceContent p {
+    font-size: 1.1rem;
+  }
+
+  .approachSection {
+    padding: 70px 60px;
+  }
+
+  .approachSection h2 {
+    font-size: 2.5rem;
+  }
+
+  .approachItem {
+    padding: 35px;
+  }
+
+  .approachItem h4 {
+    font-size: 1.4rem;
+  }
+
+  .approachItem p {
+    font-size: 1.1rem;
+  }
+
+  .ctaSection {
+    padding: 80px 40px;
+  }
+
+  .ctaSection h3 {
+    font-size: 2.5rem;
+  }
+
+  .ctaSection p {
+    font-size: 1.3rem;
+  }
+
+  .ctaButton {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+  }
+}

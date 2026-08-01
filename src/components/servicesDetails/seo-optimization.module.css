@@ -1,0 +1,195 @@
+.bg{
+  background-color: var(--page-bg);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.serviceSection {
+  margin-bottom: 80px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.serviceCard {
+  background: var(--card-bg);
+  padding: 32px 24px;
+  border-radius: 10px;
+  box-shadow:var(--card-shadow);    border: 1px solid var(--border-color);
+
+}
+
+.serviceCard:hover {
+  box-shadow:var(--card-shadow);
+  transform: translateY(-5px);
+
+}
+
+.serviceName {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.serviceDescription {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.impContainer {
+  margin: 100px 0;
+  background: var(--card-bg);
+  padding: 80px 60px;
+  border-radius: 12px; border: 1px solid var(--border-color);
+}
+
+.impCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.impCardtext {
+  background:var(--card-bg);
+  padding: 35px 25px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+ border: 1px solid var(--border-color);
+}
+
+.impCardtext:hover {
+  box-shadow: var(--card-shadow);
+}
+
+.impCardtext h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.impCardtext p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.processContainer {
+  margin: 80px 0 40px;
+}
+
+.processCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.process {
+  background: var(--card-bg);
+  padding: 35px 25px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+ border: 1px solid var(--border-color);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.process:hover {
+ box-shadow:var(--card-shadow);
+}
+
+
+
+.process h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.process p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .servicesGrid,
+  .impCard,
+  .processCard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .impContainer {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
+  
+  .servicesGrid,
+  .impCard,
+  .processCard {
+    grid-template-columns: 1fr;
+  }
+  
+  .serviceSection {
+    margin-bottom: 60px;
+  }
+  
+  .impContainer {
+    margin: 60px 0;
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
+  
+  .process {
+    padding: 30px 20px;
+  }
+  
+  .stepNumber {
+    font-size: 36px;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.serviceCard,
+.impCardtext,
+.process {
+  animation: fadeInUp 0.6s ease-out forwards;
+}

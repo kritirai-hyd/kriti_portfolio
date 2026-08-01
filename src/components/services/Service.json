@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "link": "/services/responsive-web-design",
+    "title": "Responsive Website Design",
+    "bg": "linear-gradient(135deg,#fff1ed 0%,#fff8e7 100%)",
+    "desc": "I create websites that look and work perfectly on mobile phones, tablets, and desktops, giving your customers a smooth experience wherever they visit."
+  },
+  {
+    "id": "2",
+    "link": "/services/seo-optimization",
+    "title": "SEO-Friendly Website Development",
+    "bg": "linear-gradient(135deg,#e8fbff 0%,#eaf2ff 100%)",
+    "desc": "I build websites with SEO best practices so your business has a stronger foundation to appear in search results, reach more people, and improve online visibility."
+  },
+  {
+    "id": "3",
+    "link": "/services/ui-ux-design",
+    "title": "UI & UX Design",
+    "bg": "linear-gradient(135deg,#fdf0ff 0%,#f5f0ff 100%)",
+    "desc": "I design simple and attractive interfaces that help visitors easily understand your business, explore your services, and take action."
+  },
+  {
+    "id": "4",
+    "link": "/services/performance-optimization",
+    "title": "Website Speed Optimization",
+    "bg": "linear-gradient(135deg,#effcf6 0%,#ecfdf5 100%)",
+    "desc": "I optimize websites for faster loading, smoother performance, and a better user experience that keeps visitors engaged."
+  },
+  {
+    "id": "5",
+    "link": "/services/accessibility",
+    "title": "Accessible Website Design",
+    "bg": "linear-gradient(135deg,#fff7ed 0%,#fffbeb 100%)",
+    "desc": "I create websites that are easier for everyone to use by following accessibility best practices, including better navigation, readability, and device support."
+  },
+  {
+    "id": "6",
+    "link": "/services/content-protection",
+    "title": "Website Security & Protection",
+    "bg": "linear-gradient(135deg,#eef2ff 0%,#f5f3ff 100%)",
+    "desc": "I add extra protection measures to help safeguard your website content and reduce the risk of unauthorized copying or misuse."
+  }
+]
