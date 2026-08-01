@@ -1,16 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
+const isProd = process.env.NODE_ENV === "production";
+
+module.exports = {
+  output: "export",
   images: {
     unoptimized: true,
   },
- 
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  }
+  basePath: isProd ? "/kriti_portfolio" : "",
+  assetPrefix: isProd ? "/kriti_portfolio/" : "",
 };
-
-module.exports = nextConfig;
