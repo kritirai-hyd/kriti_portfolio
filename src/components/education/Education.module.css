@@ -4,10 +4,11 @@
     max-width: 1280px;
   display: flex;
   align-items: center;
-
+margin-top: 2rem;
   color: var(--text-color);
 }
 .bg{
+  border-top: 1px solid var(--text-color);
   background: var(--page-bg);
 }
 .wrapper {

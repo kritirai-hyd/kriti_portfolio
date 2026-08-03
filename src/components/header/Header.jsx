@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import styles from "./Header.module.css";
-import ThemeToggle from "../context/ThemeToggle";
+import s from "./style.module.css";
+import Toggle from "../context/ThemeToggle";
 import logo from "../../assets/svg/kritirai.svg";
-
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -24,46 +23,66 @@ export default function Header() {
     setIsActive(false);
   }, [pathname]);
 
-  
+  const menu = [
+    {
+      name: "About Me",
+      link: "/about-kriti-rai",
+    },
+    {
+      name: "Services",
+      link: "/services",
+    },
+    {
+      name: "Projects",
+      link: "/projects",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+    {
+      name: "Blog",
+      link: "/blog",
+    },
+  ];
+
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.headerLeft}>
+    <header className={`${s.header} ${scrolled ? s.scrolled : ""}`}>
+      <div className={s.left}>
         <Link href="/">
           <Image
             src={logo}
             width={140}
             height={60}
-            className={styles.logo}
+            className={s.logo}
             alt="Kriti Rai"
           />
         </Link>
       </div>
 
-      <nav className={`${styles.nav} ${isActive ? styles.open : ""}`}>
-        <ul className={styles.navList}>
-          {["about Me", "services", "projects", "contact", "blog"].map(
-            (page) => (
-              <li
-                key={page}
-                className={pathname === `/${page}` ? styles.active : ""}
-              >
-                <Link href={`/${page}`} onClick={handleClose}>
-                  {page.charAt(0).toUpperCase() + page.slice(1)}
-                </Link>
-              </li>
-            ),
-          )}
+      <nav className={`${s.nav} ${isActive ? s.open : ""}`}>
+        <ul className={s.list}>
+          {menu.map((page) => (
+            <li
+              key={page}
+              className={pathname === `${page.link}` ? s.active : ""}
+            >
+              <Link href={`${page.link}`} onClick={handleClose}>
+                {page.name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
-        <div className={styles.navThemeToggle}>
-          <ThemeToggle />
+        <div className={s.toggle}>
+          <Toggle />
         </div>
       </nav>
-<div className={styles.mnavThemeToggle}>
-          <ThemeToggle />
-        </div>
+      <div className={s.mtoggle}>
+        <Toggle />
+      </div>
       <button
-        className={`${styles.burger} ${isActive ? styles.open : ""}`}
+        className={`${s.menu} ${isActive ? s.open : ""}`}
         onClick={handleToggle}
         aria-label="Toggle Menu"
       >
@@ -71,7 +90,6 @@ export default function Header() {
         <span></span>
         <span></span>
       </button>
-       
     </header>
   );
 }

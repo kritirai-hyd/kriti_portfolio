@@ -23,10 +23,10 @@ import googleAnalytics from "../../assets/svg/google-analytics.png";
 import googleSearch from "../../assets/svg/google-console-search.png";
 import bingSearch from "../../assets/svg/bing-search.png";
 import cpanel from "../../assets/svg/cpanel.png";
-import Image from "next/image";
 import styles from "./styles.module.css";
 import Heading from "../ui/Heading/Heading";
-const Technology = () => {
+import Image from "next/image";
+const Skills = () => {
   const frontend = [
     { text: "HTML", img: html, color: "#E34F26" },
     { text: "CSS", img: css, color: "#1572B6" },
@@ -58,7 +58,6 @@ const Technology = () => {
   const Scroll = ({ items, reverse = false }) => (
     <div className={`${styles.line} ${reverse ? styles.reverse : ""}`}>
       {[...items, ...items].map((item, index) => {
-        const Icon = item.icon;
         return (
           <div key={index} className={styles.card}>
             <Image
@@ -84,8 +83,10 @@ const Technology = () => {
     <div className={styles.bg}>
       <section className={styles.section}>
         <div className={styles.header}>
-          <Heading heading="Technologies I Use To Build Modern Websites" />
-          <Heading para="I use powerful and reliable technologies to create fast, scalable, secure, and user-friendly digital experiences that help businesses grow online." />
+          <Heading
+            heading="My Skills & Tools"
+            para="Technologies and tools I work with to create efficient, scalable, and user-friendly digital experiences."
+          />{" "}
         </div>
         <div className={styles.wrapper}>
           <div className={styles.slider}>
@@ -99,4 +100,4 @@ const Technology = () => {
     </div>
   );
 };
-export default Technology;
+export default Skills;

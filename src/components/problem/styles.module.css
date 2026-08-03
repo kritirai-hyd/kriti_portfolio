@@ -1,4 +1,7 @@
-.section {
+.bg {
+  background: var(--card-bg);
+}
+.problem {
   padding: 6rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -10,27 +13,17 @@
   max-width: 780px;
   margin: 0 auto 3.5rem auto;
 }
-.grid {
+.container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  max-width: 1200px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4rem auto;
   position: relative;
 }
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-/* Eye-Catching Glass Cards */
 .card {
   position: relative;
-  background: var(--card-bg, #ffffff);
+  background: var(--counter-card);
   border: 1px solid rgba(226, 232, 240, 0.8);
   border-radius: 18px;
   padding: 2.25rem 2rem 2rem 2rem;
@@ -41,8 +34,7 @@
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1;
 }
-/* Glowing Dynamic Icon */
-.iconWrapper {
+.icon {
   width: 54px;
   height: 54px;
   border-radius: 14px;
@@ -53,25 +45,22 @@
   background: color-mix(in srgb, var(--item-color) 12%, transparent);
   color: var(--item-color);
   border: 1px solid color-mix(in srgb, var(--item-color) 25%, transparent);
-  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
 }
-/* Content Typography */
-.cardTitle {
+.title {
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--text-primary, #0f172a);
+  color: var(--text-color);
   margin-bottom: 0.75rem;
   letter-spacing: -0.01em;
 }
-.cardDescription {
+.description {
   font-size: 0.95rem;
-  color: var(--text-secondary, #64748b);
+  color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 1.75rem;
   flex-grow: 1;
 }
-/* Card Button */
-.cardButton {
+.bottom .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -84,27 +73,16 @@
   border-radius: 10px;
   border: 1.5px solid color-mix(in srgb, var(--item-color) 30%, transparent);
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: fit-content;
+  margin: 0 auto;
 }
-.btnIcon {
-  transition: transform 0.25s ease;
-}
-.cardButton:hover {
+.bottom .button:hover {
   background: var(--item-color);
   color: #ffffff;
   border-color: var(--item-color);
   box-shadow: 0 6px 16px -2px var(--item-glow);
 }
-.cardButton:hover .btnIcon {
-  transform: translateX(4px);
-}
-/* Bottom Main Call To Action */
-.ctaWrapper {
-  text-align: center;
-}
-.ctaButton {
-  display: inline-flex;
+.button {
+  display: flex;
   align-items: center;
   gap: 0.75rem;
   color: #001e69;
@@ -115,23 +93,20 @@
   padding: 1.1rem 2.5rem;
   border-radius: 9px;
   box-shadow: rgba(62, 112, 236, 0.15) 0px 10px 30px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  /* box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); */
+  margin: 2rem auto auto auto;
 }
-.ctaIcon {
-  transition: transform 0.25s ease;
-}
-.ctaButton:hover .ctaIcon {
-  transform: translateX(5px);
+.link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 @media (max-width:768px) {
-  .section {
+  .problem {
     overflow: visible;
   }
-  .grid {
+  .container {
     display: block;
-    position: relative;
+    grid-template-columns: repeat(2, 1fr);
   }
   .card {
     position: sticky;
@@ -139,29 +114,34 @@
     width: calc(100% - 10px);
     max-width: 360px;
     min-height: 350px;
-    margin: 0 auto 120px;
-    background: #fff;
+    margin: 10px auto auto auto;
+    background: var(--card-m);
     border-radius: 20px;
     box-shadow:
       0 20px 40px rgba(0, 0, 0, .15);
   }
-  /* stack order */
   .card:nth-child(1) {
-    z-index: 1;        top: 7rem;
+    z-index: 1;
+    top: 7rem;
   }
   .card:nth-child(2) {
-    z-index: 2;        top: 8rem;
+    z-index: 2;
+    top: 8rem;
   }
   .card:nth-child(3) {
-    z-index: 3;  top: 9rem;
+    z-index: 3;
+    top: 9rem;
   }
   .card:nth-child(4) {
-    z-index: 4;  top: 10rem;
+    z-index: 4;
+    top: 10rem;
   }
   .card:nth-child(5) {
-    z-index: 5;top: 11rem;
+    z-index: 5;
+    top: 11rem;
   }
   .card:nth-child(6) {
-    z-index: 6;top: 12rem;
+    z-index: 6;
+    top: 15rem;
   }
 }

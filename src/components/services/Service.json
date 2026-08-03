@@ -2,43 +2,43 @@
   {
     "id": "1",
     "link": "/services/responsive-web-design",
-    "title": "Responsive Website Design",
+    "title": "Business Website Development",
     "bg": "linear-gradient(135deg,#fff1ed 0%,#fff8e7 100%)",
-    "desc": "I create websites that look and work perfectly on mobile phones, tablets, and desktops, giving your customers a smooth experience wherever they visit."
+    "desc": "I create modern, responsive websites that look professional and work perfectly on mobile phones, tablets, and desktops. Your website will load smoothly, showcase your business clearly, and make a great first impression on every visitor."
   },
   {
     "id": "2",
-    "link": "/services/seo-optimization",
-    "title": "SEO-Friendly Website Development",
+    "link": "/services/seo-website-development",
+    "title": "Google-Friendly Websites",
     "bg": "linear-gradient(135deg,#e8fbff 0%,#eaf2ff 100%)",
-    "desc": "I build websites with SEO best practices so your business has a stronger foundation to appear in search results, reach more people, and improve online visibility."
+    "desc": "I build websites with SEO best practices so your business has a better chance of appearing in Google search results. This helps more people find your business, increases online visibility, and brings more potential customers."
   },
   {
     "id": "3",
-    "link": "/services/ui-ux-design",
-    "title": "UI & UX Design",
-    "bg": "linear-gradient(135deg,#fdf0ff 0%,#f5f0ff 100%)",
-    "desc": "I design simple and attractive interfaces that help visitors easily understand your business, explore your services, and take action."
+    "link": "/services/web-application-development",
+    "title": "Custom Web Applications",
+    "bg": "linear-gradient(135deg,#f5f3ff 0%,#eef2ff 100%)",
+    "desc": "Need something beyond a website? I develop custom web applications such as dashboards, booking systems, customer portals, and business management tools that simplify your daily work and improve productivity."
   },
   {
     "id": "4",
-    "link": "/services/performance-optimization",
-    "title": "Website Speed Optimization",
+    "link": "/services/website-speed-optimization",
+    "title": "Fast Website Performance",
     "bg": "linear-gradient(135deg,#effcf6 0%,#ecfdf5 100%)",
-    "desc": "I optimize websites for faster loading, smoother performance, and a better user experience that keeps visitors engaged."
+    "desc": "A slow website can lose customers. I improve your website's speed and performance so pages load quickly, visitors stay engaged, and your business provides a better online experience."
   },
   {
     "id": "5",
-    "link": "/services/accessibility",
-    "title": "Accessible Website Design",
+    "link": "/services/website-maintenance",
+    "title": "Website Updates & Support",
     "bg": "linear-gradient(135deg,#fff7ed 0%,#fffbeb 100%)",
-    "desc": "I create websites that are easier for everyone to use by following accessibility best practices, including better navigation, readability, and device support."
+    "desc": "Your website needs regular care to stay secure and reliable. I provide updates, fix issues, improve features, and offer ongoing support so your website continues to run smoothly."
   },
   {
     "id": "6",
-    "link": "/services/content-protection",
-    "title": "Website Security & Protection",
+    "link": "/services/website-security",
+    "title": "Website Security",
     "bg": "linear-gradient(135deg,#eef2ff 0%,#f5f3ff 100%)",
-    "desc": "I add extra protection measures to help safeguard your website content and reduce the risk of unauthorized copying or misuse."
+    "desc": "I help protect your website from common security threats by implementing essential security measures. This keeps your business, customer data, and website safe while giving visitors confidence in your brand."
   }
 ]

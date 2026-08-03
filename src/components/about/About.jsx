@@ -1,120 +1,104 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import styles from "./About.module.css";
-import { fadeIn } from "../variants";
-/* Skills & Tools Assets */
-import html from "../../assets/svg/html.svg";
-import css from "../../assets/svg/css.svg";
-import js from "../../assets/svg/js.svg";
-import react from "../../assets/svg/react.svg";
-import node from "../../assets/svg/node-js.svg";
-import nextjs from "../../assets/svg/next-js.svg";
-import express from "../../assets/svg/express.png";
-import npm from "../../assets/svg/npm.png";
-import sql from "../../assets/svg/sql.svg";
-import postgres from "../../assets/svg/postgresssql.png";
-import mongodb from "../../assets/svg/mongodb.png";
-import supabase from "../../assets/svg/supabase.png";
-import tailwind from "../../assets/svg/tailwind.svg";
-import bootstrap from "../../assets/svg/bootstrap.svg";
-import git from "../../assets/svg/git.svg";
-import github from "../../assets/svg/github.svg";
-import vercel from "../../assets/svg/vercel.svg";
-import postman from "../../assets/svg/postman.svg";
-import vscode from "../../assets/svg/visual.svg";
-import restapi from "../../assets/svg/rest-api.png";
-import googleAnalytics from "../../assets/svg/google-analytics.png";
-import googleSearch from "../../assets/svg/google-console-search.png";
-import bingSearch from "../../assets/svg/bing-search.png";
-import cpanel from "../../assets/svg/cpanel.png";
-import Heading from "../ui/Heading/Heading";
-const skills = [
-  { src: html, label: "HTML" },
-  { src: css, label: "CSS" },
-  { src: js, label: "JavaScript" },
-  { src: react, label: "React" },
-  { src: nextjs, label: "Next.js" },
-  { src: node, label: "Node.js" },
-  { src: express, label: "Express.js" },
-  { src: npm, label: "NPM" },
-  { src: tailwind, label: "Tailwind CSS" },
-  { src: bootstrap, label: "Bootstrap" },
-  { src: sql, label: "SQL" },
-  { src: postgres, label: "PostgreSQL" },
-  { src: mongodb, label: "MongoDB" },
-  { src: supabase, label: "Supabase" },
-];
-const tools = [
-  { src: git, label: "Git" },
-  { src: github, label: "GitHub" },
-  { src: vscode, label: "VS Code" },
-  { src: postman, label: "Postman" },
-  { src: vercel, label: "Vercel" },
-  { src: restapi, label: "REST API" },
-  { src: googleAnalytics, label: "Google Analytics" },
-  { src: googleSearch, label: "Google Search Console" },
-  { src: bingSearch, label: "Bing Webmaster Tools" },
-  { src: cpanel, label: "cPanel" },
-];
-const Skill = ({ src, label }) => (
-  <motion.div
-    className={styles.cards}
-    whileHover={{ y: -8 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <div className={styles.img}>
-      <Image
-        src={src}
-        alt={`${label} logo`}
-        width={35}
-        height={35}
-        style={{ objectFit: "contain" }}
-      />
-    </div>
-    <p className={styles.name}>{label}</p>
-  </motion.div>
-);
+import Link from "next/link";
+import { motion } from "framer-motion";
+import github from "../../assets/svg/githubi.svg";
+import xcion from "../../assets/svg/x-icon.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
+import kriti from "../../assets/image/kritirai-2.jpeg";
+import styles from "./styles.module.css";
+import { useTheme } from "../context/ThemeContext";
+
 const About = () => {
+  const { theme } = useTheme();
+
+
+
   return (
-    <section id="skills" className={styles.about}>
+    <div style={{ width: "100%", }} className={styles.bg}>
+    
+
       <div className={styles.container}>
-        <Heading
-          heading="My Skills & Tools"
-          para="Technologies and tools I work with to create efficient, scalable, and user-friendly digital experiences."
-        />
-        <div className={styles.technologies}>
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className={styles.card}
-          >
-            <h3 className={styles.title}>Skills</h3>
-            <div className={styles.skills}>
-              {skills.map((skill, i) => (
-                <Skill key={i} {...skill} />
-              ))}
-            </div>
-          </motion.div>
-          <motion.div
-            variants={fadeIn("left", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className={styles.card}
-          >
-            <h3 className={styles.title}>Tools</h3>
-            <div className={styles.tools}>
-              {tools.map((tool, i) => (
-                <Skill key={i} {...tool} />
-              ))}
-            </div>
-          </motion.div>
+        <div className={styles.subcontainer}>
+       <div className={styles.left}>
+            <motion.div
+              className={styles.profile}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className={styles.circle}>
+                <div className={styles.light}></div>
+                <div className={styles.border}></div>
+                <Image
+                  src={kriti}
+                  alt="Kriti Rai - Full Stack Developer"
+                  className={styles.image}
+                  width={320}
+                  height={340}
+                  priority
+                />
+              </div>
+            </motion.div>
+          </div>
+          <div className={styles.right}>
+            <motion.h1
+              className={styles.heading}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+             About Me
+            </motion.h1>
+
+            <motion.p
+              className={styles.about}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+           I'm Kriti Rai, a Full Stack Developer who builds fast, modern, and SEO-optimized websites that help businesses grow online. Using technologies like HTML, CSS, JavaScript, React, Next.js, Node.js, and SQL, I create responsive, user-friendly, and high-performing web solutions that deliver great user experiences and real business results.       </motion.p>
+
+        
+              <motion.div className={styles.buttons}     initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}>
+                <div className={styles.download}>
+                  <Link
+                    href="/kritirai-cv"
+                    className={styles.link}
+                  >
+                    View CV
+                  </Link>
+                </div>
+                <ul className={styles.social}>
+                  <li className={styles.icons}>
+                    <Link href="https://github.com/kritirai-hyd" target="_blank">
+                      <Image src={github} width={34} height={34} alt="GitHub" />
+                    </Link>
+                  </li>
+                  <li className={styles.icons}>
+                    <Link href="https://x.com/dev_kritirai" target="_blank">
+                      <Image src={xcion} width={34} height={34} alt="X" />
+                    </Link>
+                  </li>
+                  <li className={styles.icons}>
+                    <Link href="https://www.linkedin.com/in/dev-kritirai" target="_blank">
+                      <Image src={linkedin} width={34} height={34} alt="LinkedIn" />
+                    </Link>
+                  </li>
+                </ul>
+              </motion.div>
+     
+          </div>
+
+        
+
+    
         </div>
       </div>
-    </section>
+    </div>
   );
 };
+
 export default About;

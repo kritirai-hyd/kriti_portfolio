@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Increment from "./Increment";
 import { fadeIn } from "../variants";
 import { useTheme } from "../context/ThemeContext";
-import styles from "./Counter.module.css";
+import s from "./styles.module.css";
 const Counter = () => {
   const { theme } = useTheme();
   const stats = [
@@ -30,30 +30,28 @@ const Counter = () => {
   ];
   return (
     <section
-      className={`${styles.counterSection} ${
-        theme === "dark" ? styles.darkMode : styles.lightMode
-      }`}
+      className={s.counter}
     >
-      <div className={styles.container}>
+      <div className={s.container}>
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.7 }}
-          className={styles.wrapper}
+          className={s.wrapper}
         >
           {stats.map((item, index) => {
      
             return (
               <div
                 key={index}
-                className={styles.statBlock}
+                className={s.card}
                 style={{   border: `1px solid ${item.color}44` }}
               >
-                <h2 className={styles.statNumber} style={{ color: item.color }}>
+                <h2 className={s.num} style={{ color: item.color }}>
                   <Increment number={item.number} />+
                 </h2>
-                <p className={styles.statDescription}>{item.title}</p>
+                <p className={s.title}>{item.title}</p>
               </div>
             );
           })}

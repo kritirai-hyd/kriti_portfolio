@@ -1,7 +1,11 @@
 .breadcrumbSection {
-  padding: 100px 0 60px;
-  text-align: center;
-  transition: all 0.5s ease;
+    text-align: center;
+
+    transition: all .5s;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .breadcrumbSection h1 {

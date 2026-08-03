@@ -75,7 +75,8 @@ const Scroll = () => {
 
   return (
 
-      <div className={styles.scrollBanner}>
+  <div className={styles.bg}>
+        <div className={styles.scrollBanner}>
 
         <div className={styles.scrollTrack}>
 
@@ -107,6 +108,7 @@ const Scroll = () => {
         </div>
 
       </div>
+  </div>
 
 
   );

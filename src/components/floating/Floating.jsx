@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./FloatingNav.module.css";
+import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import star from "../../assets/svg/star.svg";
