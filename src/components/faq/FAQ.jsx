@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import styles from "./FAQ.module.css";
+import styles from "./faq.module.css";
 import Heading from "../ui/heading/Heading";
 import faqs from "./Faqs";
 const FAQ = () => {
   const [active, setActive] = useState(null);
-  const toggleFAQ = (index) => {
+  const toggle = (index) => {
     setActive(active === index ? null : index);
   };
   return (
@@ -26,7 +26,7 @@ const FAQ = () => {
               >
                 <button
                   className={styles.question}
-                  onClick={() => toggleFAQ(index)}
+                  onClick={() => toggle(index)}
                 >
                   <span>{item.question}</span>
                   <ChevronDown size={22} className={styles.icon} />

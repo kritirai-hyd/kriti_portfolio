@@ -115,7 +115,7 @@ const Contact = () => {
                 </div>
                 <form onSubmit={handleSubmit} className={s["contact-form"]}>
                   <div className={s["group"]}>
-                    {/* First Name */}
+                  
                     <div className={s["form-group"]}>
                       <label htmlFor="firstName" className={s["form-label"]}>
                         First Name <span className={s.required}>*</span>

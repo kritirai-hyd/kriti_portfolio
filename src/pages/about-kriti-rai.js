@@ -1,4 +1,4 @@
-import AboutDetails from "@/components/about-details/AboutDetails";
+import AboutDetails from "@/components/about-details/Abouts";
 import Head from "next/head";
 export default function Page() {
       const schemaData = [

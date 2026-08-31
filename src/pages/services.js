@@ -1,4 +1,4 @@
-import ServicesDetails from "@/components/services-details/ServicesDetails";
+import ServicesDetails from "@/components/services-details/Service";
 import Head from "next/head";
 export default function Page() {
   const schemaData = [

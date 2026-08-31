@@ -12,13 +12,13 @@
   --consult-clr: rgb(2, 107, 2);
   --consult-br: #2cbe00;
   --scroll: #ffffff14;
-  --counter-card: #ffffffb0;
+  --counter-card: #ffffff;
   --card-bg: linear-gradient(135deg, #fff 0%, #dbeafe 100%);
   --card-m:#ffffff;
   --light:rgba(255, 255, 255, 0.671) 0px 30px 60px -12px inset, rgba(204, 204, 204, 0.534) 0px 18px 36px -18px inset;
-  /* --header-bg: rgb(255 255 255 / 39%);
+  --header-bg: rgb(255, 255, 255);
   --header-border: rgba(255, 255, 255, 0.6);
-  --nav-bg-mobile: #d6e5f5fc;
+  /* --nav-bg-mobile: #d6e5f5fc;
   --burger-color: #001e60;
 --bg-colorr:rgb(199, 2, 78);
 --bg-colorred:rgb(0, 100, 5);
@@ -52,6 +52,7 @@
   --border-color: rgba(255, 255, 255, 0.1);
   --heading-gradient: linear-gradient(135deg, #e7eeff 0%, #b1caff 100%);
   --header-bg: rgba(20, 20, 35, 0.7);
+    --header-bg: rgba(20, 20, 35, 0.7);
   --header-border: rgba(255, 255, 255, 0.08);
   --consult-clr: rgb(113, 255, 113);
   --consult-br: #c8ffb7;

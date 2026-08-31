@@ -32,13 +32,11 @@ export default function Header() {
       name: "Projects",
       link: "/projects",
     },
-  
-    
     {
       name: "Resume",
       link: "/resume",
     },
-     {
+    {
       name: "Contact",
       link: "/contact",
     },
@@ -76,7 +74,6 @@ export default function Header() {
       <button
         className={`${s.menu} ${active ? s.open : ""}`}
         onClick={toggle}
-        aria-label="Toggle Menu"
       >
         <span></span>
         <span></span>

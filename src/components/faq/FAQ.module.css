@@ -17,7 +17,7 @@
 .card {
     background: var(--counter-card);
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: 8px;
     overflow: hidden;
     transition: .3s ease;
 }
@@ -42,8 +42,7 @@
     text-align: left;
 }
 .icon {
-    transition: transform .3s ease;
-  color:var(--color);
+    color: var(--color);
 }
 .active .icon {
     transform: rotate(180deg);
@@ -51,7 +50,6 @@
 .answer {
     display: grid;
     grid-template-rows: 0fr;
-
 }
 .answer p {
     overflow: hidden;

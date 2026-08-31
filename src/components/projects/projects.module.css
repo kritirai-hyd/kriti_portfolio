@@ -1,8 +1,8 @@
-.bg{
-    background: var(--card-bg);
-    padding: 4rem 0;
+.bg {
+  background: var(--card-bg);
+  padding: 4rem 0;
 }
-.creationsList {
+.projects {
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -11,57 +11,37 @@
   position: relative;
   z-index: 1;
 }
-
-.titleWrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.curlyArrow {
-  width: 45px;
-  height: auto;
-  transform: translateY(8px);
-}
-
-/* Item Grid Layout */
-.creationItem {
+.project {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 40px;
   align-items: center;
 }
-
-.creationItem.reverse {
+.project.reverse {
   grid-template-columns: 1.3fr 1fr;
 }
-
-/* Info Section */
-.creationInfo {
+.details {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.creationTag {
-  font-size: 12px;
+.desc {
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--text-muted, #666666);
   margin-bottom: 12px;
 }
-
-.creationName {
+.title {
   font-size: 32px;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--text-dark, #1a1a1a);
+  background: var(--heading-gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   margin-bottom: 28px;
   letter-spacing: -0.5px;
-
 }
-
-/* Button Styling */
-.btnCircleArrow {
+.readmore {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -70,64 +50,54 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color:#fff;
+  color: #fff;
   font-size: 16px;
   transition: all 0.3s ease;
   background: #122a81;
 }
-
-.btnCircleArrow:hover {
+.readmore:hover {
   background-color: var(--primary-blue, #2b59ff);
   color: #ffffff;
   border-color: var(--primary-blue, #2b59ff);
   transform: translate(2px, -2px);
   box-shadow: 0 6px 15px rgba(43, 89, 255, 0.3);
 }
-
-
-.creationMockup {
-    background: #000;
-    border-radius: 10px;
-
-    position: relative;
-    overflow: hidden;
-
+.card {
+  background: #000;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
-
-.creationMockup:hover {
+.card:hover {
   transform: translateY(-4px);
 }
-
-.mockupImg {
+.image {
   width: 100%;
   height: 320px;
   object-fit: cover;
   display: block;
 }
 @media (max-width: 900px) {
-  .creationsList{
-        padding: 0px 30px;
+  .projects {
+    padding: 0px 30px;
   }
-  .creationItem,
-  .creationItem.reverse {
+  .project,
+  .project.reverse {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-
-  .creationInfo,
-  .creationItem.reverse .creationInfo {
+  .details,
+  .project.reverse .details {
     order: 1;
     width: 100%;
   }
-
-  .creationMockup,
-  .creationItem.reverse .creationMockup {
+  .card,
+  .project.reverse .card {
     order: 2;
     width: 100%;
   }
-
-  .mockupImg {
+  .image {
     width: 100%;
     height: auto;
     object-fit: cover;

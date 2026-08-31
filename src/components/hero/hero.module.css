@@ -212,12 +212,20 @@
         font-size: 0.85rem;
         text-align: justify;
     }
-    .buttons {
-        flex-direction: column;
+    .buttons{
+            gap: 1rem;
     }
+    .image{
+        height: 320px;
+    }
+  
     .button {
         width: 90%;
+        padding:0.55rem 1rem;
         margin: 0 auto;
+    }
+    .link{
+            font-size: 0.75rem;
     }
 }.cursor {
   display: inline-block;

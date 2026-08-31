@@ -91,7 +91,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className={`${s.consult} ${s.button}`}>
-                <Link href="/kritirai-cv" className={`${s.link}`}>
+                <Link href="/get-quote" className={`${s.link}`}>
                   <Image
                     src={consult}
                     className={s.icon}
@@ -103,7 +103,7 @@ const Hero = () => {
                 </Link>
               </div>
               <div className={`${s.download} ${s.button}`}>
-                <Link href="/kritirai-cv" className={s.link}>
+                <Link href="/projects" className={s.link}>
                   <Image src={view} className={s.icon} width={24} height={24}  alt="" />
                   View My Works
                 </Link>
