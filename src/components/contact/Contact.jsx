@@ -1,0 +1,360 @@
+"use client";
+import React, { useState, useRef } from "react";
+import s from "./styles.module.css";
+import Image from "next/image";
+import email from "../../assets/svg/email.svg";
+import loc from "../../assets/svg/location.svg";
+import phone from "../../assets/svg/phone.svg";
+import send from "../../assets/svg/send.svg";
+import github from "../../assets/svg/githubi.svg";
+import x from "../../assets/svg/x-icon.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
+import facebook from "../../assets/svg/facebook.svg";
+import Heading from "../ui/Heading/Heading";
+import { useTheme } from "../context/ThemeContext";
+
+const Contact = () => {
+  const { theme } = useTheme();
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [activeTemplate, setActiveTemplate] = useState(null);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const textareaRef = useRef(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleQuickMessage = (templateText, type) => {
+    setActiveTemplate(type);
+    setFormData((prev) => ({ ...prev, message: templateText }));
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const payload = new FormData();
+    payload.append("access_key", "f9a52860-113e-4c0b-bc85-581bc2af8241");
+    payload.append("name", `${formData.firstName} ${formData.lastName}`);
+    payload.append("email", formData.email);
+    payload.append("phone", formData.phone);
+    payload.append("message", formData.message);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: payload,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setIsSubmitted(true);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        setActiveTemplate(null);
+      } else {
+        alert("Submission failed! Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong!");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <section id="contact" className={s["contact-section"]}>
+      <div className={s["contact-container"]}>
+        <Heading
+          heading="Get In Touch"
+          para="Let's create something amazing together"
+        />
+        <div className={s["contact-cards"]}>
+          <div className={s["contact-form-wrapper"]}>
+            {isSubmitted ? (
+              <div className={s["success-card"]}>
+                <div className={s["success-icon"]}>✓</div>
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for reaching out. I'll get back to you shortly.</p>
+                <button
+                  className={s["submit-btn"]}
+                  onClick={() => setIsSubmitted(false)}
+                >
+                  Send Another Message
+                </button>
+              </div>
+            ) : (
+              <>
+                <div className={s["form-header"]}>
+                  <h2
+                    className={
+                      theme === "dark" ? s.tDark : s.tLight
+                    }
+                  >
+                    Let's work together!
+                  </h2>
+                  <p>
+                    I design and code beautifully simple things, and I love what
+                    I do.
+                  </p>
+                </div>
+                <form onSubmit={handleSubmit} className={s["contact-form"]}>
+                  <div className={s["group"]}>
+                    {/* First Name */}
+                    <div className={s["form-group"]}>
+                      <label htmlFor="firstName" className={s["form-label"]}>
+                        First Name <span className={s.required}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="e.g. John"
+                        className={s["form-input"]}
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+
+                    {/* Last Name */}
+                    <div className={s["form-group"]}>
+                      <label htmlFor="lastName" className={s["form-label"]}>
+                        Last Name <span className={s.required}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="e.g. Doe"
+                        className={s["form-input"]}
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className={s["form-group"]}>
+                    <label htmlFor="email" className={s["form-label"]}>
+                      Email Address <span className={s.required}>*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="e.g. john@example.com"
+                      className={s["form-input"]}
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+
+                  {/* Phone */}
+                  <div className={s["form-group"]}>
+                    <label htmlFor="phone" className={s["form-label"]}>
+                      Phone Number <span className={s.optional}>(Optional)</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="e.g. +1 234 567 890"
+                      className={s["form-input"]}
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+
+                  {/* Quick Message Templates */}
+                  <div className={s["quick-actions"]}>
+                    <span className={s["quick-title"]}>Select Template:</span>
+                    <div className={s["quick-pills"]}>
+                      <button
+                        type="button"
+                        className={`${s["quick-btn"]} ${
+                          activeTemplate === "hire" ? s["quick-btn-active"] : ""
+                        }`}
+                        onClick={() =>
+                          handleQuickMessage(
+                            "Hi there,\n\nI’m currently open to new opportunities and would love to connect with you if you’re looking to hire. Let’s chat!\n\n",
+                            "hire"
+                          )
+                        }
+                      >
+                        <span className={`${s.dot} ${s.blue}`}></span>
+                        Open to Hire
+                      </button>
+                      <button
+                        type="button"
+                        className={`${s["quick-btn"]} ${
+                          activeTemplate === "project" ? s["quick-btn-active"] : ""
+                        }`}
+                        onClick={() =>
+                          handleQuickMessage(
+                            "Hello,\n\nI’m looking to explore exciting projects or roles. Please let me know if there’s a fit—I’d love to discuss!\n\n",
+                            "project"
+                          )
+                        }
+                      >
+                        <span className={`${s.dot} ${s.green}`}></span>
+                        Project / Role
+                      </button>
+                      <button
+                        type="button"
+                        className={`${s["quick-btn"]} ${
+                          activeTemplate === "custom" ? s["quick-btn-active"] : ""
+                        }`}
+                        onClick={() => handleQuickMessage("", "custom")}
+                      >
+                        <span className={`${s.dot} ${s.dark}`}></span>
+                        Custom
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Textarea */}
+                  <div className={s["form-group"]}>
+                    <label htmlFor="message" className={s["form-label"]}>
+                      Your Message <span className={s.required}>*</span>
+                    </label>
+                    <textarea
+                      ref={textareaRef}
+                      id="message"
+                      name="message"
+                      rows={4}
+                      placeholder="Type your message here..."
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      className={`${s["form-input"]} ${s.textarea}`}
+                      required
+                    ></textarea>
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className={s["submit-wrapper"]}>
+                    <button
+                      type="submit"
+                      className={`${s["submit-btn"]} ${
+                        isLoading ? s.loading : ""
+                      }`}
+                      disabled={isLoading}
+                    >
+                      {isLoading ? (
+                        <div className={s.spinner}></div>
+                      ) : (
+                        <>
+                          <span>Send Message</span>
+                          <Image src={send} width={18} height={18} alt="Send" />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              </>
+            )}
+          </div>
+
+          {/* Contact Info Side */}
+          <div className={s["contact-info"]}>
+            <h3 className={s["info-title"]}>Contact Information</h3>
+            <p className={s["info-subtitle"]}>
+              Reach out directly or stay connected through my socials
+            </p>
+            <div className={s["info-items"]}>
+              <div className={s["info-item"]}>
+                <div className={s["info-icon"]}>
+                  <Image src={email} width={22} height={22} alt="Email" />
+                </div>
+                <div className={s["info-content"]}>
+                  <span className={s["info-label"]}>Email</span>
+                  <a href="mailto:kritirai.hyd@gmail.com" className={s["info-value"]}>
+                    kritirai.hyd@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div className={s["info-item"]}>
+                <div className={s["info-icon"]}>
+                  <Image src={loc} width={22} height={22} alt="Location" />
+                </div>
+                <div className={s["info-content"]}>
+                  <span className={s["info-label"]}>Location</span>
+                  <span className={s["info-value"]}>Hyderabad, India</span>
+                </div>
+              </div>
+              <div className={s["info-item"]}>
+                <div className={s["info-icon"]}>
+                  <Image src={phone} width={22} height={22} alt="Phone" />
+                </div>
+                <div className={s["info-content"]}>
+                  <span className={s["info-label"]}>Phone</span>
+                  <span className={s["info-value"]}>Available upon request</span>
+                </div>
+              </div>
+            </div>
+            <div className={s["social-section"]}>
+              <p className={s["social-title"]}>Connect with me</p>
+              <div className={s["social-icons"]}>
+                <a
+                  href="https://www.linkedin.com/in/dev-kritirai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={s.link}
+                  aria-label="LinkedIn Profile"
+                >
+                  <Image src={linkedin} width={22} height={22} alt="LinkedIn" />
+                </a>
+                <a
+                  href="https://github.com/kritirai-hyd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={s.link}
+                  aria-label="GitHub Profile"
+                >
+                  <Image src={github} width={22} height={22} alt="GitHub" />
+                </a>
+                <a
+                  href="https://x.com/dev_kritirai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={s.link}
+                  aria-label="X Profile"
+                >
+                  <Image src={x} width={22} height={22} alt="X" />
+                </a>
+                <a
+                  href="https://www.facebook.com/dev.kriti"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={s.link}
+                  aria-label="Facebook Profile"
+                >
+                  <Image src={facebook} width={22} height={22} alt="Facebook" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

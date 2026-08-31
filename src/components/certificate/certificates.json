@@ -1,0 +1,55 @@
+ 
+[
+  {
+   "id": 1,
+   "image": "free-responisve.png",
+   "title": "Responsive Web Design",
+  "org": "freeCodeCamp",
+   "date": "Issued: April 10 2024",
+   "credential": "https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/responsive-web-design"
+  },
+  {
+   "id": 2,
+   "image": "free-js.png",
+   "title": "JavaScript Algorithms & Data Structures",
+   "org": "freeCodeCamp",
+  "date": "Issued: May 4 2024",
+   "credential": "https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/javascript-algorithms-and-data-structures-v8"
+  },
+  {
+   "id": 3,
+   "image": "hackerank-sql.png",
+   "title": "SQL and Relational Databases",
+   "org": "Hackerank",
+   "date": "Issued: Jan 28 2025",
+   "credential": "https://www.hackerrank.com/certificates/22f1961a6cff"
+  }
+  ,
+  {
+   "id": 4,
+   "image": "postman-api-expert-cert.png",
+   "title": "Postman API Fundamentals Student Experts",
+   "org": "Postman",
+   "date": "Issued: Jan 26 2025",
+   "credential": "https://accounts.skilljar.com/accounts/profile/rst126clzdyy?d=rst126clzdyy&next=%2F"
+  }
+  ,
+  {
+   "id": 5,
+   "image": "c-sql.png",
+   "title": "SQL and Relational Databases",
+   "org": "Cognitive Class",
+   "date": "Issued: Jan 28 2025",
+   "credential": "https://www.linkedin.com/in/dev-kritirai/overlay/Certifications/1504451508/treasury/?profileId=ACoAAES3sZEBcuuxhTdNUg1pzSjjoN3lbykBuLI"
+  }
+   ,
+  {
+   "id": 6,
+   "image": "c-sharp.png",
+   "title": "Foundational c sharp with Microsoft",
+   "org": "freeCodeCamp",
+   "date": "Issued: Dec 15 2024",
+   "credential": "https://www.freecodecamp.org/certification/fcc0eff59a2-6ba3-4acc-923c-f68ff0f8c431/foundational-c-sharp-with-microsoft"
+  }
+
+]

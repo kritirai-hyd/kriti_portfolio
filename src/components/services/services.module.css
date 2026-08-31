@@ -1,0 +1,148 @@
+.bg {
+  background: var(--card-bg);
+  padding: 5rem 1.5rem;
+}
+
+.header {
+  max-width: 1280px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 32px 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+
+
+}
+
+.primary {
+  background-color: var(--primary-blue, #34419e);
+  color: #ffffff;
+box-shadow: rgba(0, 0, 0, 0.233) 0px 2px 4px 0px inset;
+}
+
+.secondary {
+  background: var(--counter-card);
+  color: var(--color);
+box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.primary:hover {
+  box-shadow: 0 20px 35px rgba(43, 89, 255, 0.35);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 1px solid rgba(43, 89, 255, 0.35);
+}
+
+.primary .icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.secondary .icon {
+  background: rgba(43, 89, 255, 0.1);
+  color: var(--primary-blue, #2b59ff);
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  font-size: 0.825rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.list li::before {
+  content: "✓";
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.readmore {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+.primary .readmore {
+  background: #ffffff;
+  color: var(--primary-blue, #2b59ff);
+}
+
+.secondary .readmore {
+  background: #f4f6fc;
+  color: var(--text-dark, #1a1a1a);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.readmore:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@media (max-width: 992px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}

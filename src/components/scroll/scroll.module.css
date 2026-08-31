@@ -1,0 +1,50 @@
+
+.bg{
+  background: var(--card-bg);
+}
+.scroll {
+  overflow: hidden;
+  position: relative;
+  padding: 15px 0;
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999;
+  background: #fff;
+  border: 1px solid #0028971f;
+  padding: 12px 0;
+
+;
+
+  transform: rotate(355deg);    box-shadow: 0 6px 25px #00000026;
+
+
+}
+
+.line {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+.scroll:hover .line {
+  animation-play-state: paused;
+}
+.text {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #032768;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-right: 1.5rem;
+  white-space: nowrap;
+}
+.starIcon {
+  filter: brightness(0) invert(1);
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
