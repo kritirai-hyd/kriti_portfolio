@@ -1,7 +1,7 @@
 "use client";
 import styles from "./Education.module.css";
 import { useTheme } from "../context/ThemeContext";
-import Heading from "../ui/Heading/Heading";
+import Heading from "../ui/heading/Heading";
 import { useEffect, useRef, useState } from "react";
 import { Calendar, Building2, Award, Clock } from "lucide-react";
 

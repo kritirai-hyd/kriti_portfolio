@@ -10,7 +10,7 @@ import github from "../../assets/svg/githubi.svg";
 import x from "../../assets/svg/x-icon.svg";
 import linkedin from "../../assets/svg/linkedin.svg";
 import facebook from "../../assets/svg/facebook.svg";
-import Heading from "../ui/Heading/Heading";
+import Heading from "../ui/heading/Heading";
 import { useTheme } from "../context/ThemeContext";
 
 const Contact = () => {

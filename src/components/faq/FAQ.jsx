@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import styles from "./FAQ.module.css";
-import Heading from "../ui/Heading/Heading";
+import Heading from "../ui/heading/Heading";
 import faqs from "./Faqs";
 const FAQ = () => {
   const [active, setActive] = useState(null);

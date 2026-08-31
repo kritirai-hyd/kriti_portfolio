@@ -25,7 +25,7 @@ import bingSearch from "../../assets/svg/bing-search.png";
 import cpanel from "../../assets/svg/cpanel.png";
 import Image from "next/image";
 import styles from "./styles.module.css";
-import Heading from "../ui/Heading/Heading";
+import Heading from "../ui/heading/Heading";
 const Technology = () => {
   const frontend = [
     { text: "HTML", img: html, color: "#E34F26" },

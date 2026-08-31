@@ -24,7 +24,7 @@ import googleSearch from "../../assets/svg/google-console-search.png";
 import bingSearch from "../../assets/svg/bing-search.png";
 import cpanel from "../../assets/svg/cpanel.png";
 import styles from "./styles.module.css";
-import Heading from "../ui/Heading/Heading";
+import Heading from "../ui/heading/Heading";
 import Image from "next/image";
 const Skills = () => {
   const frontend = [
