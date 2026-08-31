@@ -1,4 +1,4 @@
-import styles from './Gallery.module.css';
+import styles from './gallery.module.css';
 import Image from 'next/image';
 
 import a from '../../assets/image/kritirai-6.jpeg';
@@ -11,7 +11,7 @@ import g from '../../assets/image/kriitrai.png';
 import h from '../../assets/image/kritirai-9.jpeg';
 import i from '../../assets/image/kritirai-2.jpeg';
 import j from '../../assets/image/kriitrai.jpeg';
-import BreadCrumb from '../ui/BreadCrumb/BreadCrumb';
+import BreadCrumb from '../ui/breadCrumb/BreadCrumb';
 
 const awardImages = [a, b, c, d, e, f];
 const portfolioImages = [g, h, i, j];
