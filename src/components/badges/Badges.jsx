@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Badges.module.css";
 import { useTheme } from "../context/ThemeContext";
-import Heading from "../ui/Heading/Heading";
+import Heading from "../ui/heading/Heading";
 import badges from "./Badges.json";
 import Link from "next/link";
 import { SquareArrowOutUpRight, Award } from "lucide-react";

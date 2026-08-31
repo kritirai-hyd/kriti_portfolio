@@ -3,9 +3,9 @@ import Image from "next/image";
 import styles from "./Certificate.module.css";
 import Link from "next/link";
 import { useTheme } from "../context/ThemeContext";
-import Btn from "../ui/Btn/Btn";
+import Btn from "../ui/btn/Btn";
 import certificates from "./certificates.json";
-import Heading from "../ui/Heading/Heading";
+import Heading from "../ui/heading/Heading";
 import { CalendarDays, Building2, ExternalLink } from "lucide-react";
 const Certificate = () => {
   const { theme } = useTheme();

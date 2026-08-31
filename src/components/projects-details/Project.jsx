@@ -4,7 +4,7 @@ import React from "react";
 import useLenis from "../hooks/useLenis";
 import styles from "./projects.module.css";
 
-import BreadCrumb from "../ui/BreadCrumb/BreadCrumb";
+import BreadCrumb from "../ui/breadCrumb/BreadCrumb";
 import Projects from "../projects/Projects";
 
 const Project = () => {

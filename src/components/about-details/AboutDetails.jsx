@@ -4,7 +4,7 @@ import useLenis from "../hooks/useLenis";
 import { useTheme } from "../context/ThemeContext";
 import styles from "./AboutDetails.module.css";
 import Certificate from "../certificate/Certificate";
-import BreadCrumb from "../ui/BreadCrumb/BreadCrumb";
+import BreadCrumb from "../ui/breadCrumb/BreadCrumb";
 import Counter from "../counter/Counter";
 import About from "../about/About";
 import Skills from "../skills/Skills";

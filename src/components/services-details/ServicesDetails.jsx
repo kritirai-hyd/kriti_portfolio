@@ -4,7 +4,7 @@ import useLenis from "../hooks/useLenis";
 import { useTheme } from "../context/ThemeContext";
 
 import styles from "./ServicesDetails.module.css";
-import BreadCrumb from "../ui/BreadCrumb/BreadCrumb";
+import BreadCrumb from "../ui/breadCrumb/BreadCrumb";
 import Services from "../services/Services";
 const ServicesDetails = () => {
   useLenis();
