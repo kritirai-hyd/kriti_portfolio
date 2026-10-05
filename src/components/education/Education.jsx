@@ -13,20 +13,27 @@ const Education = () => {
   const journey = [
     {
       id: "1",
+      name: "Master of Computer Applications (MCA)",
+      date: "2026-2028",
+      org: "Jawaharlal Nehru Technological University",
+      status: "In Progress",
+    },
+     {
+      id: "2",
       name: "Bachelor of Computer Applications (BCA)",
       date: "2023-2026",
       org: "Osmania University",
-      status: "In Progress",
+      status: "Completed",
     },
     {
-      id: "2",
+      id: "3",
       name: "12th Grade – Higher Secondary",
       date: "2021-2023",
       org: "Science Stream (MPC)",
       status: "Completed",
     },
     {
-      id: "3",
+      id: "4",
       name: "10th Grade – Secondary Education",
       date: "2020-2021",
       org: "General Education",
